@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 SITE_ID = 1
@@ -64,7 +65,10 @@ ROOT_URLCONF = 'sweetiverse.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'home' / 'templates'
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

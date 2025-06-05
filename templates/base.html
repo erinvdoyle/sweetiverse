@@ -54,7 +54,7 @@
     </div>
   </div>
 
-  <!-- Messages -->
+  <!-- Flash messages -->
   <div class="container mt-2">
     {% if messages %}
       <div class="message-container">
@@ -67,7 +67,12 @@
     {% endif %}
   </div>
 
-  <!-- Main Page Content -->
+  <!-- Optional page header -->
+  <div class="container-fluid mt-4">
+    {% block pageheader %}{% endblock %}
+  </div>
+
+  <!-- Main content -->
   <main class="container my-4">
     {% block content %}{% endblock %}
   </main>
@@ -90,5 +95,7 @@
   <footer class="bg-dark text-light text-center py-3 mt-5">
     <small>© 2025 Sweetiverse. All rights reserved.</small>
   </footer>
+
+  {% block postloadjs %}{% endblock %}
 </body>
 </html>

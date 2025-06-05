@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Feature Section -->
+<div class="feature-section text-center">
+  <h2>Welcome to Sweetiverse 🍬</h2>
+  <p>Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth!</p>
+</div>
+
+<!-- Trust Badges -->
+<div class="trust-badges d-flex justify-content-around text-center">
+  <div><strong>🚚 Delivery</strong></div>
+  <div><strong>💳 Payment</strong></div>
+  <div><strong>📦 Subscription</strong></div>
+</div>
+
+<!-- Most Popular Sweets -->
+<div class="popular-section text-center">
+  <h3>Most Popular Sweets</h3>
+  <div class="row justify-content-center mt-4">
+    <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
+    <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
+    <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
+    <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
+  </div>
+  <a href="#" class="d-block mt-3 text-end pe-3 text-decoration-none text-dark">See all Sweeties →</a>
+</div>
+
+{% endblock %}
