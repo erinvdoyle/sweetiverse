@@ -74,14 +74,15 @@
   <!-- Subscription Box -->
   <div class="subscription-box text-center">
     <h4>Subscribe to Sweet News!</h4>
-    <form class="row justify-content-center">
-      <div class="col-md-6">
-        <input type="email" class="form-control" placeholder="Enter your email">
-      </div>
-      <div class="col-md-2 mt-2 mt-md-0">
-        <button type="submit" class="btn btn-primary w-100">Subscribe</button>
-      </div>
-    </form>
+    <form method="post" class="row justify-content-center">
+        {% csrf_token %}
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="col-md-2 mt-2 mt-md-0">
+          <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+        </div>
+      </form>      
   </div>
 
   <!-- Footer -->
