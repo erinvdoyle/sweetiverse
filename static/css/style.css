@@ -49,10 +49,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Feature Blocks */
-.feature-section,
 /* .trust-badges, */
 /* .popular-section, */
-.subscription-box {
+.feature-section {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
   padding: 2rem;
@@ -60,13 +59,36 @@ h1, h2, h3, h4, h5, h6 {
   width: 90%;
 }
 
-.subscription-box {
+/* .subscription-box {
     /* background-color: rgb(255, 239, 247, 0.9) !important; */
-    background-color: rgb(255, 182, 193, .8) !important;
+    /* background-color: rgb(255, 182, 193, .8) !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
     border-radius: 20px !important;
+  } */ */
+
+  .subscription-box-wrapper {
+    padding: 2rem;
+  }
+  
+  .subscription-box-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+  }
+  
+  .subscription-box {
+    background-color: rgba(255, 182, 193, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 650px;
   }
 
+  .subscription-box h4 {
+    color:#a65fd0;
+  }
+     
   .feature-section {
     background-color: rgb(240, 200, 241, .9)
   }
@@ -220,7 +242,7 @@ a.text-dark:hover {
     line-height: 0;
     margin: 0;
     padding: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff69b4' fill-opacity='0.4'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3Ccircle cx='25' cy='15' r='2'/%3E%3Ccircle cx='15' cy='30' r='2'/%3E%3Ccircle cx='35' cy='25' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff69b4' fill-opacity='0.6'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3Ccircle cx='25' cy='15' r='2'/%3E%3Ccircle cx='15' cy='30' r='2'/%3E%3Ccircle cx='35' cy='25' r='2'/%3E%3C/g%3E%3C/svg%3E");
   }
 
 /* Fix vertical spacing */
@@ -256,7 +278,9 @@ a.text-dark:hover {
   }
 
   .navbar .navbar-brand {
-    font-family: 'Chewy', cursive;
+    /* font-family: 'Chewy', cursive; */
+    font-family: Fredoka, sans-serif;
+    font-weight: 600;
     font-size: 1.8rem;
     color: #fff !important;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -275,3 +299,14 @@ a.text-dark:hover {
     padding-top: 164px;
   }
 }
+
+@media (max-width: 768px) {
+    .subscription-box-wrapper {
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+  
+    .subscription-box {
+      max-width: 100%;
+    }
+  }
