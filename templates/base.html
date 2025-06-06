@@ -6,7 +6,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Sweetiverse{% block extratitle %}{% endblock %}</title>
 
   {% block extrameta %}{% endblock %}
@@ -23,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
   {% endblock %}
 
@@ -33,44 +33,59 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-    <a class="navbar-brand" href="/">Sweetiverse</a>
-    <div class="ms-auto">
-      <a href="/accounts/login/" class="me-3 text-light">Login / Create Account</a>
-      <a href="/cart/" class="text-light">🛒</a>
+    <a class="navbar-brand logo-font" href="/">Sweetiverse</a>
+    <div class="ms-auto d-flex align-items-center gap-3">
+
+      <!-- Account Dropdown -->
+      <div class="dropdown">
+        <a class="text-light dropdown-toggle text-decoration-none" href="#" role="button" id="accountDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-user"></i> My Account
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+          {% if user.is_authenticated %}
+            <li><a class="dropdown-item" href="{% url 'account_email' %}">My Profile</a></li>
+            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+            {% if user.is_superuser %}
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/admin/">Manage Store</a></li>
+            {% endif %}
+          {% else %}
+            <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <!-- Cart -->
+      <a href="/cart/" class="text-light"><i class="fas fa-shopping-bag"></i></a>
     </div>
   </nav>
 
-  <!-- Header Links -->
-  <div class="bg-light text-dark text-center py-2">
+  <!-- Main Header (Links + Search) -->
+  <div class="main-header border-bottom">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-        <a href="#" class="text-decoration-none text-dark">All Sweets</a>
-        <a href="#" class="text-decoration-none text-dark">Japanese Sweets</a>
-        <a href="#" class="text-decoration-none text-dark">Mexican Sweets</a>
-        <a href="#" class="text-decoration-none text-dark">More Sweets by Nation</a>
-        <a href="#" class="text-decoration-none text-dark">Sweetie Selector</a>
-        <a href="#" class="text-decoration-none text-dark">Pick N Mix</a>
-        <a href="#" class="text-decoration-none text-dark">FAQ</a>
+      <div class="row align-items-center py-2">
+        <div class="col-12 col-lg-8">
+          <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <a href="#" class="text-decoration-none text-dark">All Sweets</a>
+            <a href="#" class="text-decoration-none text-dark">Japanese Sweets</a>
+            <a href="#" class="text-decoration-none text-dark">Mexican Sweets</a>
+            <a href="#" class="text-decoration-none text-dark">More Sweets by Nation</a>
+            <a href="#" class="text-decoration-none text-dark">Sweetie Selector</a>
+            <a href="#" class="text-decoration-none text-dark">Pick N Mix</a>
+            <a href="#" class="text-decoration-none text-dark">FAQ</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 mt-2 mt-lg-0">
+          <form method="GET" action="{% url 'search_results' %}" class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search for sweets..." required>
+            <button type="submit" class="btn btn-outline-primary"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Search Bar -->
-    <div class="bg-white py-2 border-bottom">
-        <div class="container">
-        <form method="GET" action="{% url 'search_results' %}" class="row g-2">
-            <div class="col-10 col-md-11">
-            <input type="text" name="q" class="form-control" placeholder="Search for sweets..." required>
-            </div>
-            <div class="col-2 col-md-1">
-            <button type="submit" class="btn btn-outline-primary w-100">
-                <i class="fas fa-search"></i>
-            </button>
-            </div>
-        </form>
-        </div>
-    </div>
-  
   <!-- Flash messages -->
   <div class="container mt-2">
     {% if messages %}
@@ -84,7 +99,7 @@
     {% endif %}
   </div>
 
-  <!-- Optional page header -->
+  <!-- Page header -->
   <div class="container-fluid mt-4">
     {% block pageheader %}{% endblock %}
   </div>
