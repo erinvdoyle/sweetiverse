@@ -19,9 +19,11 @@ from django.urls import path, include
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
+from home import views as home_views
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
+    path('search/', home_views.search_results, name='search_results'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
