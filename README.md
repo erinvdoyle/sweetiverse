@@ -111,3 +111,122 @@ The project aims to deliver a responsive and user-friendly sweets e-commerce pla
 - Secure checkout using Stripe  
 - Newsletter signup  
 - Admin management for inventory and orders
+
+## Design
+
+### Color Scheme
+
+### Database Schema
+
+#### User
+Django's built-in User model
+
+#### UserProfile
+- id (Primary Key)
+- user (One-to-One Field to User)
+- default_phone_number (CharField)
+- default_street_address1 (CharField)
+- default_street_address2 (CharField)
+- default_town_or_city (CharField)
+- default_county (CharField)
+- default_postcode (CharField)
+- default_country (CountryField)
+
+#### Sweet
+Represents an individual sweet product
+- id (UUID)
+- name (CharField)
+- description (TextField)
+- image (ImageField)
+- ingredients (TextField)
+- flavor (CharField)
+- country_of_origin (CountryField)
+- type (ForeignKey to Type)
+- stock_amount (IntegerField)
+- in_stock (BooleanField)
+- on_sale (BooleanField)
+- price (DecimalField)
+- discount (IntegerField)
+- sale_price (DecimalField)
+- created (DateTimeField)
+
+#### Type
+Represents a sweet type (e.g. chocolate, gummy, hard candy)
+- id (Primary Key)
+- name (CharField)
+- friendly_name (CharField)
+- category (ForeignKey to Category)
+
+#### Category
+Categorization of types
+- name (CharField)
+
+#### SweetReview
+User-generated review for a sweet
+- user (ForeignKey to UserProfile)
+- sweet (ForeignKey to Sweet)
+- rating (IntegerField)
+- review (TextField)
+- created (DateTimeField)
+
+#### WishList
+A user's saved list of favorite sweets
+- user (ForeignKey to UserProfile)
+- sweet (ForeignKey to Sweet)
+- created (DateTimeField)
+
+#### Order
+Tracks all order details
+- id (Primary Key)
+- order_number (CharField)
+- user_profile (ForeignKey to UserProfile)
+- full_name (CharField)
+- email (EmailField)
+- phone_number (CharField)
+- country (CountryField)
+- postcode (CharField)
+- town_or_city (CharField)
+- street_address1 (CharField)
+- street_address2 (CharField)
+- county (CharField)
+- date (DateTimeField)
+- delivery_cost (DecimalField)
+- discount (DecimalField)
+- order_total (DecimalField)
+- grand_total (DecimalField)
+- original_cart (TextField)
+- stripe_pid (CharField)
+
+#### OrderLineItem
+Individual sweet items in an order
+- order (ForeignKey to Order)
+- sweet (ForeignKey to Sweet)
+- quantity (IntegerField)
+- lineitem_total (DecimalField)
+
+#### Order Status
+Tracks the current status of an order
+- order (One-to-One Field to Order)
+- status (CharField)
+
+#### Discount Code
+Promotional codes for users to apply at checkout
+- code (CharField)
+- discount (IntegerField)
+- active (BooleanField)
+
+#### PickNMix
+A user-selected bundle of random sweets
+- user (ForeignKey to UserProfile)
+- quantity (IntegerField)
+- created (DateTimeField)
+- sweets (ManyToManyField to Sweet)
+- total_price (DecimalField)
+
+#### SubscriptionBox
+Monthly sweet box sent to a user
+- user (ForeignKey to UserProfile)
+- start_date (DateTimeField)
+- active (BooleanField)
+- sweets (ManyToManyField to Sweet)
+- country_selection (Optional CharField or JSONField)
