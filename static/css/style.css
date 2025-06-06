@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Feature Blocks */
 .feature-section,
-.trust-badges,
+/* .trust-badges, */
 .popular-section,
 .subscription-box {
   border-radius: 20px;
@@ -61,7 +61,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subscription-box {
-    background-color: rgb(255, 239, 247, 0.9) !important;
+    /* background-color: rgb(255, 239, 247, 0.9) !important; */
+    background-color: rgb(255, 182, 193, .8) !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
     border-radius: 20px !important;
   }
@@ -74,12 +75,66 @@ h1, h2, h3, h4, h5, h6 {
     color: #d63384;
   }
   
-  .trust-badges {
+  /* .trust-badges {
     background-color: rgba(252, 241, 127, 0.9);
-  }
+  } */
   
   .popular-section {
     background-color: rgba(252, 241, 127, 0.9);
+  }
+
+  .trust-badges {
+    background: none;
+    margin: 2rem auto;
+    width: 90%;
+    padding: 1.25rem 0;
+  }
+  
+  .badge-card {
+    /* background-color: rgba(255, 250, 250, 0.95); candy white */
+    /* background-color: #a96ccc; */
+    background: linear-gradient(135deg, #a96ccc, #d9a3ff);
+    /* background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffc0cb' fill-opacity='0.4'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3Ccircle cx='25' cy='10' r='2'/%3E%3Ccircle cx='15' cy='30' r='2'/%3E%3Ccircle cx='35' cy='35' r='2'/%3E%3C/g%3E%3C/svg%3E"); */
+    border-radius: 16px;
+    /* box-shadow: 0 4px 10px rgba(255, 105, 180, 0.65); */
+    box-shadow: 0 8px 10px -4px rgba(255, 105, 180, 0.25);
+    /* flex: 1 1 220px;
+    max-width: 280px;
+    padding: 1rem; */
+    transition: transform 0.3s ease;
+    color: white;
+    font-family: 'Chewy', cursive;
+    font-weight: 400;
+    flex: 1 1 250px;           
+    max-width: 320px;          
+    padding: 2rem 1.5rem;      
+    text-align: center;
+    min-height: 180px;
+  }
+  
+  .badge-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 16px -4px rgba(255, 105, 180, 0.3);
+  }
+  
+  .badge-card i {
+    margin-top: 10px;
+    color: #d63384;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .badge-card:hover i {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  
+  .badge-card h5 {
+    /* font-family: 'Chewy', cursive; */
+    font-family: Fredoka, sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0.75rem;
+    color: #d63384 !important;
   }
   
 
