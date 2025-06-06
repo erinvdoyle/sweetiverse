@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Feature Blocks */
 .feature-section,
 /* .trust-badges, */
-.popular-section,
+/* .popular-section, */
 .subscription-box {
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
@@ -79,14 +79,42 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(252, 241, 127, 0.9);
   } */
   
-  .popular-section {
+  /* .popular-section {
     background-color: rgba(252, 241, 127, 0.9);
+  } */
+
+  /* .popular-section {
+    background-color: rgba(252, 241, 127, 0.9);
+    padding: 3rem 0;
+    margin: 0;
+    width: 100vh;
+    border-radius: 0;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+  } */
+  
+  .container-fluid.px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
+  .popular-section-wrapper {
+        width: 100%;
+        /* background-color: rgba(252, 241, 127, 0.9); */
+        background: linear-gradient(135deg, #fff7ae, #ffe19c);
+        margin: 0;
+        padding: 2rem 0;
+  }
+    
+  .popular-section-inner {
+    padding: 0rem 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
   .trust-badges {
     background: none;
     margin: 2rem auto;
-    width: 90%;
+    width: 80%;
     padding: 1.25rem 0;
   }
   
@@ -95,8 +123,9 @@ h1, h2, h3, h4, h5, h6 {
     /* background-color: #a96ccc; */
     background: linear-gradient(135deg, #a96ccc, #d9a3ff);
     /* background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffc0cb' fill-opacity='0.4'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3Ccircle cx='25' cy='10' r='2'/%3E%3Ccircle cx='15' cy='30' r='2'/%3E%3Ccircle cx='35' cy='35' r='2'/%3E%3C/g%3E%3C/svg%3E"); */
-    border-radius: 16px;
+    /* border-radius: 16px; */
     /* box-shadow: 0 4px 10px rgba(255, 105, 180, 0.65); */
+    border-radius: 80px;
     box-shadow: 0 8px 10px -4px rgba(255, 105, 180, 0.25);
     /* flex: 1 1 220px;
     max-width: 280px;
@@ -106,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Chewy', cursive;
     font-weight: 400;
     flex: 1 1 250px;           
-    max-width: 320px;          
+    max-width: 310px;          
     padding: 2rem 1.5rem;      
     text-align: center;
     min-height: 180px;
@@ -191,6 +220,7 @@ a.text-dark:hover {
     line-height: 0;
     margin: 0;
     padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff69b4' fill-opacity='0.4'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3Ccircle cx='25' cy='15' r='2'/%3E%3Ccircle cx='15' cy='30' r='2'/%3E%3Ccircle cx='35' cy='25' r='2'/%3E%3C/g%3E%3C/svg%3E");
   }
 
 /* Fix vertical spacing */
