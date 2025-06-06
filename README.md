@@ -117,6 +117,7 @@ The project aims to deliver a responsive and user-friendly sweets e-commerce pla
 ### Color Scheme
 
 ### Database Schema
+![database schema](./assets/readme-images/erd.png)
 
 #### User
 Django's built-in User model
