@@ -1,86 +1,141 @@
+/* Base Structure */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: #fff;
-    font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #333;
+  font-family: 'Fredoka', sans-serif;
+  background-color: transparent;
 }
 
+/* Vanta Background */
 #vanta-bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-/* Section styling */
-.feature-section, .trust-badges, .popular-section, .subscription-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #333;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    margin: 1rem auto;
-    padding: 2rem;
-    width: 90%;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Chewy', cursive;
+  color: #FF69B4;
 }
 
-.trust-badges div {
-    flex: 1;
-    text-align: center;
-}
-
-/* Product placeholder */
-.product-placeholder {
-    width: 100%;
-    max-width: 200px;
-    height: 150px;
-    background-color: #ddd;
-    border-radius: 10px;
-    margin: auto;
-}
-
-/* Typography and branding */
 .logo-font {
-    font-family: 'Fredoka One', cursive;
-    text-transform: uppercase;
-    font-weight: bold;
+  font-family: 'Chewy', cursive;
+  color: #FF69B4;
+  letter-spacing: 1px;
 }
 
-.text-black {
-    color: #000 !important;
+/* Candy Style Buttons */
+.btn-primary,
+.shop-now-button,
+.btn-outline-primary {
+  background-color: #FF69B4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 
-.border-black {
-    border-color: #000 !important;
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  background-color: #ff85c1;
+  color: white;
+  transform: scale(1.05);
 }
 
-/* Button styling */
-.shop-now-button {
+/* Feature Blocks */
+.feature-section,
+.trust-badges,
+.popular-section,
+.subscription-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+/* Product Placeholder Styling */
+.product-placeholder {
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  background-color: #ffe6f1;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+/* Header Link Buttons */
+a.text-dark {
+  color: #d63384 !important;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+a.text-dark:hover {
+  color: #ff69b4 !important;
+}
+
+/* Search Bar */
+.input-group input {
+  border-radius: 20px 0 0 20px;
+}
+.input-group button {
+  border-radius: 0 20px 20px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #ffc0cb;
+}
+
+/* Fix vertical spacing */
+.navbar {
+    margin-bottom: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  
+  .main-header {
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Link bubbles */
+  .main-header a.text-dark {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #d63384 !important;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.2);
+    font-size: 0.95rem;
+  }
+  
+  .main-header a.text-dark:hover {
     background-color: #ff69b4;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    color: white !important;
+    transform: scale(1.05);
+  }
+  
+/* Media Queries */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
 }
 
-.icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 1.5em;
-    width: 1.5em;
-}
-
-/* Header styling */
-.main-header {
-    background-color: white;
-    padding: 1rem 0;
-}
-
-@media (max-width: 992px) {
-    .main-header {
-        display: none;
-    }
+@media (min-width: 992px) {
+  .main-header {
+    padding-top: 164px;
+  }
 }
