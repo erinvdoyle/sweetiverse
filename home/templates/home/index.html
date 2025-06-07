@@ -5,15 +5,28 @@
 
 <!-- Feature Section -->
 <div class="feature-section text-center">
-  <h2>Welcome to the Sweetiverse 🍬</h2>
-  <p>Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth!</p>
-  <p>Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth!</p>
-  <p>Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth!</p>
-  <p>Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth!</p>
-</div>
+    <div class="feature-stars"></div>
+    <div class="container-inner w-100">
+      <div class="row">
+        <!-- Text Column -->
+        <div class="col-md-6 text-col text-start px-4">
+          <h2>Welcome to the SWEETiVERSE</h2>
+          <p> Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth! </p>
+        </div>
+        <!-- Image Column -->
+        <div class="col-md-6 image-col">
+          <img src="{% static 'images/msm-transparent.png' %}" class="molly-img" alt="Sweetiverse Mascot">
+        </div>
+      </div>
+      <!-- Button  -->
+      <div class="shop-now-wrapper mt-4">
+        <a href="#" class="btn btn-primary shop-now-button shimmer-button">SHOP NOW</a>
+      </div>
+    </div>
+  </div>
 
-<!-- Trust Badges -->
-<div class="trust-badges d-flex justify-content-around flex-wrap gap-3">
+  <!-- Trust Badges -->
+  <div class="trust-badges d-flex justify-content-around flex-wrap gap-3">
     <div class="badge-card text-center p-3">
       <i class="fas fa-truck-fast fa-2x mb-2"></i>
       <h5>RELIABLE Shipping</h5>
@@ -26,23 +39,31 @@
     </div>
     <div class="badge-card text-center p-3">
       <i class="fas fa-gift fa-2x mb-2"></i>
-      <h5>Monthly SWEETIE Box</h5>
+      <h5>Monthly SWEETI Box</h5>
       <p class="mb-0 small">New global treats every month!</p>
     </div>
   </div>
   
-<!-- Most Popular Sweets -->
-<div class="popular-section-wrapper">
+  <!-- Most Popular Sweets -->
+  <div class="popular-section-wrapper">
     <div class="popular-section-inner text-center">
-      <h3>Most Popular Sweets</h3>
+      <h3>Most Popular SWEETiS</h3>
       <div class="row justify-content-center mt-4">
-        <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
-        <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
-        <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
-        <div class="col-6 col-sm-3 mb-3"><div class="product-placeholder"></div></div>
+        <div class="col-6 col-sm-3 mb-3">
+          <div class="product-placeholder"></div>
+        </div>
+        <div class="col-6 col-sm-3 mb-3">
+          <div class="product-placeholder"></div>
+        </div>
+        <div class="col-6 col-sm-3 mb-3">
+          <div class="product-placeholder"></div>
+        </div>
+        <div class="col-6 col-sm-3 mb-3">
+          <div class="product-placeholder"></div>
+        </div>
       </div>
-      <a href="#" class="d-block mt-3 text-end pe-3 text-decoration-none text-dark">See all Sweeties →</a>
+      <a href="#" class="d-block mt-3 text-end pe-3 text-decoration-none text-dark">See all SWEETiS →</a>
     </div>
-  </div>   
+  </div>
 
 {% endblock %}
