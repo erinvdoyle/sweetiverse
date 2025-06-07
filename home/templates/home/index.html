@@ -5,25 +5,31 @@
 
 <!-- Feature Section -->
 <div class="feature-section text-center">
-    <div class="feature-stars"></div>
-    <div class="container-inner w-100">
-      <div class="row">
+    <div class="container-inner">
+      <div class="row align-items-center">
         <!-- Text Column -->
-        <div class="col-md-6 text-col text-start px-4">
-          <h2>Welcome to the SWEETiVERSE</h2>
-          <p> Your global gateway to sweets and treats from every corner of the world. Explore, enjoy, and satisfy your sweet tooth! </p>
+        <div class="col-md-6 text-col text-start">
+            <h2>
+                <!-- Candy icon by Icons8-->
+                Welcome to the <br><img src="{% static 'images/icons8-candy-60.png' %}" alt="Candy icon" class="candy-icon"><span class="text-highlight">SWEETiVERSE</span>
+                <img src="{% static 'images/icons8-candy-60.png' %}" alt="Candy icon" class="candy-icon">
+              </h2>              
+          <p>
+            Your global gateway to sweets and treats from every corner of the world.
+            Explore, enjoy, and satisfy your sweet tooth!
+          </p>
+          <div class="shop-now-wrapper mt-4">
+            <a href="#" class="btn shop-now-button shimmer-button">SHOP NOW</a>
+          </div>
         </div>
         <!-- Image Column -->
         <div class="col-md-6 image-col">
           <img src="{% static 'images/msm-transparent.png' %}" class="molly-img" alt="Sweetiverse Mascot">
         </div>
       </div>
-      <!-- Button  -->
-      <div class="shop-now-wrapper mt-4">
-        <a href="#" class="btn btn-primary shop-now-button shimmer-button">SHOP NOW</a>
-      </div>
     </div>
   </div>
+  
 
   <!-- Trust Badges -->
   <div class="trust-badges d-flex justify-content-around flex-wrap gap-3">
