@@ -436,8 +436,59 @@ footer {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-6px); }
   }
-  
 
+
+/*--- Testimonial Section ---------------------------------------------------------------------------------------------------------------------*/
+.testimonial-heart-container {
+    background: url("/static/images/heart.png") no-repeat center/contain;
+    position: relative;
+    width: 375px;
+    min-height: 375px;
+    margin: 2rem 0 2rem 5%;
+    transform: rotate(-15deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: height 0.4s ease;
+    opacity: 0.9;
+  }
+  
+  .testimonial-content {
+    transform: rotate(15deg);
+    text-align: center;
+    max-width: 80%;
+    margin-left: -15px;
+  }
+  
+  .testimonial-quote {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #7d0036;
+    margin-bottom: 0.5rem;
+    margin-left: -15px;
+  }
+  
+  .testimonial-author {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+    color: #a10053;
+  }
+  
+  .testimonial-slide {
+    display: none;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s ease;
+  }
+  
+  .testimonial-slide.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */

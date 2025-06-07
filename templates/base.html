@@ -116,7 +116,25 @@
         </div>
       </div>
     </div>
-    
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-heart-container">
+        <div class="testimonial-content" id="testimonial-carousel">
+          <div class="testimonial-slide active">
+            <div class="testimonial-quote">“Adorable sweets and top-tier service!”</div>
+            <div class="testimonial-author">– Sweetiverse Shopper</div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-quote">“Packaging is as sweet as the treats!”</div>
+            <div class="testimonial-author">– Happy Customer</div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-quote">“I love the global candy options!”</div>
+            <div class="testimonial-author">– Candy Enthusiast</div>
+          </div>
+        </div>
+      </div>
+                        
     <!-- Wavy Divider Above Footer -->
     <div class="wavy-divider-bottom">
       <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
@@ -129,6 +147,31 @@
       <small>© 2025 SWEETiVERSE. All rights reserved.</small>
     </footer>
 
-  {% block postloadjs %}{% endblock %}
+  {% block postloadjs %}
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = document.querySelectorAll(".testimonial-slide");
+      let current = 0;
+  
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+  
+      function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+  
+      // Initial display
+      showSlide(current);
+  
+      // Auto-play every 5.5 seconds
+      setInterval(nextSlide, 5500);
+    });
+  </script>
+      
+  {% endblock %}
 </body>
 </html>
