@@ -368,7 +368,20 @@ footer {
     margin-top: 1rem;
     text-align: center;
   }
-  
+
+  .highlight-line {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    flex-shrink: 1;
+    white-space: nowrap;
+  }
+    
   /* Shop Now Button */
   .shop-now-wrapper {
     margin-top: 2rem;
@@ -490,7 +503,102 @@ footer {
     opacity: 1;
     transform: translateX(0);
   }
+
+  .testimonial-float-wrapper {
+    animation: floatHeart 6s ease-in-out infinite;
+    will-change: transform;
+  }
   
+  @keyframes floatHeart {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+/*--- Contact & Icon Section --------------------------------------------------------------------------------------------------------------------------*/
+.testimonial-contact-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 5%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .testimonial-heart-wrapper {
+    flex: 0 1 375px;
+    max-width: 100%;
+  }
+  
+  .contact-candy-section {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #ffe8f0;
+    border-radius: 20px;
+    padding: 2rem 1rem;
+    box-shadow: 0 6px 16px rgba(255, 105, 180, 0.3);
+    font-family: 'Fredoka', sans-serif;
+    animation: floatContact 7s ease-in-out infinite;
+    background-image: radial-gradient(#ffc0cb 5%, transparent 6%),
+                      radial-gradient(#fbd0e5 5%, transparent 6%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    position: relative;
+    z-index: 1;
+    margin-left: 5%;
+  }
+  
+  .contact-title {
+    font-family: 'Chewy', cursive;
+  font-size: 2.2rem;
+  text-align: center;
+  animation: candyCycle 6s infinite;
+}
+
+@keyframes candyCycle {
+  0%   { color: #ff69b4; }
+  25%  { color: #a65fd0; }
+  50%  { color: #6f0927 }
+  75%  { color: #d63384; }
+  100% { color: #ff69b4; }
+}
+  
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .contact-icon {
+    font-size: 1.6rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: white;
+    color: #d63384;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.25) rotate(10deg);
+    background-color: #ffeff8;
+    color: #a10053;
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.5), 0 0 10px rgba(255, 182, 193, 0.8);
+  }
+  
+  @keyframes floatContact {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+     
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */
@@ -692,6 +800,12 @@ footer {
   }
 }
 
+@media (max-width: 992px) {
+    .contact-candy-section {
+      margin-left: 0;
+    }
+  }
+
 @media (max-width: 768px) {
   .subscription-box-wrapper {
     justify-content: center;
@@ -715,6 +829,17 @@ footer {
     margin-top: 2rem;
     max-height: 300px;
   }
+
+  .testimonial-contact-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-heart-wrapper,
+  .contact-candy-section {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 
@@ -733,4 +858,15 @@ footer {
       font-size: 1rem;
     }
   }
+
+  @media (max-width: 576px) {
+    .candy-icon {
+      width: 20px;
+    }
+  
+    .feature-section h2 {
+      font-size: 2rem;
+    }
+  }
+  
   

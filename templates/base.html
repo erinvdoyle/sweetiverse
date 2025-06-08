@@ -105,7 +105,7 @@
     <div class="subscription-box-wrapper">
       <div class="container subscription-box-container">
         <div class="subscription-box text-center">
-          <h4>Subscribe for SWEET News!</h4>
+          <h4>Subscribe for SWEET News</h4>
           <form method="post" class="row justify-content-center"> {% csrf_token %} <div class="col-md-8">
               <input type="email" class="form-control" placeholder="Enter your email">
             </div>
@@ -117,7 +117,10 @@
       </div>
     </div>
 
+    <div class="testimonial-contact-row">
     <!-- Testimonial Section -->
+    <div class="testimonial-heart-wrapper">
+    <div class="testimonial-float-wrapper">
     <div class="testimonial-heart-container">
         <div class="testimonial-content" id="testimonial-carousel">
           <div class="testimonial-slide active">
@@ -134,7 +137,21 @@
           </div>
         </div>
       </div>
-                        
+      </div>
+      </div>
+
+      <!-- Contact Section -->
+        <div class="contact-candy-section">
+            <h3 class="contact-title">Let's confect!</h3>
+            <div class="contact-icons">
+            <a href="#" class="contact-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="contact-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="contact-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:info@sweetiverse.com" class="contact-icon email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        </div>
+                                    
     <!-- Wavy Divider Above Footer -->
     <div class="wavy-divider-bottom">
       <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
@@ -164,10 +181,8 @@
         showSlide(current);
       }
   
-      // Initial display
       showSlide(current);
   
-      // Auto-play every 5.5 seconds
       setInterval(nextSlide, 5500);
     });
   </script>
