@@ -793,7 +793,26 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
+/* --- SWEETS APP ---------------------------------------------------------------------------------------------------------*/
+.candy-card {
+    background: #fff0fb;
+    border: 3px dashed #ff6ec7;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+  }
+  .candy-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+  }
+  .candy-card img {
+    max-height: 160px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+   
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */

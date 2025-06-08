@@ -4,9 +4,14 @@ from django_countries.fields import CountryField
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
+    
+    def get_friendly_name(self):
+        return self.friendly_name
+
 
 class Type(models.Model):
     name = models.CharField(max_length=100)
@@ -16,8 +21,10 @@ class Type(models.Model):
     def __str__(self):
         return self.friendly_name
 
+
 class Sweet(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=200)
     description = models.TextField()
     image = models.ImageField(upload_to='sweets/', blank=True, null=True)
@@ -32,6 +39,8 @@ class Sweet(models.Model):
     discount = models.IntegerField(default=0)
     sale_price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -46,5 +55,3 @@ class Sweet(models.Model):
         self.sale_price = self.calculate_sale_price()
         self.in_stock = self.stock_amount > 0
         super().save(*args, **kwargs)
-
-# Create your models here.
