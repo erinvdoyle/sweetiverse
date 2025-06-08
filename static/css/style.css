@@ -623,17 +623,31 @@ footer {
   }
   
   .cloud-search-wrapper {
-    background-color: rgb(169, 108, 204, .5);
+    background-color: rgb(169, 108, 204, .3);
     padding: 4rem 2rem;
     text-align: center;
     color: white;
   }
   
-  .cloud-search-wrapper h3 {
-    font-family: 'Chewy', cursive;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-  }
+ .cloud-search-wrapper h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffc0e1,
+    #ffc0e1 10px,
+    #f998c1 10px,
+    #f998c1 20px
+  );
+  border-radius: 50px;
+  color: #7a003c;
+  padding: 0.6rem 1.5rem;
+  box-shadow: 0 3px 6px rgba(255, 105, 180, 0.3);
+  display: inline-block;
+}
+
+  
   
   .cloud-search-wrapper p {
     font-size: 1.1rem;
