@@ -89,6 +89,15 @@
         </div>
       </div>
     </div>
+
+    <!-- Promo Banner -->
+    <div class="promo-banner-wrapper">
+        <div class="promo-banner" id="promoBanner">
+        <div class="promo-message active">Free shipping when you spend £25!</div>
+        <div class="promo-message">Buy 4 Sweetis, get 1 free!</div>
+        </div>
+    </div>
+  
     
     <!-- Flash messages -->
     <div class="container mt-2"> {% if messages %} <div class="message-container"> {% for message in messages %} <div class="alert alert-{{ message.tags }}">
@@ -186,6 +195,20 @@
   
       setInterval(nextSlide, 5500);
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const messages = document.querySelectorAll("#promoBanner .promo-message");
+      let currentIndex = 0;
+
+      function showNextMessage() {
+        messages[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % messages.length;
+        messages[currentIndex].classList.add("active");
+      }
+
+      setInterval(showNextMessage, 5000);
+    });
+
   </script>
       
   {% endblock %}
