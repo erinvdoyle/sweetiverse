@@ -1,0 +1,58 @@
+[
+    {
+        "model": "sweets.category",
+        "pk": 1,
+        "fields": {
+            "name": "japanese",
+            "friendly_name": "Japanese Sweets"
+        }
+    },
+    {
+        "model": "sweets.category",
+        "pk": 2,
+        "fields": {
+            "name": "korean",
+            "friendly_name": "Korean Sweets"
+        }
+    },
+    {
+        "model": "sweets.category",
+        "pk": 3,
+        "fields": {
+            "name": "hard-candy",
+            "friendly_name": "Hard Candy"
+        }
+    },
+    {
+        "model": "sweets.category",
+        "pk": 4,
+        "fields": {
+            "name": "chewy-candy",
+            "friendly_name": "Chewy Candy"
+        }
+    },
+    {
+        "model": "sweets.category",
+        "pk": 5,
+        "fields": {
+            "name": "gummies",
+            "friendly_name": "Gummies"
+        }
+    },
+    {
+        "model": "sweets.category",
+        "pk": 6,
+        "fields": {
+            "name": "chocolate",
+            "friendly_name": "Chocolate"
+        }
+    },
+    {
+        "model": "sweets.category",
+        "pk": 7,
+        "fields": {
+            "name": "gum",
+            "friendly_name": "Gum"
+        }
+    }
+]

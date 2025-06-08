@@ -1,0 +1,38 @@
+[
+    {
+        "model": "sweets.type",
+        "pk": 1,
+        "fields": {
+            "name": "kit-kat",
+            "friendly_name": "Kit-Kat",
+            "category": 6
+        }
+    },
+    {
+        "model": "sweets.type",
+        "pk": 2,
+        "fields": {
+            "name": "bars",
+            "friendly_name": "Bars",
+            "category": 6
+        }
+    },
+    {
+        "model": "sweets.type",
+        "pk": 3,
+        "fields": {
+            "name": "multi-pack",
+            "friendly_name": "Multi-pack",
+            "category": 4
+        }
+    },
+    {
+        "model": "sweets.type",
+        "pk": 4,
+        "fields": {
+            "name": "fruity",
+            "friendly_name": "Fruity",
+            "category": 5
+        }
+    }
+]
