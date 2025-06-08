@@ -623,7 +623,7 @@ footer {
   }
   
   .cloud-search-wrapper {
-    background-color: transparent;
+    background-color: rgb(169, 108, 204, .5);
     padding: 4rem 2rem;
     text-align: center;
     color: white;
@@ -646,7 +646,48 @@ footer {
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
   }
+
+
+/*--- product_nav.html ---------------------------------------------------------------------------------------------------------------*/
+.candy-sort-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
   
+  .candy-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(145deg, #ff7fcf, #f78bb8);
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(255, 105, 180, 0.3);
+    text-decoration: none;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .candy-pill:hover {
+    background: linear-gradient(145deg, #ff93d1, #ffb3e6);
+    transform: scale(1.05);
+    text-decoration: none;
+  }
+  
+  .sort-label {
+    background: linear-gradient(145deg, #ffc0e1, #fbd1ec);
+    color: #a10053;
+  }
+  
+  .pill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    color: red;
+    filter: drop-shadow(0 0 2px rgba(255, 182, 193, 0.6));
+  }
   
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
