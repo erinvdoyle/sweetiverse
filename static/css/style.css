@@ -552,7 +552,7 @@ footer {
     background-position: 0 0, 20px 20px;
     position: relative;
     z-index: 1;
-    margin-left: 5%;
+    margin-left: 4%;
   }
   
   .contact-title {
@@ -598,7 +598,56 @@ footer {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
   }
-     
+
+/*--- Search Results Page ---------------------------------------------------------------------------------------------------------------------*/
+.cloud-border {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1920 / 409;
+  }
+  
+  .cloud-top {
+    background-image: url("/static/images/cloudbordertop.png");
+  }
+  
+  .cloud-bottom {
+    background-image: url("/static/images/cloudborderbottom.png");
+  }
+  
+  .cloud-stripe {
+    background-color: #f8fcff;
+    height: 20px;
+    width: 100%;
+  }
+  
+  .cloud-search-wrapper {
+    background-color: transparent;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .cloud-search-wrapper h3 {
+    font-family: 'Chewy', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cloud-search-wrapper p {
+    font-size: 1.1rem;
+    color: #f9f9f9;
+  }
+  
+  .product-placeholder {
+    background-color: #ffe6f1;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+  }
+  
+  
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */
