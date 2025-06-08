@@ -1,18 +1,28 @@
-<div class="candy-sort-nav d-flex justify-content-end pe-3 pt-2">
-    <div class="candy-pill sort-label">
-      <span>Sort by:</span>
-    </div>
-    <a href="?sort=price" class="candy-pill">
-      <img src="https://img.icons8.com/ios/50/astronaut.png" alt="Price Icon" class="pill-icon" />
-      Price
+<div class="candy-sort-nav d-flex justify-content-end pe-3 pt-2 flex-wrap">
+  <div class="candy-pill sort-label me-2">Sort by:</div>
+
+  <!-- Mobile Toggle -->
+  <div class="dropdown d-lg-none">
+    <button class="btn candy-pill dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      Select
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end candy-dropdown" aria-labelledby="sortDropdown">
+      <li><a class="dropdown-item" href="?sort=price"><img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon me-2">Price</a></li>
+      <li><a class="dropdown-item" href="?sort=category"><img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2">Category</a></li>
+      <li><a class="dropdown-item" href="?sort=rating"><img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon me-2">Rating</a></li>
+    </ul>
+  </div>
+
+  <!-- Desktop Pills -->
+  <div class="d-none d-lg-flex gap-2">
+    <a href="?sort=price" class="candy-pill wiggle">
+      <img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon" /> Price
     </a>
-    <a href="?sort=category" class="candy-pill">
-      <img src="https://img.icons8.com/ios/50/planet.png" alt="Category Icon" class="pill-icon" />
-      Category
+    <a href="?sort=category" class="candy-pill wiggle">
+      <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon" /> Category
     </a>
-    <a href="?sort=rating" class="candy-pill">
-      <img src="https://img.icons8.com/ios/50/rocket--v1.png" alt="Rating Icon" class="pill-icon" />
-      Rating
+    <a href="?sort=rating" class="candy-pill wiggle">
+      <img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon" /> Rating
     </a>
   </div>
-  
+</div>
