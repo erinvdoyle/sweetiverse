@@ -9,19 +9,31 @@
 <div class="cloud-search-wrapper">
   <div class="cloud-search-content text-center">
     <h3>Search Results for "{{ query }}"</h3>
-    {% if sweets %}
-      <div class="row mt-4 justify-content-center">
-        {% for sweet in sweets %}
-          <div class="col-6 col-sm-4 col-md-3 mb-3">
-            <div class="product-placeholder">
-              <p class="mt-2">{{ sweet.name }}</p>
-            </div>
-          </div>
-        {% endfor %}
+
+    <!-- Placeholder -->
+    <div class="row mt-4 justify-content-center">
+      <div class="col-6 col-sm-4 col-md-3 mb-3">
+        <div class="product-placeholder">
+          <p class="mt-2">Product 1</p>
+        </div>
       </div>
-    {% else %}
-      <p>No sweets found.</p>
-    {% endif %}
+      <div class="col-6 col-sm-4 col-md-3 mb-3">
+        <div class="product-placeholder">
+          <p class="mt-2">Product 2</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 mb-3">
+        <div class="product-placeholder">
+          <p class="mt-2">Product 3</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 mb-3">
+        <div class="product-placeholder">
+          <p class="mt-2">Product 4</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -29,6 +41,5 @@
 <div class="cloud-border cloud-bottom"></div>
 <div class="cloud-stripe"></div>
 
-
-
 {% endblock %}
+
