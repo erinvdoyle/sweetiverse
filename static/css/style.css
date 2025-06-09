@@ -872,6 +872,51 @@ footer {
     50% { filter: drop-shadow(0 0 6px #ffccff); }
   }
   
+  /* Cloud heading */
+.cloud-heading-container {
+    position: relative;
+    text-align: center;
+    animation: floatFadeIn 1.6s ease-out forwards, gentleFloat 8s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  @keyframes floatFadeIn {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes gentleFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  
+  
+  .cloud-heading-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto -30px auto;
+  }
+  
+  .cloud-heading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Chewy', cursive;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+  }
 
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
