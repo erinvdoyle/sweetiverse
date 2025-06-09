@@ -16,7 +16,7 @@ class Category(models.Model):
 class Type(models.Model):
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=100)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    categories = models.ManyToManyField(Category, related_name='types')
 
     def __str__(self):
         return self.friendly_name
@@ -27,11 +27,12 @@ class Sweet(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='sweets/', blank=True, null=True)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
     ingredients = models.TextField()
     flavor = models.CharField(max_length=100)
     country_of_origin = CountryField()
-    type = models.ForeignKey(Type, on_delete=models.SET_NULL, null=True)
+    type = models.ForeignKey(Type, on_delete=models.SET_NULL, null=True, blank=True)
+    categories = models.ManyToManyField(Category, related_name='sweets')
     stock_amount = models.PositiveIntegerField()
     in_stock = models.BooleanField(default=True)
     on_sale = models.BooleanField(default=False)
@@ -55,3 +56,14 @@ class Sweet(models.Model):
         self.sale_price = self.calculate_sale_price()
         self.in_stock = self.stock_amount > 0
         super().save(*args, **kwargs)
+
+
+class SweetReview(models.Model):
+    sweet = models.ForeignKey(Sweet, on_delete=models.CASCADE, related_name='reviews')
+    user = models.CharField(max_length=100)
+    rating = models.DecimalField(max_digits=2, decimal_places=1)
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Review for {self.sweet.name} by {self.user}'

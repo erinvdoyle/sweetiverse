@@ -5,7 +5,7 @@
         "fields": {
             "name": "kit-kat",
             "friendly_name": "Kit-Kat",
-            "category": 6
+            "categories": [1, 6]
         }
     },
     {
@@ -14,7 +14,7 @@
         "fields": {
             "name": "bars",
             "friendly_name": "Bars",
-            "category": 6
+            "categories": [6]
         }
     },
     {
@@ -23,7 +23,7 @@
         "fields": {
             "name": "multi-pack",
             "friendly_name": "Multi-pack",
-            "category": 4
+            "categories": [1, 2, 3, 4, 5, 6, 7]
         }
     },
     {
@@ -32,7 +32,7 @@
         "fields": {
             "name": "fruity",
             "friendly_name": "Fruity",
-            "category": 5
+            "categories": [1, 2, 3, 4, 5, 6, 7]
         }
     }
 ]
