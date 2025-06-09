@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from sweets.models import Sweet
-
-# Create your views here.
+from .models import Sweet
 
 
 def all_sweets(request):
+    """ A view to return all sweets """
     sweets = Sweet.objects.all()
-    return render(request, 'sweets/sweets.html', {'sweets': sweets})
+    context = {
+        'sweets': sweets,
+    }
+    return render(request, 'sweets/sweets.html', context)
+
