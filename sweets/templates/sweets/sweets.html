@@ -19,7 +19,9 @@
           <!-- Image Section -->
           <div class="sweet-image-wrapper">
             {% if sweet.image %}
+            <a href="{% url 'sweet_detail' sweet.id %}">
               <img src="{{ sweet.image.url }}" class="sweet-image" alt="{{ sweet.name }}">
+            </a>            
             {% else %}
               <img src="{% static 'images/default.png' %}" class="sweet-image" alt="{{ sweet.name }}">
             {% endif %}
