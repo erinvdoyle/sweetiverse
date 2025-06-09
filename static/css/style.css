@@ -795,7 +795,7 @@ footer {
   }
 
 /* --- SWEETS APP ---------------------------------------------------------------------------------------------------------*/
-.candy-card {
+/* .candy-card {
     background: #fff0fb;
     border: 3px dashed #ff6ec7;
     border-radius: 20px;
@@ -811,8 +811,68 @@ footer {
     max-height: 160px;
     object-fit: contain;
     border-radius: 12px;
+  } */
+
+  /* .page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: -1;
   }
-   
+   */
+/*--- sweets.html ---------------------------------------------------------------------------------------------------------*/  
+  .sweet-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .sweet-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .sweet-image-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+    margin-bottom: 1rem;
+  }
+  
+  .sweet-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    animation: sparkle 5s infinite ease-in-out;
+  }
+  
+  .sweet-info-card {
+    background: #fff8fc;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(245, 105, 180, 0.1);
+    text-align: center;
+  }
+  
+  .sweet-name {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #7a003c;
+  }
+  
+  .sweet-price, .sweet-rating {
+    margin: 0.3rem 0;
+    color: #a10053;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { filter: drop-shadow(0 0 0px #ff66cc); }
+    50% { filter: drop-shadow(0 0 6px #ffccff); }
+  }
+  
+
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */

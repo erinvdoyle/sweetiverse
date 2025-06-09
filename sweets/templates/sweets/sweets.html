@@ -1,29 +1,58 @@
- {% extends "base.html" %}
-   {% load static %}
-   
-   {% block content %}
-   <div class="container mt-5">
-       <div class="row">
-           <div class="col text-center">
-               <h2 class="mb-4">All Sweets</h2>
-               <div class="row justify-content-center">
-                   {% for sweet in sweets %}
-                   <div class="col-6 col-sm-4 col-md-3 mb-4">
-                       <div class="candy-card p-3 rounded text-white text-center">
-                           <img src="{{ sweet.image.url }}" class="img-fluid mb-2" alt="{{ sweet.name }}">
-                           <h5>{{ sweet.name }}</h5>
-                           <p>£{{ sweet.price }}</p>
-                           {% if sweet.on_sale %}
-                             <span class="badge bg-danger">Sale</span>
-                           {% endif %}
-                       </div>
-                   </div>
-                   {% empty %}
-                   <p>No sweets found.</p>
-                   {% endfor %}
-               </div>
-           </div>
-       </div>
-   </div>
-   {% endblock %}
-   
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="page-overlay"></div>
+
+<div class="container-fluid px-4 py-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center mb-4 logo-font">Our Sweets</h2>
+      <hr class="w-50 mx-auto mb-5">
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    {% for sweet in sweets %}
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5">
+        <div class="sweet-card">
+
+          <!-- Image Section -->
+          <div class="sweet-image-wrapper">
+            {% if sweet.image %}
+              <img src="{{ sweet.image.url }}" class="sweet-image" alt="{{ sweet.name }}">
+            {% else %}
+              <img src="{% static 'images/default.png' %}" class="sweet-image" alt="{{ sweet.name }}">
+            {% endif %}
+          </div>
+
+          <!-- Info Section -->
+          <div class="sweet-info-card">
+            <p class="sweet-name">{{ sweet.name }}</p>
+            <p class="sweet-price">£{{ sweet.price }}</p>
+            {% if sweet.rating %}
+              <p class="sweet-rating">⭐ {{ sweet.rating }}</p>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Responsive Horizontal Rule -->
+      {% if forloop.counter|divisibleby:1 %}
+        <div class="w-100 d-block d-sm-none mb-4"><hr></div>
+      {% endif %}
+      {% if forloop.counter|divisibleby:2 %}
+        <div class="w-100 d-none d-sm-block d-md-none mb-4"><hr></div>
+      {% endif %}
+      {% if forloop.counter|divisibleby:3 %}
+        <div class="w-100 d-none d-md-block d-lg-none mb-4"><hr></div>
+      {% endif %}
+      {% if forloop.counter|divisibleby:4 %}
+        <div class="w-100 d-none d-lg-block mb-4"><hr></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
