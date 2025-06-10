@@ -61,31 +61,36 @@
     </div>
     
     <!-- Main Header (Search + Links) -->
-    <div class="main-header border-bottom pt-2 pb-1">
-      <div class="container text-center">
-        <!-- Search bar row -->
-        <div class="row mb-2">
-          <div class="col-12 col-md-8 offset-md-2">
-            <form method="GET" action="{% url 'search_results' %}" class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search for sweets..." required>
-              <button type="submit" class="btn btn-outline-primary">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-          </div>
+<div class="main-header border-bottom pt-2 pb-1">
+    <div class="container text-center">
+  
+      <!-- Search bar row -->
+      <div class="row mb-2">
+        <div class="col-12 col-md-8 offset-md-2">
+          <form method="GET" action="{% url 'search_results' %}" class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Search for sweets..." required>
+            <button type="submit" class="btn btn-outline-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
         </div>
-
-        <!-- Link row -->
-        <div class="row">
-          <div class="col-12 d-flex flex-wrap justify-content-center gap-2">
-            <a href="{% url 'sweets' %}" class="text-decoration-none text-dark candy-stripe">All Sweets</a>
-            <a href="#" class="text-decoration-none text-dark candy-stripe4">Japanese Sweets</a>
-            <a href="#" class="text-decoration-none text-dark candy-stripe2">Mexican Sweets</a>
-            <a href="#" class="text-decoration-none text-dark candy-stripe5">More Sweets by Nation</a>
-            <a href="#" class="text-decoration-none text-dark candy-stripe3">SWEETi Selector</a>
-            <a href="#" class="text-decoration-none text-dark candy-stripe4">Pick N Mix</a>
-            <a href="#" class="text-decoration-none text-dark candy-stripe">FAQ</a>
-          </div>
+      </div>
+  
+      <!-- Link row -->
+      <div class="row">
+        <div class="col-12 d-flex flex-wrap justify-content-center gap-2">
+          <a href="{% url 'sweets' %}" class="text-decoration-none text-dark candy-stripe">All Sweets</a>
+          <a href="#" class="text-decoration-none text-dark candy-stripe4">Japanese Sweets</a>
+          <a href="#" class="text-decoration-none text-dark candy-stripe2">Korean Sweets</a>
+          <a href="#" class="text-decoration-none text-dark candy-stripe5">More Sweets by Nation</a>
+          <a href="#" class="text-decoration-none text-dark candy-stripe3">SWEETi Selector</a>
+          <a href="#" class="text-decoration-none text-dark candy-stripe4">Pick N Mix</a>
+          <a href="#" class="text-decoration-none text-dark candy-stripe">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
         </div>
       </div>
     </div>

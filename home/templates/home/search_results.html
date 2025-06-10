@@ -7,35 +7,51 @@
 
 <!-- Search Results Container -->
 <div class="cloud-search-wrapper">
-  <div class="cloud-search-content text-center">
+  <div class="cloud-search-content container-narrow text-center">
 
-    <h3> Search Results for "{{ query }}" </h3>
+    {% if search_term %}
+      <h3>Search Results for "{{ search_term }}"</h3>
+    {% else %}
+      <h3>All Our Sweets</h3>
+    {% endif %}
 
     {% include "includes/product_nav.html" %}
 
-    <!-- Placeholder -->
-    <div class="row mt-4 justify-content-center">
-      <div class="col-6 col-sm-4 col-md-3 mb-3">
-        <div class="product-placeholder">
-          <p class="mt-2">Product 1</p>
-        </div>
+    {% if sweets %}
+      <div class="row mt-4 justify-content-center">
+        {% for sweet in sweets %}
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+            <div class="sweet-card-wrapper w-100">
+              <!-- Image Card -->
+              <div class="search-sweet-image-card">
+                <img src="{{ sweet.image.url }}" alt="{{ sweet.name }}" class="img-fluid">
+              </div>
+
+              <!-- Text Card -->
+              <div class="sweet-text-card">
+                <h5 class="mb-1">{{ sweet.name }}</h5>
+                <p class="mb-1">Flavor: {{ sweet.flavor }}</p>
+                <small class="text-muted">Origin: {{ sweet.country_of_origin.name }}</small>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
       </div>
-      <div class="col-6 col-sm-4 col-md-3 mb-3">
-        <div class="product-placeholder">
-          <p class="mt-2">Product 2</p>
-        </div>
+
+      <!-- Pagination Controls -->
+      <div class="pagination justify-content-center">
+        {% if sweets.has_previous %}
+          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.previous_page_number }}">← Prev</a>
+        {% endif %}
+        {% if sweets.has_next %}
+          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.next_page_number }}">Next →</a>
+        {% endif %}
       </div>
-      <div class="col-6 col-sm-4 col-md-3 mb-3">
-        <div class="product-placeholder">
-          <p class="mt-2">Product 3</p>
-        </div>
+    {% else %}
+      <div class="text-center mt-5">
+        <h4>No results found for "{{ search_term }}"</h4>
       </div>
-      <div class="col-6 col-sm-4 col-md-3 mb-3">
-        <div class="product-placeholder">
-          <p class="mt-2">Product 4</p>
-        </div>
-      </div>
-    </div>
+    {% endif %}
 
   </div>
 </div>
@@ -45,4 +61,3 @@
 <div class="cloud-stripe"></div>
 
 {% endblock %}
-

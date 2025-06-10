@@ -633,12 +633,13 @@ footer {
   font-family: 'Chewy', cursive;
   font-size: 2.2rem;
   margin-bottom: 1rem;
+  margin-top: -1rem;
   background: repeating-linear-gradient(
     45deg,
     #ffc0e1,
     #ffc0e1 10px,
-    #f998c1 10px,
-    #f998c1 20px
+    #f4cfe9 10px,
+    #f4cfe9 20px
   );
   border-radius: 50px;
   color: #7a003c;
@@ -647,21 +648,72 @@ footer {
   display: inline-block;
 }
 
-  
-  
   .cloud-search-wrapper p {
     font-size: 1.1rem;
     color: #f9f9f9;
   }
   
-  .product-placeholder {
+  /* .product-placeholder {
     background-color: #ffe6f1;
     border-radius: 16px;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+  } */
+  .search-sweet-image-card {
+    background-color: #fceaff;
+    border-radius: 16px;
+    padding: 0.75rem;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .search-sweet-image-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
   }
 
-
+  .container-narrow {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .sweet-card-wrapper .sweet-text-card {
+    background-color: #fceaff !important;
+    border-radius: 16px;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+  
+  
+  .sweet-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .pagination .candy-pill {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.9rem;
+  }
 /*--- product_nav.html ---------------------------------------------------------------------------------------------------------------*/
 .candy-sort-nav {
     flex-wrap: wrap;
@@ -709,7 +761,7 @@ footer {
     width: 20px;
     height: 20px;
     margin-right: 6px;
-    filter: drop-shadow(0 0 2px rgba(255, 182, 193, 0.6));
+    filter: invert(1) brightness(2) drop-shadow(0 0 2px rgba(104, 11, 25, 0.6));    
   }
   
   /* Candy Dropdown Menu */
@@ -760,6 +812,31 @@ footer {
     box-shadow: 0 3px 8px rgba(255, 182, 193, 0.5);
   }
 
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+  
+  .pagination a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(145deg, #ff7fcf, #f78bb8);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .pagination a:hover {
+    background: linear-gradient(145deg, #ff93d1, #ffb3e6);
+    text-decoration: none;
+  }
+  
 /*--- base.html promo label 1 ---------------------------------------------------------------------------------------------------------------------*/
 .promo-banner-wrapper {
     background-color: #a76bca;
@@ -992,6 +1069,129 @@ footer {
     to { opacity: 1; transform: translateY(0); }
   }
 
+/*--- Sweet Review Bubble ---------------------------------------------------------------------------------------------------------*/
+/* .sweeti-review-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6rem;
+    margin-bottom: -10rem;
+    padding: 0;
+  }
+  
+  .sweeti-review-bubble {
+    background: url('/static/images/speech-bubble.png') no-repeat center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    width: 100%;
+    max-width: 800px;
+  
+    padding: -4rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    color: #5c3a82;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .sweeti-review-bubble {
+      padding: 3rem 1.5rem;
+      background-size: 100%;
+      min-height: 600px;
+    }
+  } */
+ 
+  .sweeti-review-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: -6rem;
+    margin-bottom: -10rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Recommendations Panel */
+  .sweeti-recommendations {
+    flex: 1;
+    max-width: 400px;
+    margin-top: 10rem;
+    margin-left: 6rem;
+    text-align: center;
+  }
+  
+  .recommendation-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .mini-product-card {
+    background: #fff6ff;
+    border: 2px solid #ffc9f3;
+    border-radius: 16px;
+    padding: 0.75rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .mini-product-img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  
+  .mini-product-name {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #a76bca;
+    font-size: 1rem;
+  }
+  
+  /* Review Bubble Right Side */
+  .sweeti-review-bubble {
+    flex: 2;
+    background: url('/static/images/speech-bubble.png') no-repeat center center;
+    background-size: contain;
+    min-height: 800px;
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #5c3a82;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+  }
+  
+  @media (max-width: 992px) {
+    .sweeti-review-container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  
+    .sweeti-review-bubble,
+    .sweeti-recommendations {
+      max-width: 100%;
+    }
+  
+    .sweeti-review-bubble {
+      background-size: 90%;
+      min-height: 600px;
+    }
+  }
+  
+  
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */
