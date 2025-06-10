@@ -1,4 +1,8 @@
 /*--- Base Structure --------------------------------------------------------------------------------------------------------------------------*/
+html {
+    scroll-behavior: smooth;
+  }
+  
 body,
 html {
   margin: 0;
@@ -9,7 +13,7 @@ html {
   background-color: transparent;
 }
 
-/* Vanta Background */
+/* Vanta.js Background */
 #vanta-bg {
   position: fixed;
   width: 100%;

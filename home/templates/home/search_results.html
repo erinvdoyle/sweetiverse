@@ -45,6 +45,10 @@
         {% if sweets.has_previous %}
           <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if current_category %}category={{ current_category }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.previous_page_number }}">← Prev</a>
         {% endif %}
+
+        <!-- New Search Button -->
+  <a href="#search-bar" class="candy-pill">New Search</a>
+
         {% if sweets.has_next %}
           <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if current_category %}category={{ current_category }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.next_page_number }}">Next →</a>
         {% endif %}
