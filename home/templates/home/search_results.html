@@ -11,6 +11,8 @@
 
     {% if search_term %}
       <h3>Search Results for "{{ search_term }}"</h3>
+    {% elif current_category %}
+      <h3>{{ current_category|capfirst }} Sweets</h3>
     {% else %}
       <h3>All Our Sweets</h3>
     {% endif %}
@@ -41,12 +43,12 @@
       <!-- Pagination Controls -->
       <div class="pagination justify-content-center">
         {% if sweets.has_previous %}
-          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.previous_page_number }}">← Prev</a>
+          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if current_category %}category={{ current_category }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.previous_page_number }}">← Prev</a>
         {% endif %}
         {% if sweets.has_next %}
-          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.next_page_number }}">Next →</a>
+          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if current_category %}category={{ current_category }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.next_page_number }}">Next →</a>
         {% endif %}
-      </div>
+      </div>      
     {% else %}
       <div class="text-center mt-5">
         <h4>No results found for "{{ search_term }}"</h4>
