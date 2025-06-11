@@ -1,30 +1,40 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from sweets.models import Sweet
 
 def bag_contents(request):
     bag_items = []
     total = 0
-    product_count = 0
+    sweet_count = 0
+    bag = request.session.get('bag', {})
 
-    free_delivery_threshold = settings.FREE_DELIVERY_THRESHOLD
-    standard_delivery_percentage = settings.STANDARD_DELIVERY_PERCENTAGE
+    for item_id, quantity in bag.items():
+        sweet = get_object_or_404(Sweet, pk=item_id)
+        total += quantity * sweet.price
+        sweet_count += quantity
+        bag_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'sweet': sweet,
+        })
 
-    if total < free_delivery_threshold:
-        delivery = total * Decimal(standard_delivery_percentage / 100)
-        free_delivery_delta = free_delivery_threshold - total
+    delivery = 0
+    if total < settings.FREE_DELIVERY_THRESHOLD:
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
-        delivery = Decimal('0.00')
-        free_delivery_delta = Decimal('0.00')
+        free_delivery_delta = 0
 
     grand_total = total + delivery
 
     context = {
         'bag_items': bag_items,
         'total': total,
-        'product_count': product_count,
+        'sweet_count': sweet_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': free_delivery_threshold,
+        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
 

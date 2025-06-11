@@ -1343,8 +1343,46 @@ footer {
       min-height: 600px;
     }
   }
+ 
+  .sweeti-quantity-form {
+    max-width: 200px;
+    align-self: center;
+  }
   
+  .sweeti-qty-btn {
+    background: #e3c6f3;
+    border: none;
+    color: #6a2a8f;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
   
+  .sweeti-qty-btn:hover {
+    background: #d6b0f0;
+  }
+  
+  .sweeti-qty-input {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .sweeti-add-btn {
+    background: linear-gradient(145deg, #b88ce0, #e0b3ff);
+    border: none;
+    font-weight: 600;
+    border-radius: 2rem;
+  }
+
+  .sweet-info {
+    position: relative;
+    z-index: 10;
+  }
+  
+    
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */

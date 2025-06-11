@@ -1,12 +1,51 @@
 {% extends "base.html" %}
 {% load static %}
+{% load maths_filters %}
+
 {% block content %}
 <div class="sweet-detail-bg">
   <div class="container py-5">
-    <h2 class="logo-font text-center">Your SWEETiS</h2>
+    <h2 class="logo-font text-center">🛍️ Your SWEETi Bag</h2>
     <hr>
+
     {% if bag_items %}
-      <!-- Table to display bag contents -->
+      <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle bg-light">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">Sweet</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Price</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in bag_items %}
+              <tr>
+                <td>
+                  {% if item.sweet.image %}
+                    <img src="{{ item.sweet.image.url }}" alt="{{ item.sweet.name }}" style="max-height: 80px;">
+                  {% else %}
+                    <img src="{% static 'images/default.png' %}" alt="No image" style="max-height: 80px;">
+                  {% endif %}
+                  <p class="mt-2">{{ item.sweet.name }}</p>
+                </td>
+                <td>{{ item.quantity }}</td>
+                <td>£{{ item.sweet.price|floatformat:2 }}</td>
+                <td>£{{ item.sweet.price|mul:item.quantity|floatformat:2 }}</td>
+              </tr>
+            {% endfor %}
+            <tr class="table-secondary">
+              <td colspan="3" class="text-end"><strong>Delivery:</strong></td>
+              <td>£{{ delivery|floatformat:2 }}</td>
+            </tr>
+            <tr class="table-secondary">
+              <td colspan="3" class="text-end"><strong>Total:</strong></td>
+              <td><strong>£{{ grand_total|floatformat:2 }}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     {% else %}
       <p class="text-center">Your Sweeti Bag is empty!</p>
       <div class="text-center">
