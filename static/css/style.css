@@ -917,7 +917,38 @@ footer {
     font-size: 0.85rem;
     padding: 0.3rem 0.8rem;
   }
+
+  .btt-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffefff;
+    border: 2px solid #ff88cc;
+    border-radius: 30px;
+    padding: 10px 15px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
   
+  .btt-button:hover {
+    background-color: #ffccee;
+    transform: scale(1.05);
+  }
+  
+  .btt-link {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .active-pill {
+    background-color: #eac4f9 !important;
+    border-color: #d08fe7;
+    font-weight: bold;
+    color: #5e2b97 !important;
+    box-shadow: 0 0 8px rgba(208, 143, 231, 0.4);
+  }
+   
 /*--- base.html promo label 1 ---------------------------------------------------------------------------------------------------------------------*/
 .promo-banner-wrapper {
     background-color: #a76bca;
@@ -1076,6 +1107,22 @@ footer {
     margin: 0;
   }
 
+  .candy-pill.candy-pill-purple {
+    background: linear-gradient(145deg, #ecc9f6, #d38bf7);
+    color: white;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 3px 6px rgba(169, 108, 204, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .candy-pill.candy-pill-purple:hover {
+    background: linear-gradient(145deg, #b88ce0, #e0b3ff);
+  }
+  
 /*--- Sweet_detail.html -----------------------------------------------------------------------------------------------------*/
 .sweet-detail-bg {
     background: url('/static/images/starry-bg-dk-purple.png') no-repeat center center fixed;

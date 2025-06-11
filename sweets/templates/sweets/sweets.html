@@ -9,6 +9,16 @@
   <h2 class="cloud-heading-text logo-font">Our Sweets</h2>
 </div>
 
+<div class="container text-center my-4">
+  <div class="d-flex flex-wrap justify-content-center gap-3">
+    <a href="{% url 'sweets' %}" class="candy-pill candy-pill-purple wiggle">All Sweets</a>
+    <a href="{% url 'sweets' %}?category=korean" class="candy-pill candy-pill-purple wiggle">Korean Sweets</a>
+    <a href="{% url 'sweets' %}?category=japanese" class="candy-pill candy-pill-purple wiggle">Japanese Sweets</a>
+    <a href="{% url 'sweets' %}?category=korean,japanese" class="candy-pill candy-pill-purple wiggle">Sweets by Nation</a>
+    <a href="{% url 'search_results' %}" class="candy-pill candy-pill-purple wiggle">Search Sweets</a>
+  </div>
+</div>
+
 <!-- Products Section -->
 <div class="container-fluid px-4 py-5">
   <div class="row justify-content-center" style="max-width: 90%; margin: 0 auto;">
@@ -41,6 +51,22 @@
     {% endfor %}
   </div>
 </div>
+
+
+  <!-- Back to Top Button -->
+  <a href="#" class="btt-button btt-link text-decoration-none">
+    <i class="fas fa-arrow-up"></i> Back to Top
+  </a>
+  
+  </div>
+   
+  <script>
+    $('.btt-link').click(function(e){
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, 500);
+    });
+  </script>
+
 
 {% endblock %}
 

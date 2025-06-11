@@ -87,11 +87,25 @@
     {% endif %}
 
   </div>
+  <!-- Back to Top Button -->
+<a href="#" class="btt-button btt-link text-decoration-none">
+  <i class="fas fa-arrow-up"></i> Back to Top
+</a>
+
 </div>
 
 <!-- Bottom Cloud Border and Stripe -->
 <div class="cloud-border cloud-bottom"></div>
 <div class="cloud-stripe"></div>
+
+
+<script>
+  $('.btt-link').click(function(e){
+    e.preventDefault();
+    $('html, body').animate({scrollTop: 0}, 500);
+  });
+</script>
+
 
 {% endblock %}
 
