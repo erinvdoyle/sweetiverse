@@ -75,19 +75,35 @@ def sweet_detail(request, sweet_id):
 def sweets_list(request):
     """View to show all sweets"""
     sweets = Sweet.objects.all()
+    sort = request.GET.get('sort')
     category_param = request.GET.get('category')
-    current_categories = []
 
+    current_categories = []
     if category_param:
         category_names = [name.strip() for name in category_param.split(',') if name.strip()]
         sweets = sweets.filter(categories__name__in=category_names).distinct()
         current_categories = Category.objects.filter(name__in=category_names)
+    else:
+        category_names = []
+
+    sort_options = {
+        'price': 'price',
+        'rating': 'rating',
+        'type': 'type__friendly_name',
+    }
+    if sort:
+        sort_field = sort_options.get(sort)
+        if sort_field:
+            sweets = sweets.order_by(sort_field)
 
     categories = Category.objects.all()
 
     context = {
         'sweets': sweets,
+        'sort': sort,
         'categories': categories,
         'current_categories': current_categories,
+        'category_names': ','.join(category_names),
     }
+
     return render(request, 'sweets/sweets.html', context)

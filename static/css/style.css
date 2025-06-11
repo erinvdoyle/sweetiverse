@@ -1122,6 +1122,31 @@ footer {
   .candy-pill.candy-pill-purple:hover {
     background: linear-gradient(145deg, #b88ce0, #e0b3ff);
   }
+
+  .candy-breadcrumb .breadcrumb {
+    background: transparent;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .breadcrumb-link:hover {
+    color: #d08bff;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "🍬";
+    margin: 0 0.5rem;
+  }
+  
   
 /*--- Sweet_detail.html -----------------------------------------------------------------------------------------------------*/
 .sweet-detail-bg {
