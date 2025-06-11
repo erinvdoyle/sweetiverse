@@ -1,12 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Sweet, Category
 from django.db.models import Q
 from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-
-from django.db.models import Q
-from django.contrib import messages
-from django.shortcuts import redirect, reverse
+from urllib.parse import urlencode
 
 
 def search_results(request):
@@ -14,19 +11,21 @@ def search_results(request):
     sweets = Sweet.objects.all()
     query = request.GET.get('q')
     sort = request.GET.get('sort')
-    category_filter = request.GET.get('category')
+    category_param = request.GET.get('category')
 
-    if query is not None:
+    category_names = []
+    current_categories = []
+
+    if query:
         if not query.strip():
             messages.error(request, "Oops! You forgot to type something")
-            return redirect('sweets')
-        sweets = sweets.filter(
-            Q(name__icontains=query) |
-            Q(description__icontains=query)
-        )
+            return redirect(reverse('sweets'))
+        sweets = sweets.filter(Q(name__icontains=query) | Q(description__icontains=query))
 
-    if category_filter:
-        sweets = sweets.filter(categories__name=category_filter)
+    if category_param:
+        category_names = [name.strip() for name in category_param.split(',') if name.strip()]
+        sweets = sweets.filter(categories__name__in=category_names).distinct()
+        current_categories = Category.objects.filter(name__in=category_names)
 
     sort_options = {
         'name': 'name',
@@ -49,11 +48,17 @@ def search_results(request):
 
     categories = Category.objects.all()
 
+    query_params = request.GET.copy()
+    query_params.pop('page', None)
+    base_query = query_params.urlencode()
+    
     context = {
         'sweets': paged_sweets,
         'search_term': query,
-        'current_category': category_filter,
         'categories': categories,
+        'current_categories': current_categories,
+        'category_names': ','.join(category_names),
+        'base_query': base_query,
     }
 
     return render(request, 'home/search_results.html', context)

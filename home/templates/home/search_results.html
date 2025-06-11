@@ -9,27 +9,53 @@
 <div class="cloud-search-wrapper">
   <div class="cloud-search-content container-narrow text-center">
 
+    <!-- Header -->
     {% if search_term %}
       <h3>Search Results for "{{ search_term }}"</h3>
-    {% elif current_category %}
-      <h3>{{ current_category|capfirst }} Sweets</h3>
+    {% elif current_categories %}
+      <h3>{{ current_categories.0.friendly_name }}{% if current_categories|length > 1 %}, ...{% endif %} Sweets</h3>
     {% else %}
       <h3>All Our Sweets</h3>
     {% endif %}
 
+    <!-- Category Badges with Remove Links -->
+    {% if current_categories %}
+      <div class="category-badges mt-3 mb-4 d-flex flex-wrap justify-content-center gap-2">
+        {% for cat in current_categories %}
+          {% with remaining=category_names|cut:cat.name|cut:',,' %}
+            <a href="?{% if search_term %}q={{ search_term }}&{% endif %}
+                    {% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}
+                    {% if remaining %}category={{ remaining }}{% endif %}"
+              class="candy-badge d-inline-flex align-items-center">
+              🍬 {{ cat.friendly_name }} <span class="badge-close ms-1">×</span>
+            </a>
+          {% endwith %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Sort + Filter Pills -->
     {% include "includes/product_nav.html" %}
 
+    <!-- Info Row -->
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mt-3 mb-3">
+      <span class="candy-pill small-pill">{{ sweets.paginator.count }} sweet{{ sweets.paginator.count|pluralize }}</span>
+      {% if request.GET.sort %}
+        <span class="candy-pill small-pill">Sorted by: {{ request.GET.sort|capfirst }}</span>
+      {% endif %}
+    </div>
+
+    <!-- Sweet Cards -->
     {% if sweets %}
       <div class="row mt-4 justify-content-center">
         {% for sweet in sweets %}
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
             <div class="sweet-card-wrapper w-100">
-              <!-- Image Card -->
+              <!-- Image -->
               <div class="search-sweet-image-card">
                 <img src="{{ sweet.image.url }}" alt="{{ sweet.name }}" class="img-fluid">
               </div>
-
-              <!-- Text Card -->
+              <!-- Text -->
               <div class="sweet-text-card">
                 <h5 class="mb-1">{{ sweet.name }}</h5>
                 <p class="mb-1">Flavor: {{ sweet.flavor }}</p>
@@ -40,22 +66,23 @@
         {% endfor %}
       </div>
 
-      <!-- Pagination Controls -->
-      <div class="pagination justify-content-center">
-        {% if sweets.has_previous %}
-          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if current_category %}category={{ current_category }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.previous_page_number }}">← Prev</a>
-        {% endif %}
+<!-- Pagination -->
+<div class="pagination justify-content-center">
+  {% if sweets.has_previous %}
+    <a class="candy-pill" href="?{{ base_query }}&page={{ sweets.previous_page_number }}">← Prev</a>
+  {% endif %}
 
-        <!-- New Search Button -->
   <a href="#search-bar" class="candy-pill">New Search</a>
 
-        {% if sweets.has_next %}
-          <a class="candy-pill" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if current_category %}category={{ current_category }}&{% endif %}{% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}page={{ sweets.next_page_number }}">Next →</a>
-        {% endif %}
-      </div>      
+  {% if sweets.has_next %}
+    <a class="candy-pill" href="?{{ base_query }}&page={{ sweets.next_page_number }}">Next →</a>
+  {% endif %}
+</div>
+
+
     {% else %}
       <div class="text-center mt-5">
-        <h4>No results found for "{{ search_term }}"</h4>
+        <h4>No results found{% if search_term %} for "{{ search_term }}"{% endif %}</h4>
       </div>
     {% endif %}
 
@@ -67,3 +94,4 @@
 <div class="cloud-stripe"></div>
 
 {% endblock %}
+

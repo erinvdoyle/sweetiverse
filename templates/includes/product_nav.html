@@ -1,3 +1,95 @@
+<!-- <div class="candy-sort-nav d-flex justify-content-end pe-3 pt-2 flex-wrap">
+  <div class="candy-pill sort-label me-2">Sort by:</div> -->
+
+  <!-- Mobile Sort Dropdown -->
+  <!-- <div class="dropdown d-lg-none me-2">
+    <button class="btn candy-pill dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      Sort
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end candy-dropdown" aria-labelledby="sortDropdown">
+      <li>
+        <a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.category %}category={{ request.GET.category }}&{% endif %}sort=price">
+          <img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon me-2">Price
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.category %}category={{ request.GET.category }}&{% endif %}sort=type">
+          <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2">Category
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.category %}category={{ request.GET.category }}&{% endif %}sort=rating">
+          <img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon me-2">Rating
+        </a>
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- Mobile Category Filter Dropdown -->
+  <!-- <div class="dropdown d-lg-none me-2">
+    <button class="btn candy-pill dropdown-toggle d-flex align-items-center" type="button" id="categoryDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2" />
+      {% if current_categories %}
+        {{ current_categories|join:", "|cut:"["|cut:"]"|cut:"<Category:"|cut:">" }}
+      {% else %}
+        Category
+      {% endif %}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end candy-dropdown" aria-labelledby="categoryDropdownMobile">
+      {% for cat in categories %}
+        <li>
+          <a class="dropdown-item" href="?category={{ cat.name }}{% if search_term %}&q={{ search_term }}{% endif %}">
+            {{ cat.friendly_name }}
+          </a>
+        </li>
+      {% endfor %}
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <a class="dropdown-item text-danger" href="?{% if search_term %}q={{ search_term }}{% endif %}">
+          Clear Category Filter
+        </a>
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- Desktop Pills -->
+  <!-- <div class="d-none d-lg-flex gap-2">
+    <a href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.category %}category={{ request.GET.category }}&{% endif %}sort=price" class="candy-pill wiggle">
+      <img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon" /> Price
+    </a>
+    <a href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if request.GET.category %}category={{ request.GET.category }}&{% endif %}sort=rating" class="candy-pill wiggle">
+      <img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon" /> Rating
+    </a> -->
+
+    <!-- Category Dropdown -->
+    <!-- <div class="dropdown">
+      <button class="btn candy-pill dropdown-toggle d-flex align-items-center" type="button" id="categoryDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2" />
+        {% if current_categories %}
+          {{ current_categories.0.friendly_name }}{% if current_categories|length > 1 %}, ...{% endif %}
+        {% else %}
+          Category
+        {% endif %}
+      </button>
+      <ul class="dropdown-menu candy-dropdown" aria-labelledby="categoryDropdownDesktop">
+        {% for cat in categories %}
+          <li>
+            <a class="dropdown-item" href="?category={{ cat.name }}{% if search_term %}&q={{ search_term }}{% endif %}">
+              {{ cat.friendly_name }}
+            </a>
+          </li>
+        {% endfor %}
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <a class="dropdown-item text-danger" href="?{% if search_term %}q={{ search_term }}{% endif %}">
+            Clear Category Filter
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
 <div class="candy-sort-nav d-flex justify-content-end pe-3 pt-2 flex-wrap">
   <div class="candy-pill sort-label me-2">Sort by:</div>
 
@@ -7,21 +99,9 @@
       Sort
     </button>
     <ul class="dropdown-menu dropdown-menu-end candy-dropdown" aria-labelledby="sortDropdown">
-      <li>
-        <a class="dropdown-item" href="{% url 'search_results' %}?{% if search_term %}q={{ search_term }}&{% endif %}sort=price">
-          <img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon me-2">Price
-        </a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="{% url 'search_results' %}?{% if search_term %}q={{ search_term }}&{% endif %}sort=type">
-          <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2">Category
-        </a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="{% url 'search_results' %}?{% if search_term %}q={{ search_term }}&{% endif %}sort=rating">
-          <img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon me-2">Rating
-        </a>
-      </li>
+      <li><a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if category_names %}category={{ category_names }}&{% endif %}sort=price"><img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon me-2">Price</a></li>
+      <li><a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if category_names %}category={{ category_names }}&{% endif %}sort=type"><img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2">Category</a></li>
+      <li><a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if category_names %}category={{ category_names }}&{% endif %}sort=rating"><img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon me-2">Rating</a></li>
     </ul>
   </div>
 
@@ -29,62 +109,41 @@
   <div class="dropdown d-lg-none me-2">
     <button class="btn candy-pill dropdown-toggle d-flex align-items-center" type="button" id="categoryDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false">
       <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2" />
-      {% if current_category %}
-        {{ current_category|capfirst }}
+      {% if current_categories %}
+        {{ current_categories.0.friendly_name }}{% if current_categories|length > 1 %}, ...{% endif %}
       {% else %}
         Category
       {% endif %}
     </button>
     <ul class="dropdown-menu dropdown-menu-end candy-dropdown" aria-labelledby="categoryDropdownMobile">
       {% for cat in categories %}
-      <li>
-        <a class="dropdown-item" href="{% url 'search_results' %}?category={{ cat.name }}{% if search_term %}&q={{ search_term }}{% endif %}">
-          {{ cat.friendly_name }}
-        </a>
-      </li>
+        <li><a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}category={{ category_names }},{{ cat.name }}">{{ cat.friendly_name }}</a></li>
       {% endfor %}
       <li><hr class="dropdown-divider"></li>
-      <li>
-        <a class="dropdown-item text-danger" href="{% url 'search_results' %}{% if search_term %}?q={{ search_term }}{% endif %}">
-          Clear Category Filter
-        </a>
-      </li>
+      <li><a class="dropdown-item text-danger" href="?{% if search_term %}q={{ search_term }}{% endif %}">Clear Category Filter</a></li>
     </ul>
   </div>
 
   <!-- Desktop Pills -->
   <div class="d-none d-lg-flex gap-2">
-    <a href="{% url 'search_results' %}?sort=price" class="candy-pill wiggle">
-      <img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon" /> Price
-    </a>
-    <a href="{% url 'search_results' %}?sort=rating" class="candy-pill wiggle">
-      <img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon" /> Rating
-    </a>
+    <a href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if category_names %}category={{ category_names }}&{% endif %}sort=price" class="candy-pill wiggle"><img src="https://img.icons8.com/ios/50/astronaut.png" class="pill-icon" /> Price</a>
+    <a href="?{% if search_term %}q={{ search_term }}&{% endif %}{% if category_names %}category={{ category_names }}&{% endif %}sort=rating" class="candy-pill wiggle"><img src="https://img.icons8.com/ios/50/rocket--v1.png" class="pill-icon" /> Rating</a>
 
-    <!-- Category Dropdown -->
     <div class="dropdown">
       <button class="btn candy-pill dropdown-toggle d-flex align-items-center" type="button" id="categoryDropdownDesktop" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="https://img.icons8.com/ios/50/planet.png" class="pill-icon me-2" />
-        {% if current_category %}
-          {{ current_category|capfirst }}
+        {% if current_categories %}
+          {{ current_categories.0.friendly_name }}{% if current_categories|length > 1 %}, ...{% endif %}
         {% else %}
           Category
         {% endif %}
       </button>
       <ul class="dropdown-menu candy-dropdown" aria-labelledby="categoryDropdownDesktop">
         {% for cat in categories %}
-        <li>
-          <a class="dropdown-item" href="{% url 'search_results' %}?category={{ cat.name }}{% if search_term %}&q={{ search_term }}{% endif %}">
-            {{ cat.friendly_name }}
-          </a>
-        </li>
+          <li><a class="dropdown-item" href="?{% if search_term %}q={{ search_term }}&{% endif %}category={{ category_names }},{{ cat.name }}">{{ cat.friendly_name }}</a></li>
         {% endfor %}
         <li><hr class="dropdown-divider"></li>
-        <li>
-          <a class="dropdown-item text-danger" href="{% url 'search_results' %}{% if search_term %}?q={{ search_term }}{% endif %}">
-            Clear Category Filter
-          </a>
-        </li>
+        <li><a class="dropdown-item text-danger" href="?{% if search_term %}q={{ search_term }}{% endif %}">Clear Category Filter</a></li>
       </ul>
     </div>
   </div>
