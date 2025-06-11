@@ -26,6 +26,7 @@ from sweets import views as sweets_views
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
+    path('bag/', include('bag.urls')),
     path('', include('home.urls')),
     path('sweets/', include('sweets.urls')),
     path('search/', sweets_views.search_results, name='search_results'),

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'home',
     'sweets',
     'django_countries',
+    'bag',
 ]
 
 SITE_ID = 1
@@ -82,12 +83,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'sweetiverse.wsgi.application'
+
+FREE_DELIVERY_THRESHOLD = 25
+STANDARD_DELIVERY_PERCENTAGE = 10
 
 
 # Database

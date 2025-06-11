@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="sweet-detail-bg">
+  <div class="container py-5">
+    <h2 class="logo-font text-center">Your SWEETiS</h2>
+    <hr>
+    {% if bag_items %}
+      <!-- Table to display bag contents -->
+    {% else %}
+      <p class="text-center">Your Sweeti Bag is empty!</p>
+      <div class="text-center">
+        <a href="{% url 'sweets' %}" class="btn btn-candy">Explore Sweetis</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
