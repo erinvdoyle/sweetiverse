@@ -4,15 +4,18 @@ from decimal import Decimal
 from django.conf import settings
 
 
+from django.shortcuts import get_object_or_404
+from sweets.models import Sweet
+from decimal import Decimal
+
 def bag_contents(request):
     bag_items = []
     total = Decimal('0.00')
     sweeti_count = 0
     lowest_price = None
     discount = Decimal('0.00')
-    
+
     bag = request.session.get('bag', {})
-    applied = request.session.get('sweetistravaganza_applied', False)
 
     for item_id, item_data in bag.items():
         sweet = get_object_or_404(Sweet, pk=item_id)
@@ -32,15 +35,12 @@ def bag_contents(request):
                 'sweet': sweet,
             })
 
-    sweetistravaganza_needed = max(0, 4 - sweeti_count)
-
-    if sweeti_count >= 4 and not applied:
+    sweetistravaganza_applied = False
+    if sweeti_count >= 4:
         if lowest_price:
             discount = lowest_price
             total -= discount
-            request.session['sweetistravaganza_applied'] = True
-    elif sweeti_count < 4:
-        request.session['sweetistravaganza_applied'] = False
+        sweetistravaganza_applied = True
 
     delivery = Decimal('3.95') if total < 25 else Decimal('0.00')
     grand_total = total + delivery
@@ -52,6 +52,6 @@ def bag_contents(request):
         'delivery': delivery,
         'grand_total': grand_total,
         'sweetistravaganza_discount': discount,
-        'sweetistravaganza_applied': request.session.get('sweetistravaganza_applied', False),
-        'sweetistravaganza_needed': sweetistravaganza_needed,
+        'sweetistravaganza_applied': sweetistravaganza_applied,
+        'sweetistravaganza_needed': max(0, 4 - sweeti_count),
     }
