@@ -2,7 +2,7 @@
 .sqlite3
 .pyc
 __pycache__
-
+.env
 
 # {% for testimonial in testimonials %}
 #   <div class="testimonial-slide {% if forloop.first %}active{% endif %}">
