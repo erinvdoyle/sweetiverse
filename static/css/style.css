@@ -1520,7 +1520,27 @@ footer {
     transform: scale(1.03);
   }
   
-   
+  .btn-candy {
+    background: linear-gradient(to right, #ff80cc, #a76bca);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn-candy:hover {
+    background: linear-gradient(to right, #ff66b3, #9456c2);
+    color: white;
+  }
+  
+  .sweeti-bag {
+    color: #fff;
+  }
+    
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */

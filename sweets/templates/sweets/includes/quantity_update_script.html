@@ -1,54 +1,84 @@
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const qtyButtons = document.querySelectorAll('.increase-qty, .decrease-qty');
-    
-      function updateButtonState(input) {
-        const value = parseInt(input.value);
-        const increaseBtn = input.closest('.sweeti-quantity-form').querySelector('.increase-qty');
-        const decreaseBtn = input.closest('.sweeti-quantity-form').querySelector('.decrease-qty');
-    
+  document.addEventListener('DOMContentLoaded', function () {
+    const qtyButtons = document.querySelectorAll('.increase-qty, .decrease-qty');
+  
+    function updateButtonState(input) {
+      const value = parseInt(input.value);
+      const increaseBtn = input.closest('.sweeti-quantity-form').querySelector('.increase-qty');
+      const decreaseBtn = input.closest('.sweeti-quantity-form').querySelector('.decrease-qty');
+  
+      if (increaseBtn && decreaseBtn) {
         increaseBtn.disabled = value >= 99;
         decreaseBtn.disabled = value <= 1;
       }
-    
-      qtyButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          const inputId = this.getAttribute('data-input-id');
-          const input = document.getElementById(inputId);
-          if (!input) return;
-    
-          let currentValue = parseInt(input.value) || 1;
-    
-          if (this.classList.contains('increase-qty') && currentValue < 99) {
-            input.value = currentValue + 1;
-          } else if (this.classList.contains('decrease-qty') && currentValue > 1) {
-            input.value = currentValue - 1;
-          }
-    
-          updateButtonState(input);
-        });
-      });
-    
-      document.querySelectorAll('.sweeti-qty-input').forEach(input => {
+    }
+  
+    qtyButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const inputId = this.getAttribute('data-input-id');
+        const input = document.getElementById(inputId);
+        if (!input) return;
+  
+        let currentValue = parseInt(input.value) || 1;
+  
+        if (this.classList.contains('increase-qty') && currentValue < 99) {
+          input.value = currentValue + 1;
+        } else if (this.classList.contains('decrease-qty') && currentValue > 1) {
+          input.value = currentValue - 1;
+        }
+  
         updateButtonState(input);
-    
-        input.addEventListener('change', function () {
-          let value = parseInt(input.value);
-          if (isNaN(value) || value < 1) value = 1;
-          if (value > 99) value = 99;
-          input.value = value;
-          updateButtonState(input);
-        });
       });
-    
-      // Form submit trigger from link
-      document.querySelectorAll('.submit-update-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const form = this.closest('form');
-          form.submit();
+    });
+  
+    document.querySelectorAll('.sweeti-qty-input').forEach(input => {
+      updateButtonState(input);
+  
+      input.addEventListener('change', function () {
+        let value = parseInt(input.value);
+        if (isNaN(value) || value < 1) value = 1;
+        if (value > 99) value = 99;
+        input.value = value;
+        updateButtonState(input);
+      });
+    });
+  
+    // Submit quantity update form via anchor
+    document.querySelectorAll('.submit-update-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const form = this.closest('form');
+        if (form) form.submit();
+      });
+    });
+  
+    // Handle remove via AJAX
+    document.querySelectorAll('.btn-remove-sweeti[data-sweet-id]').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!confirm('Remove this sweet from your bag?')) return;
+  
+        const sweetId = this.getAttribute('data-sweet-id');
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+  
+        fetch(`/bag/remove/${sweetId}/`, {
+          method: 'POST',
+          headers: {
+            'X-CSRFToken': csrfToken
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            location.reload();
+          } else {
+            alert('Oops! Could not remove item. Please try again.');
+          }
+        })
+        .catch(() => {
+          alert('Something went wrong. Please try again.');
         });
       });
     });
-    </script>
-    
+  });
+  </script>
+  
