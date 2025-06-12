@@ -10,7 +10,8 @@
     {% if bag_items %}
       <div class="sweeti-bag-wrapper mx-auto" style="max-width: 660px;">
         {% for item in bag_items %}
-          <div class="sweeti-bag-card d-flex flex-wrap align-items-start justify-content-start p-4 mb-4 rounded-4" style="background: #fceaff; border: 3px solid #ffc9f3;">            <!-- Left: Image -->
+          <div class="sweeti-bag-card d-flex flex-wrap align-items-start justify-content-start p-4 mb-4 rounded-4" style="background: #fceaff; border: 3px solid #ffc9f3;">
+            <!-- Left: Image -->
             <div class="bag-image text-center mb-3 mb-md-0" style="flex: 0 0 180px;">
               <img src="{{ item.sweet.image.url }}" alt="{{ item.sweet.name }}" class="rounded-3 bag-item-img" style="width: 100%; max-width: 140px; object-fit: contain;">
             </div>
@@ -39,24 +40,42 @@
           </div>
         {% endfor %}
 
+        <!-- SWEETiStravaganza Messaging -->
+        {% if not sweetistravaganza_applied and sweeti_count == 4 %}
+          <div class="text-center mt-3 px-2">
+            <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
+              💖 Add 1 more SWEETi to get 1 FREE!
+            </p>
+          </div>
+        {% elif not sweetistravaganza_applied and sweetistravaganza_needed > 0 %}
+          <div class="text-center mt-3 px-2">
+            <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
+              {% if sweetistravaganza_needed == 1 %}
+                🎉 You're 1 SWEETi away from a free one!
+              {% else %}
+                🎉 Add {{ sweetistravaganza_needed }} more SWEETis to get 1 FREE!
+              {% endif %}
+            </p>
+          </div>
+        {% endif %}
+
         <!-- Summary Section -->
         <div class="sweeti-bag-summary text-center mt-5 p-4 rounded-4" style="background: #fdf1ff;">
+          {% if sweetistravaganza_applied %}
+            <p class="text-success fw-bold mb-2" style="background: linear-gradient(to right, #ff80cc, #a76bca); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+              🎁 SWEETiStravaganza: 1 Sweeti is FREE!
+            </p>
+            <p class="mb-1 text-muted"><strong>Deal Discount:</strong> −£{{ sweetistravaganza_discount|floatformat:2 }}</p>
+          {% endif %}
+
           <p class="mb-1"><strong>Delivery:</strong> £{{ delivery|floatformat:2 }}</p>
           <p class="fs-5"><strong>Total:</strong> £{{ grand_total|floatformat:2 }}</strong></p>
+
           <div class="d-flex justify-content-center flex-wrap gap-3 mt-3">
             <a href="{% url 'sweets' %}" class="btn btn-outline-pink">🔍 Continue Shopping</a>
             <a href="#" class="btn btn-pink">Checkout →</a>
           </div>
         </div>
-      </div>
-    {% else %}
-      <div class="text-center mt-5">
-        <p class="fs-5">Your Sweeti Bag is empty! 🍬</p>
-        <a href="{% url 'sweets' %}" class="btn btn-candy mt-3">Explore Sweetis</a>
-      </div>
-    {% endif %}
-  </div>
-</div>
 
 <script>
   function changeQty(sweetId, delta) {
@@ -68,4 +87,5 @@
     }
   }
 </script>
+{% endif %}
 {% endblock %}

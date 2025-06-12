@@ -37,27 +37,35 @@
             {% csrf_token %}
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
         
-    <!-- Quantity Controls (Centered Only) -->
-    <div class="d-flex justify-content-center">
-      <div class="d-flex align-items-center sweeti-quantity-form">
-        <button type="button" class="btn sweeti-qty-btn decrease-qty" data-input-id="qty-input-{{ sweet.id }}">
-          <i class="fas fa-minus"></i>
-        </button>
-  
-        <input type="number" name="quantity" value="1" min="1" max="99"
-               class="form-control sweeti-qty-input mx-2" id="qty-input-{{ sweet.id }}">
-  
-        <button type="button" class="btn sweeti-qty-btn increase-qty" data-input-id="qty-input-{{ sweet.id }}">
-          <i class="fas fa-plus"></i>
-        </button>
-      </div>
-    </div>
-  
-    <!-- Submit Button (Full Width, Styled, Unchanged) -->
-    <button type="submit" class="btn btn-primary mt-3 w-100 sweeti-add-btn">
-      Add to Bag
-    </button>
-  </form>
+            <!-- Quantity Controls-->
+            <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-center sweeti-quantity-form">
+                    <button type="button" class="btn sweeti-qty-btn decrease-qty" data-input-id="qty-input-{{ sweet.id }}">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <input type="number" name="quantity" value="1" min="1" max="99"
+                           class="form-control sweeti-qty-input mx-2" id="qty-input-{{ sweet.id }}">
+                    <button type="button" class="btn sweeti-qty-btn increase-qty" data-input-id="qty-input-{{ sweet.id }}">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        
+
+            <div class="text-center mt-3 px-2">
+                <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
+                  🎉 SWEETiStravaganza: Buy 4 Sweetis, Get 1 FREE!
+                </p>
+              </div>
+              
+              
+
+            <!-- Add to Bag -->
+            <button type="submit" class="btn btn-primary mt-3 w-100 sweeti-add-btn">
+                Add to Bag
+            </button>
+        </form>
+        
   
         </div>
       </div>

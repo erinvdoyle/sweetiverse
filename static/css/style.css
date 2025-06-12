@@ -1196,7 +1196,7 @@ footer {
   }
   
   .breadcrumb-item + .breadcrumb-item::before {
-    content: "🍬";
+    content: "/";
     margin: 0 0.5rem;
   }
   
@@ -1219,13 +1219,18 @@ footer {
   .sweet-detail-wrapper {
     padding-top: 2rem;
   }
-  
-  @media (max-width: 768px) {
-    .sweet-detail-wrapper {
-      padding-top: 3rem;
-    }
+
+  .sweet-info {
+    position: relative;
+    z-index: 2;
   }
-  
+     
+ .sweeti-add-btn {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+        
   .sweet-image-card {
     background: rgba(255, 255, 255, 0.85);
     border-radius: 20px;
@@ -1274,6 +1279,21 @@ footer {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  .sweetistravaganza-label {
+    background: linear-gradient(to right, #ff80cc, #a76bca);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 999px; /* pill shape */
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(167, 107, 202, 0.25);
+    max-width: 100%;
+  }
+  
+  
 
 /*--- Sweet Review Bubble ---------------------------------------------------------------------------------------------------------*/
 /* .sweeti-review-container {
@@ -1741,6 +1761,10 @@ footer {
   .contact-candy-section {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  .sweet-detail-wrapper {
+    padding-top: 3rem;
   }
 }
 

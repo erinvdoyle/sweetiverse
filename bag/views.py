@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from sweets.models import Sweet
 from django.contrib import messages
+from .context_processors import bag_contents
 
 
 # Create your views here.
@@ -8,7 +9,15 @@ from django.contrib import messages
 
 def view_bag(request):
     """ View to render the sweeti shopping bag page """
-    return render(request, 'bag/bag.html')
+    context = bag_contents(request)
+
+    if context.get('sweetistravaganza_applied') and not request.session.get('sweetistravaganza_message_shown'):
+        messages.success(request, "🎁 SWEETiStravaganza: 1 Sweeti is FREE!")
+        request.session['sweetistravaganza_message_shown'] = True
+    elif not context.get('sweetistravaganza_applied'):
+        request.session['sweetistravaganza_message_shown'] = False
+
+    return render(request, 'bag/bag.html', context)
 
 
 def add_to_bag(request, sweet_id):
