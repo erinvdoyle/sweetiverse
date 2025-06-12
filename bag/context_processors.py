@@ -4,10 +4,6 @@ from decimal import Decimal
 from django.conf import settings
 
 
-from django.shortcuts import get_object_or_404
-from sweets.models import Sweet
-from decimal import Decimal
-
 def bag_contents(request):
     bag_items = []
     total = Decimal('0.00')

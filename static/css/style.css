@@ -1650,6 +1650,24 @@ footer {
     background-color: #a353c1;
   }
   
+  .stripe-style-input, 
+  .StripeElement {
+      border: 1px solid #000;
+      border-radius: 0;
+      padding: 0.75rem;
+      font-size: 16px;
+      background-color: #fff;
+      color: #000;
+  }
+  
+  .StripeElement--focus {
+      border-color: #a970ff;
+  }
+  
+  .stripe-style-input::placeholder,
+  .StripeElement::placeholder {
+      color: #6c757d;
+  }
     
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 

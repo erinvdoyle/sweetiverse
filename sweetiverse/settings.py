@@ -174,3 +174,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+if os.path.isfile(os.path.join(BASE_DIR, 'env.py')):
+    import env
+
+STRIPE_CURRENCY = os.environ.get('STRIPE_CURRENCY', 'gbp')
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')

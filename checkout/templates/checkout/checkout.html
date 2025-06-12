@@ -25,19 +25,19 @@
   </div>
 
   {% for item in bag_items %}
-    <div class="row align-items-center mb-2">
-      <div class="col-6">
-        {% if item.product.image %}
-        <img src="{{ item.product.image.url|default_if_none:MEDIA_URL|add:'noimage.png' }}" alt="..." />
-        {% else %}
-          <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="50" class="me-2 rounded">
-        {% endif %}
-        {{ item.product.name }}
-      </div>
-      <div class="col-3 text-center">{{ item.quantity }}</div>
-      <div class="col-3 text-end">£{{ item.product.price | calc_subtotal:item.quantity }}</div>
+  <div class="row align-items-center mb-2">
+    <div class="col-6">
+      {% if item.sweet.image %}
+        <img src="{{ item.sweet.image.url }}" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
+      {% else %}
+        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
+      {% endif %}
+      {{ item.sweet.name }}
     </div>
-  {% endfor %}
+    <div class="col-3 text-center">{{ item.quantity }}</div>
+    <div class="col-3 text-end">£{{ item.sweet.price|calc_subtotal:item.quantity }}</div>
+  </div>
+{% endfor %}
 
   <hr>
   <div class="row fw-bold">
@@ -105,5 +105,14 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
+
+  {% endblock %}
+  
+  {% block postloadjs %}
+  {{ block.super }}
+  {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+  {{ client_secret|json_script:"id_client_secret" }}
+  <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+
 {% endblock %}
