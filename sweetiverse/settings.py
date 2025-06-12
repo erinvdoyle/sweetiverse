@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-
+from django.contrib.messages import constants as messages
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -164,3 +164,4 @@ LOGIN_REDIRECT_URL = '/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

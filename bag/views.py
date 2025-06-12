@@ -37,6 +37,7 @@ def add_to_bag(request, sweet_id):
         bag[sweet_id] = quantity
 
     request.session['bag'] = bag
+    messages.success(request, f"🍬 Added {quantity} × {sweet.name} to your bag!")
     return redirect(redirect_url)
 
 
@@ -54,13 +55,14 @@ def adjust_bag(request, sweet_id):
         return redirect('view_bag')
 
     bag = request.session.get('bag', {})
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
 
     if quantity > 0:
         bag[sweet_id] = quantity
-        messages.success(request, 'Sweet quantity updated!')
+        messages.success(request, f"🔁 Updated {sweet.name} quantity to {quantity}.")
     else:
         bag.pop(sweet_id, None)
-        messages.success(request, 'Sweet removed from your bag.')
+        messages.success(request, f"❌ Removed {sweet.name} from your bag.")
 
     request.session['bag'] = bag
     return redirect('view_bag')
@@ -76,11 +78,13 @@ def remove_from_bag(request, sweet_id):
         bag.pop(sweet_id, None)
         request.session['bag'] = bag
         request.session.modified = True
+        sweet = get_object_or_404(Sweet, pk=sweet_id)
+
 
         if request.headers.get('x-requested-with') == 'XMLHttpRequest':
             return HttpResponse(status=200)
         else:
-            messages.success(request, 'Sweeti removed from your bag.')
+            messages.success(request, f"❌ Removed {sweet.name} from your bag.")
             return redirect('view_bag')
     except Exception as e:
         if request.headers.get('x-requested-with') == 'XMLHttpRequest':

@@ -203,7 +203,24 @@
       <small>© 2025 SWEETiVERSE. All rights reserved.</small>
     </footer>
 
+    <div class="toast-container position-fixed top-0 end-0 p-3 z-3">
+        {% if messages %}
+          {% for message in messages %}
+            {% if message.tags == "error" %}
+              {% include "sweets/includes/toasts/toast_error.html" %}
+            {% elif message.tags == "success" %}
+              {% include "sweets/includes/toasts/toast_success.html" %}
+            {% elif message.tags == "warning" %}
+              {% include "sweets/includes/toasts/toast_warning.html" %}
+            {% else %}
+              {% include "sweets/includes/toasts/toast_info.html" %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+            
   {% block postloadjs %}
+  {{ block.super }}
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const slides = document.querySelectorAll(".testimonial-slide");
@@ -239,6 +256,15 @@
     });
 
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toastElList = [].slice.call(document.querySelectorAll('.toast'))
+      toastElList.forEach(function (toastEl) {
+        new bootstrap.Toast(toastEl).show();
+      });
+    });
+  </script>
+  
       
   {% endblock %}
 </body>
