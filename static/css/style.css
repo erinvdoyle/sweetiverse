@@ -1603,6 +1603,34 @@ footer {
   .sweeti-bag {
     color: #fff;
   }
+
+/*--- Checkout App ---------------------------------------------------------------------------------------------------------*/
+.sweeti-form-input {
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid #ff69b4;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.sweeti-submit-btn {
+    background-color: #d08bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sweeti-submit-btn:hover {
+    background-color: #5c3a82;
+    color: #fff;
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(194, 102, 255, 0.5);
+}
+
     
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 

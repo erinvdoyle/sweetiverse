@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="sweet-detail-bg">
+    <div class="container-xl py-5 sweet-detail-wrapper">
+      <div class="row justify-content-center align-items-start g-5 flex-column flex-md-row">
+  
+        <!-- Checkout Form Section -->
+        <div class="col-md-8">
+          <div class="sweet-info styled-card p-4">
+            <h2 class="logo-font sweet-text-highlight mb-4">CHECKOUT</h2>
+  
+            <p class="mb-3">Please fill out your details below to complete your SWEETi order.</p>
+  
+            <form method="POST" id="checkout-form">
+              {% csrf_token %}
+              {{ order_form|crispy }}
+  
+              <!-- Submit Button -->
+              <button type="submit" class="btn sweeti-submit-btn w-100 mt-3">
+                PLACE ORDER
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+{% endblock %}
