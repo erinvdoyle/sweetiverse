@@ -59,7 +59,31 @@
         <path fill="#ffffff" d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"></path>
       </svg>
     </div>
-    
+
+    <!-- Success Messages -->
+    {% if messages %}
+    <div class="container mt-4">
+        {% for message in messages %}
+        <div class="sweeti-alert 
+                    {% if message.tags == 'success' %}sweeti-success
+                    {% elif message.tags == 'error' %}sweeti-error
+                    {% elif message.tags == 'warning' %}sweeti-warning
+                    {% else %}sweeti-info
+                    {% endif %}">
+            <span>
+            {% if message.tags == 'success' %}🍭
+            {% elif message.tags == 'error' %}🚫
+            {% elif message.tags == 'warning' %}⚠️
+            {% else %}💡
+            {% endif %}
+            {{ message }}
+            </span>
+            <button type="button" class="sweeti-close" onclick="this.parentElement.style.display='none';">&times;</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <!-- Main Header (Search + Links) -->
 <div class="main-header border-bottom pt-2 pb-1">
     <div class="container text-center">
@@ -103,11 +127,6 @@
         </div>
     </div>
   
-    
-    <!-- Flash messages -->
-    <div class="container mt-2"> {% if messages %} <div class="message-container"> {% for message in messages %} <div class="alert alert-{{ message.tags }}">
-          {{ message }}
-        </div> {% endfor %} </div> {% endif %} </div>
     <!-- Page header -->
     <div class="container-fluid mt-4"> {% block pageheader %}{% endblock %} </div>
     <!-- Main content -->

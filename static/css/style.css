@@ -983,6 +983,59 @@ footer {
     transform: translateY(0);
   }
 
+  /*--- Success Messages ---------------------------------------------------------------------------------------------------------------------*/
+  .sweeti-alert {
+    border-radius: 1rem;
+    font-weight: 500;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: 0 4px 12px rgba(234, 180, 255, 0.3);
+    padding: 1rem 1.25rem;
+    position: relative;
+    border: none;
+    margin-bottom: 1.2rem;
+}
+
+.sweeti-success {
+    background: linear-gradient(145deg, #d9a3ff, #eecbff);
+    color: #4b186e;
+}
+
+.sweeti-error {
+    background: linear-gradient(145deg, #ffb3d9, #ffcce5);
+    color: #8a204e;
+}
+
+.sweeti-warning {
+    background: linear-gradient(145deg, #fff0b3, #fff4cc);
+    color: #664d03;
+}
+
+.sweeti-info {
+    background: linear-gradient(145deg, #cceeff, #e6f7ff);
+    color: #155a7c;
+}
+
+.sweeti-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: inherit;
+    cursor: pointer;
+}
+
+.sweeti-alert {
+    animation: fadeInSweeti 0.5s ease-in;
+  }
+  
+  @keyframes fadeInSweeti {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+
 /* --- SWEETS APP ---------------------------------------------------------------------------------------------------------*/
 /* .candy-card {
     background: #fff0fb;
@@ -1343,46 +1396,89 @@ footer {
       min-height: 600px;
     }
   }
- 
-  .sweeti-quantity-form {
-    max-width: 200px;
-    align-self: center;
-  }
-  
-  .sweeti-qty-btn {
-    background: #e3c6f3;
+
+  /*--- Bag App ------------------------------------------------------------------------------------------------------------------------------------------*/
+.sweeti-bag-wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.sweeti-bag-card {
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15);
+}
+
+.qty-btn {
+    background-color: #fcd5ec;
     border: none;
-    color: #6a2a8f;
-    font-weight: bold;
+    border-radius: 50%;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    color: #6a2a8f;
+    font-size: 1.25rem;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .sweeti-qty-btn:hover {
-    background: #d6b0f0;
+  .qty-btn:hover {
+    background-color: #f5c2e7;
   }
   
   .sweeti-qty-input {
     width: 60px;
-    text-align: center;
+    height: 36px;
+    border-radius: 10px;
+    border: 2px solid #f3d1f3;
     font-weight: bold;
+    font-size: 1rem;
   }
   
-  .sweeti-add-btn {
-    background: linear-gradient(145deg, #b88ce0, #e0b3ff);
-    border: none;
-    font-weight: 600;
-    border-radius: 2rem;
-  }
+.btn-pink {
+  background: #ff80cc;
+  color: white;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  transition: background 0.3s ease;
+}
 
-  .sweet-info {
-    position: relative;
-    z-index: 10;
-  }
-  
-    
+.btn-pink:hover {
+  background: #ff66b3;
+}
+
+.btn-outline-pink {
+  background: transparent;
+  border: 2px solid #ff80cc;
+  color: #ff80cc;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover {
+  background: #ffe6f2;
+}
+
+.btn-update-sweeti,
+.btn-remove-sweeti {
+  background-color: #fce0f0;
+  border: none;
+  color: #6a2a8f;
+  font-weight: 600;
+  border-radius: 1rem;
+  padding: 0.4rem 1rem;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.btn-update-sweeti:hover,
+.btn-remove-sweeti:hover {
+  background-color: #f5c2e7;
+}
+   
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */
@@ -1626,6 +1722,34 @@ footer {
   }
 }
 
+@media (max-width: 580px) {
+    .sweeti-bag-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.2rem;
+    }
+  
+    .bag-image {
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 140px;
+    }
+  
+    .bag-item-info {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .sweeti-bag-wrapper {
+      max-width: 94vw;
+    }
+  
+    .sweeti-bag-summary .btn {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
 
 @media (max-width: 767.98px) {
     .testimonial-heart-container {
@@ -1651,6 +1775,13 @@ footer {
     .feature-section h2 {
       font-size: 2rem;
     }
-  }
+ 
+    .sweeti-bag-card h5 {
+        font-size: 1rem;
+      }
+      .sweeti-bag-card p {
+        font-size: 0.9rem;
+      }
+    }
   
   
