@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="sweet-detail-bg">
+  <div class="container-xl py-5 sweet-detail-wrapper">
+    <div class="row justify-content-center align-items-start g-5 flex-column flex-md-row">
+      <div class="col-md-8">
+        <div class="sweet-info styled-card p-4">
+          <h2 class="logo-font sweet-text-highlight mb-4">Thank You for Your Order! 🎉</h2>
+
+          <p class="mb-3">Your order <strong>#{{ order.order_number }}</strong> has been placed successfully.</p>
+          <p class="text-muted">A confirmation has been sent to <strong>{{ order.email }}</strong>.</p>
+
+          <!-- Order Summary -->
+          <div class="sweet-info styled-card p-4 mb-4">
+            <h3 class="logo-font mb-3">Order Summary</h3>
+            <div class="row fw-bold border-bottom pb-2 mb-2">
+              <div class="col-6">Item</div>
+              <div class="col-3 text-center">Qty</div>
+              <div class="col-3 text-end">Subtotal</div>
+            </div>
+
+            {% for item in order.lineitems.all %}
+              <div class="row align-items-center mb-2">
+                <div class="col-6 d-flex align-items-center">
+                  {% if item.product.image %}
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="50" class="me-2 rounded">
+                  {% else %}
+                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="50" class="me-2 rounded">
+                  {% endif %}
+                  {{ item.product.name }}
+                </div>
+                <div class="col-3 text-center">{{ item.quantity }}</div>
+                <div class="col-3 text-end">£{{ item.lineitem_total }}</div>
+              </div>
+            {% endfor %}
+
+            <hr>
+            <div class="row fw-bold">
+              <div class="col-6">Order Total</div>
+              <div class="col-6 text-end">£{{ order.order_total }}</div>
+              <div class="col-6">Delivery</div>
+              <div class="col-6 text-end">£{{ order.delivery_cost }}</div>
+              <div class="col-6">Grand Total</div>
+              <div class="col-6 text-end">£{{ order.grand_total }}</div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="{% url 'sweets' %}" class="btn sweeti-add-btn rounded-pill px-4">← CONTINUE SHOPPING</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block extra_css %}
+<style>
+  .sweeti-add-btn.rounded-pill {
+    background: linear-gradient(145deg, #ff80cc, #a76bca) !important;
+    color: white;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    border: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .sweeti-add-btn.rounded-pill:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #a76bca, #ff80cc) !important;
+  }
+</style>
+{% endblock %}
+
+{% endblock %}

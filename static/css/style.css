@@ -1668,7 +1668,38 @@ footer {
   .StripeElement::placeholder {
       color: #6c757d;
   }
-    
+
+  #loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 182, 193, 0.7); /* light pink overlay */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .spinner-container {
+    text-align: center;
+  }
+  
+  .sweeti-spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f8d7da;
+    border-top: 6px solid #ff69b4;
+    border-radius: 50%;
+    animation: sweetispin 1s linear infinite;
+  }
+  
+  @keyframes sweetispin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+      
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */
