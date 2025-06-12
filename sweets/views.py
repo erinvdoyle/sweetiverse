@@ -7,7 +7,6 @@ from urllib.parse import urlencode
 
 
 def search_results(request):
-    """ View to show all sweets, with search, sort, filter, and pagination """
     sweets = Sweet.objects.all()
     query = request.GET.get('q')
     sort = request.GET.get('sort')
@@ -46,12 +45,12 @@ def search_results(request):
     except EmptyPage:
         paged_sweets = paginator.page(paginator.num_pages)
 
-    categories = Category.objects.all()
-
     query_params = request.GET.copy()
     query_params.pop('page', None)
-    base_query = query_params.urlencode()
-    
+    base_query = urlencode(query_params)
+
+    categories = Category.objects.all()
+
     context = {
         'sweets': paged_sweets,
         'search_term': query,
