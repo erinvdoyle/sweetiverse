@@ -1631,6 +1631,25 @@ footer {
     box-shadow: 0 4px 10px rgba(194, 102, 255, 0.5);
 }
 
+/* .sweeti-fieldset {
+    background: #f5e6ff;
+    border: 2px dashed #d4a8f0;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  } */
+  
+  #submit-button {
+    background-color: #c06be0;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+  }
+  
+  #submit-button:hover {
+    background-color: #a353c1;
+  }
+  
     
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
