@@ -60,3 +60,8 @@ def remove_from_bag(request, sweet_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return redirect('view_bag')
+
+
+def save_for_later(request, sweet_id):
+    messages.info(request, "Save for later is coming soon! 💖")
+    return redirect('view_bag')

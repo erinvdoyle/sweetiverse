@@ -32,6 +32,7 @@
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
                   <button type="submit" class="btn btn-update-sweeti btn-sm">Update</button>
                   <a href="{% url 'remove_from_bag' item.sweet.id %}" class="btn btn-remove-sweeti btn-sm" onclick="return confirm('Remove this sweet from your bag?')">Remove</a>
+                  <a href="{% url 'save_for_later' item.sweet.id %}" class="btn btn-wishlist-sweeti btn-sm mt-1">💖 Save for Later</a>
                 </div>
               </form>
             </div>

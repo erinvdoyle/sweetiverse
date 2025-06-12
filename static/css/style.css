@@ -1407,6 +1407,11 @@ footer {
   box-shadow: 0 4px 12px rgba(255, 182, 193, 0.15);
 }
 
+.sweeti-bag-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(255, 192, 203, 0.3);
+  }
+
 .qty-btn {
     background-color: #fcd5ec;
     border: none;
@@ -1478,6 +1483,23 @@ footer {
 .btn-remove-sweeti:hover {
   background-color: #f5c2e7;
 }
+
+.btn-wishlist-sweeti {
+    background: linear-gradient(to right, #e0b3ff, #ffc9f3);
+    color: #6a2a8f;
+    border: none;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+  }
+  
+  .btn-wishlist-sweeti:hover {
+    background: linear-gradient(to right, #d8a6f4, #ffb3dc);
+    transform: scale(1.03);
+  }
+  
    
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
