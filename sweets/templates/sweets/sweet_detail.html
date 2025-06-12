@@ -112,27 +112,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.increase-qty, .decrease-qty').forEach(button => {
-    button.addEventListener('click', function () {
-      const inputId = this.getAttribute('data-input-id');
-      const qtyInput = document.getElementById(inputId);
-
-      if (!qtyInput) return;
-      let currentValue = parseInt(qtyInput.value);
-
-      if (this.classList.contains('increase-qty')) {
-        if (currentValue < 99) qtyInput.value = currentValue + 1;
-      } else {
-        if (currentValue > 1) qtyInput.value = currentValue - 1;
-      }
-    });
-  });
-});
-
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
       const qtyButtons = document.querySelectorAll('.increase-qty, .decrease-qty');
     
       function updateButtonState(input) {
