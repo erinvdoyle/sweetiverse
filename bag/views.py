@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from sweets.models import Sweet
 from django.contrib import messages
 from .context_processors import bag_contents
+from django.http import HttpResponse, JsonResponse
 
 
 # Create your views here.
@@ -11,10 +12,11 @@ def view_bag(request):
     """ View to render the sweeti shopping bag page """
     context = bag_contents(request)
 
-    if context.get('sweetistravaganza_applied') and not request.session.get('sweetistravaganza_message_shown'):
-        messages.success(request, "🎁 SWEETiStravaganza: 1 Sweeti is FREE!")
-        request.session['sweetistravaganza_message_shown'] = True
-    elif not context.get('sweetistravaganza_applied'):
+    if context.get('sweetistravaganza_applied'):
+        if not request.session.get('sweetistravaganza_message_shown'):
+            messages.success(request, "🎁 SWEETiStravaganza: 1 Sweeti is FREE!")
+            request.session['sweetistravaganza_message_shown'] = True
+    else:
         request.session['sweetistravaganza_message_shown'] = False
 
     return render(request, 'bag/bag.html', context)
@@ -42,7 +44,15 @@ def adjust_bag(request, sweet_id):
     """
     Adjust the quantity of the specified sweet to the specified amount.
     """
-    quantity = int(request.POST.get('quantity'))
+    try:
+        quantity = int(request.POST.get('quantity'))
+        if quantity < 1 or quantity > 99:
+            messages.warning(request, 'Please enter a quantity between 1 and 99.')
+            return redirect('view_bag')
+    except (TypeError, ValueError):
+        messages.error(request, 'Invalid quantity provided.')
+        return redirect('view_bag')
+
     bag = request.session.get('bag', {})
 
     if quantity > 0:
@@ -56,6 +66,7 @@ def adjust_bag(request, sweet_id):
     return redirect('view_bag')
 
 
+
 def remove_from_bag(request, sweet_id):
     """
     Remove the item from the shopping bag.
@@ -64,11 +75,19 @@ def remove_from_bag(request, sweet_id):
         bag = request.session.get('bag', {})
         bag.pop(sweet_id, None)
         request.session['bag'] = bag
-        messages.success(request, 'Sweeti removed from your bag.')
-        return redirect('view_bag')
+        request.session.modified = True
+
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return HttpResponse(status=200)
+        else:
+            messages.success(request, 'Sweeti removed from your bag.')
+            return redirect('view_bag')
     except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
-        return redirect('view_bag')
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({'error': str(e)}, status=500)
+        else:
+            messages.error(request, f'Error removing item: {e}')
+            return redirect('view_bag')
 
 
 def save_for_later(request, sweet_id):
