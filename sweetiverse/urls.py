@@ -31,6 +31,7 @@ urlpatterns = [
     path('sweets/', include('sweets.urls')),
     path('search/', sweets_views.search_results, name='search_results'),
     path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
