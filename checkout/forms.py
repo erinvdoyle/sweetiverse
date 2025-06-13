@@ -23,15 +23,15 @@ class OrderForm(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'county': 'County, State or Locality',
-            'country': 'Country',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
 
-        for field in self.fields:
-            placeholder = placeholders.get(field, '')
-            if self.fields[field].required:
-                placeholder += ' *'
-            self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'sweeti-form-input'
-            self.fields[field].label = False
+        for field_name, field in self.fields.items():
+            if field_name != 'country':
+                placeholder = placeholders.get(field_name, '')
+                if field.required:
+                    placeholder += ' *'
+                field.widget.attrs['placeholder'] = placeholder
+            field.widget.attrs['class'] = 'sweeti-form-input'
+            field.label = False
