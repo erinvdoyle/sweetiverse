@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="sweet-detail-bg">
+  <div class="container-xl py-5 sweet-detail-wrapper">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="styled-card p-4">
+          <h2 class="logo-font sweet-text-highlight mb-4">Add a New Sweet</h2>
+          <form method="POST" enctype="multipart/form-data" class="mb-3">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="text-end">
+              <a href="{% url 'sweets' %}" class="btn btn-outline-secondary me-2">Cancel</a>
+              <button type="submit" class="btn sweeti-add-btn">Add Sweet</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

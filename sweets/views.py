@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from urllib.parse import urlencode
+from .forms import SweetForm
 
 
 def search_results(request):
@@ -106,3 +107,50 @@ def sweets_list(request):
     }
 
     return render(request, 'sweets/sweets.html', context)
+
+
+def add_sweet(request):
+    if not request.user.is_superuser:
+        messages.error(request, "Only store owners can do that.")
+        return redirect('home')
+
+    if request.method == 'POST':
+        form = SweetForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Sweet added successfully!")
+            return redirect('add_sweet')
+        else:
+            messages.error(request, "Oops! Please check the form for errors.")
+    else:
+        form = SweetForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'sweets/add_sweet.html', context)
+
+
+def edit_sweet(request, sweet_id):
+    if not request.user.is_superuser:
+        messages.error(request, "Only store owners can edit sweets.")
+        return redirect('home')
+
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
+
+    if request.method == 'POST':
+        form = SweetForm(request.POST, request.FILES, instance=sweet)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Sweet updated successfully.")
+            return redirect('sweet_detail', sweet_id=sweet.id)
+        else:
+            messages.error(request, "Error updating sweet. Please check form.")
+    else:
+        form = SweetForm(instance=sweet)
+
+    context = {
+        'form': form,
+        'sweet': sweet
+    }
+    return render(request, 'sweets/edit_sweet.html', context)
