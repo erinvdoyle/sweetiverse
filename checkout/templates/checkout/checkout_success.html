@@ -47,9 +47,15 @@
             </div>
           </div>
 
+          <!-- Action Button -->
           <div class="text-center mt-4">
-            <a href="{% url 'sweets' %}" class="btn sweeti-add-btn rounded-pill px-4">← CONTINUE SHOPPING</a>
+            {% if from_profile %}
+              <a href="{% url 'profile' %}" class="btn sweeti-add-btn rounded-pill px-4">← BACK TO PROFILE</a>
+            {% else %}
+              <a href="{% url 'sweets' %}" class="btn sweeti-add-btn rounded-pill px-4">← CONTINUE SHOPPING</a>
+            {% endif %}
           </div>
+
         </div>
       </div>
     </div>
@@ -74,5 +80,5 @@
   }
 </style>
 {% endblock %}
-
 {% endblock %}
+

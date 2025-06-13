@@ -1708,6 +1708,13 @@ option[value=""] {
     color: #6c757d;
 }
 
+select, select option {
+  color: #000 !important;
+}
+
+select option[value=""] {
+  color: #6c757d !important;
+}
       
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 

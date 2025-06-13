@@ -1,11 +1,74 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
 {% block content %}
-<div class="container mt-5">
-  <h2 class="mb-4">My Profile</h2>
-  <p><strong>Username:</strong> {{ profile.user.username }}</p>
-  <p><strong>Email:</strong> {{ profile.user.email }}</p>
-  <p><strong>Phone:</strong> {{ profile.default_phone_number }}</p>
-  <p><strong>Address:</strong> {{ profile.default_street_address1 }}, {{ profile.default_city }}</p>
-  <p><strong>Country:</strong> {{ profile.default_country }}</p>
+<div class="sweet-detail-bg">
+  <div class="container-xl py-5 sweet-detail-wrapper">
+    <div class="row justify-content-center align-items-start g-5 flex-column flex-md-row fade-in">
+
+      <!-- Profile Form -->
+      <div class="col-md-6">
+        <div class="styled-card p-4">
+          <h3 class="sweet-text-highlight text-center mb-4">🎀 Update Profile Information</h3>
+          <form method="POST" id="profile-update-form">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="text-end">
+              <button type="submit" class="btn sweeti-add-btn rounded-pill px-4">Update Info</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Order History -->
+      <div class="col-md-6">
+        <div class="styled-card p-4">
+          <h3 class="sweet-text-highlight text-center mb-4">📦 Your Order History</h3>
+          {% if orders %}
+            <div style="max-height: 416px; overflow-y: auto;">
+              <table class="table table-sm table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">Order #</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for order in orders %}
+                    <tr>
+                      <td>
+                        <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                          {{ order.order_number|truncatechars:6 }}
+                        </a>
+                      </td>
+                      <td>{{ order.date|date:"M d, Y" }}</td>
+                      <td>
+                        <ul class="list-unstyled small">
+                          {% for item in order.lineitems.all %}
+                            <li>{{ item.product.name }} × {{ item.quantity }}</li>
+                          {% endfor %}
+                        </ul>
+                      </td>
+                      <td>£{{ order.grand_total }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          {% else %}
+            <p class="text-muted text-center mt-3">You haven't placed any orders yet.</p>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+  <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
