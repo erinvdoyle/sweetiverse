@@ -10,6 +10,10 @@ from sweets.models import Sweet
 from bag.contexts import bag_contents
 import uuid
 from decimal import Decimal
+import json
+from django.http import HttpResponse
+from django.views.decorators.http import require_POST
+
 
 
 def checkout(request):
@@ -33,15 +37,17 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
-            order.order_number = str(uuid.uuid4()).replace('-', '').upper()
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_bag = json.dumps(bag)
             order.save()
 
             for item_id, quantity in bag.items():
                 try:
-                    product = Sweet.objects.get(id=item_id)
+                    sweet = Sweet.objects.get(id=item_id)
                     line_item = OrderLineItem(
                         order=order,
-                        product=product,
+                        product=sweet,
                         quantity=quantity,
                     )
                     line_item.save()
@@ -105,3 +111,19 @@ def checkout_success(request, order_number):
     }
 
     return render(request, 'checkout/checkout_success.html', context)
+
+
+@require_POST
+def cache_checkout_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'bag': json.dumps(request.session.get('bag', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be processed right now.')
+        return HttpResponse(content=e, status=400)

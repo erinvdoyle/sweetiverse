@@ -52,7 +52,8 @@
 
 
             <form method="POST" action="{% url 'checkout' %}" id="payment-form">
-                {% csrf_token %}
+                {% csrf_token %}<input type="hidden" name="client_secret" value="{{ client_secret }}">
+
                 <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
                   <legend class="logo-font fs-4 mb-3">Details</legend>
                   {{ order_form.full_name|as_crispy_field }}
@@ -92,7 +93,7 @@
                     ← BACK TO BAG
                   </a>
                   <button id="submit-button" class="btn sweeti-add-btn rounded-pill px-4">
-                    COMEPLETE ORDER
+                    COMPLETE ORDER
                   </button>
                 </div>
               
