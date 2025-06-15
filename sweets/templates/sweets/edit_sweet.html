@@ -21,4 +21,17 @@
     </div>
   </div>
 </div>
+
+<script>
+    const fileInput = document.querySelector('input[type="file"]');
+    const filenameOutput = document.getElementById('filename-output');
+  
+    if (fileInput) {
+      fileInput.addEventListener('change', function () {
+        if (this.files.length > 0) {
+          filenameOutput.textContent = this.files[0].name;
+        }
+      });
+    }
+  </script>
 {% endblock %}

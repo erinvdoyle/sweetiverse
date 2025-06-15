@@ -28,6 +28,12 @@
           {% if sweet.rating %}
             <p><strong>Rating:</strong> ⭐ {{ sweet.rating }}</p>
           {% endif %}
+          {% if user.is_superuser %}
+          <div class="mt-2">
+            <a href="{% url 'edit_sweet' sweet.id %}" class="btn btn-sm btn-outline-primary">Edit</a>
+            <a href="{% url 'delete_sweet' sweet.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+          </div>
+          {% endif %}
           <p class="mt-3"><strong>Description:</strong> {{ sweet.description }}</p>
           <p><strong>Ingredients:</strong> {{ sweet.ingredients }}</p>
           <p><strong>Country of Origin:</strong> {{ sweet.country_of_origin.name }}</p>

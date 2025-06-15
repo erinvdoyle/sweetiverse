@@ -21,4 +21,19 @@
     </div>
   </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fileInput = document.querySelector('.custom-clearable-file-input input[type="file"]') || 
+                        document.querySelector('input[type="file"]');
+      const filenameOutput = document.getElementById('filename-output');
+  
+      if (fileInput && filenameOutput) {
+        fileInput.addEventListener('change', function () {
+          filenameOutput.textContent = this.files[0]?.name || 'No file chosen';
+        });
+      }
+    });
+  </script>
+    
 {% endblock %}

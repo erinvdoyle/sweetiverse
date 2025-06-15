@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from urllib.parse import urlencode
 from .forms import SweetForm
+from django.contrib.auth.decorators import login_required
 
 
 def search_results(request):
@@ -117,9 +118,9 @@ def add_sweet(request):
     if request.method == 'POST':
         form = SweetForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            sweet = form.save()
             messages.success(request, "Sweet added successfully!")
-            return redirect('add_sweet')
+            return redirect('sweet_detail', sweet_id=sweet.id)
         else:
             messages.error(request, "Oops! Please check the form for errors.")
     else:
@@ -154,3 +155,15 @@ def edit_sweet(request, sweet_id):
         'sweet': sweet
     }
     return render(request, 'sweets/edit_sweet.html', context)
+
+
+@login_required
+def delete_sweet(request, sweet_id):
+    if not request.user.is_superuser:
+        messages.error(request, "Only store owners can delete sweets.")
+        return redirect('home')
+
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
+    sweet.delete()
+    messages.success(request, f'{sweet.name} has been deleted.')
+    return redirect('sweets')

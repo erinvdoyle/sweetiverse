@@ -1,0 +1,20 @@
+{% if widget.is_initial %}
+  <p>{{ widget.initial_text }}:
+    <a href="{{ widget.value.url }}" target="_blank">
+      <img src="{{ widget.value.url }}" class="img-thumbnail" style="height: 80px;" />
+    </a>
+  </p>
+  <div class="form-check mt-2">
+    {{ widget.clear_checkbox }} <label>{{ widget.clear_checkbox_label }}</label>
+  </div>
+{% endif %}
+
+<div class="mb-2">
+  <label class="btn btn-outline-info btn-sm position-relative overflow-hidden d-inline-block mb-2">
+    {{ widget.input_text }}
+    <input type="file" name="{{ widget.name }}" class="position-absolute top-0 start-0 w-100 h-100 opacity-0" 
+           {% include "django/forms/widgets/attrs.html" %}>
+  </label>
+</div>
+
+<p class="form-text" id="filename-output"></p>

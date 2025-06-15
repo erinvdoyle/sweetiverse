@@ -1715,6 +1715,17 @@ select, select option {
 select option[value=""] {
   color: #6c757d !important;
 }
+
+input[type="file"] {
+  position: absolute;
+  top: 0; 
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  font-size: 999px;
+}
       
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
