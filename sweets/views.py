@@ -70,7 +70,16 @@ def sweet_detail(request, sweet_id):
     View to show an individual sweet's detail.
     """
     sweet = get_object_or_404(Sweet, pk=sweet_id)
-    return render(request, 'sweets/sweet_detail.html', {'sweet': sweet})
+
+    is_wishlisted = False
+    if request.user.is_authenticated:
+        is_wishlisted = request.user.wishlist_items.filter(sweet=sweet).exists()
+
+    context = {
+        'sweet': sweet,
+        'is_wishlisted': is_wishlisted,
+    }
+    return render(request, 'sweets/sweet_detail.html', context)
 
 
 def sweets_list(request):

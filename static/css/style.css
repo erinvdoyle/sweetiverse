@@ -1726,7 +1726,43 @@ input[type="file"] {
   width: 100%;
   font-size: 999px;
 }
-      
+
+/*--- Wishlist ---------------------------------------------------------------------------------------------------------*/
+.wishlist-icon {
+  color: #888;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.wishlist-icon:hover {
+  transform: scale(1.1);
+  color: #dc3545;
+}
+
+.wishlist-icon.filled i {
+  color: #dc3545;
+}
+
+.wishlist-img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wishlist-img:hover {
+  transform: scale(1.05);
+}
+
+.btn-remove {
+  color: #ff69b4;
+  border: solid 2px #ff69b4;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */

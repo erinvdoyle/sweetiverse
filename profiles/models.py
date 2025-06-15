@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django_countries.fields import CountryField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from sweets.models import Sweet
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -23,3 +24,15 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     else:
         instance.userprofile.save()
+
+
+class WishlistItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wishlist_items')
+    sweet = models.ForeignKey(Sweet, on_delete=models.CASCADE, related_name='wishlisted_by')
+    added_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'sweet')
+
+    def __str__(self):
+        return f"{self.user.username} - {self.sweet.name}"

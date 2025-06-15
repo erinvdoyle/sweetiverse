@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from sweets.models import Sweet
+from .models import WishlistItem
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import UserProfile
@@ -39,3 +41,25 @@ def order_history(request, order_number):
     }
 
     return render(request, 'checkout/checkout_success.html', context)
+
+
+@login_required
+def add_to_wishlist(request, sweet_id):
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
+    WishlistItem.objects.get_or_create(user=request.user, sweet=sweet)
+    messages.success(request, f'{sweet.name} added to your wishlist 💖')
+    return redirect(request.META.get('HTTP_REFERER', 'sweet_detail'))
+
+
+@login_required
+def remove_from_wishlist(request, sweet_id):
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
+    WishlistItem.objects.filter(user=request.user, sweet=sweet).delete()
+    messages.info(request, f'{sweet.name} removed from your wishlist 💔')
+    return redirect(request.META.get('HTTP_REFERER', 'sweet_detail'))
+
+
+@login_required
+def wishlist_view(request):
+    wishlist = WishlistItem.objects.filter(user=request.user).select_related('sweet')
+    return render(request, 'profiles/wishlist.html', {'wishlist': wishlist})

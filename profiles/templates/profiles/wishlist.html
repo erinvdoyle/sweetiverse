@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="sweet-detail-bg">
+  <div class="container-xl py-5 sweet-detail-wrapper">
+    <h2 class="logo-font sweet-text-highlight mb-4">💖 Your SWEETi Wishlist</h2>
+
+    {% if wishlist %}
+      <div class="row g-4">
+        {% for item in wishlist %}
+          <div class="col-md-6 col-lg-4">
+            <div class="styled-card p-3 h-100 d-flex flex-column justify-content-between text-center shadow-sm">
+
+              <!-- Image -->
+              <div class="mb-3">
+                {% if item.sweet.image %}
+                  <img src="{{ item.sweet.image.url }}" alt="{{ item.sweet.name }}"
+                       class="img-fluid rounded sparkle-float wishlist-img">
+                {% else %}
+                  <img src="{% static 'images/default.png' %}" class="img-fluid rounded wishlist-img" alt="No Image">
+                {% endif %}
+              </div>
+
+              <!-- Name -->
+              <h5 class="logo-font sweet-text-highlight">{{ item.sweet.name }}</h5>
+
+              <!-- Buttons -->
+              <div class="mt-3 d-flex justify-content-around">
+                <form method="POST" action="{% url 'add_to_bag' item.sweet.id %}" class="d-inline">
+                    {% csrf_token %}
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" name="redirect_url" value="{% url 'wishlist' %}">
+                    <button type="submit" class="btn btn-primary btn-sm">Move to Bag</button>
+                  </form>                  
+                <a href="{% url 'remove_from_wishlist' item.sweet.id %}" class="btn btn-primary-outline btn-remove btn-sm">
+                  ❌ Remove
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="sweeti-review-bubble text-center mt-5">
+        <h4 class="logo-font">No SWEETis in your wishlist yet!</h4>
+        <p>Browse the shop and click the 💖 to save your faves!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
