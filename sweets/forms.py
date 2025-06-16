@@ -1,5 +1,5 @@
 from django import forms
-from .models import Sweet, Category
+from .models import Sweet, Category, SweetReview
 from .widgets import CustomClearableFileInput
 
 
@@ -29,3 +29,26 @@ class SweetForm(forms.ModelForm):
 
             if not isinstance(field.widget, CustomClearableFileInput):
                 field.widget.attrs['class'] = css_classes
+
+
+class SweetReviewForm(forms.ModelForm):
+    RATING_CHOICES = [
+        (5, '⭐️⭐️⭐️⭐️⭐️'),
+        (4, '⭐️⭐️⭐️⭐️'),
+        (3, '⭐️⭐️⭐️'),
+        (2, '⭐️⭐️'),
+        (1, '⭐️'),
+    ]
+
+    rating = forms.ChoiceField(
+        choices=RATING_CHOICES,
+        widget=forms.RadioSelect(attrs={'class': 'star-rating'}),
+        label="Your Rating"
+    )
+
+    class Meta:
+        model = SweetReview
+        fields = ['rating', 'comment']
+        widgets = {
+            'comment': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Write your thoughts...'}),
+        }

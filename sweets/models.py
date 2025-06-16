@@ -1,6 +1,7 @@
 from django.db import models
 import uuid
 from django_countries.fields import CountryField
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -59,14 +60,24 @@ class Sweet(models.Model):
         self.sale_price = self.calculate_sale_price()
         self.in_stock = self.stock_amount > 0
         super().save(*args, **kwargs)
+        
+    def update_rating(self):
+        reviews = self.reviews.all()
+        if reviews.exists():
+            total = sum([review.rating for review in reviews])
+            self.rating = round(total / reviews.count(), 1)
+            self.save()
 
 
 class SweetReview(models.Model):
     sweet = models.ForeignKey(Sweet, on_delete=models.CASCADE, related_name='reviews')
-    user = models.CharField(max_length=100)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=2, decimal_places=1)
-    comment = models.TextField()
+    comment = models.TextField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        unique_together = ('sweet', 'user')
+
     def __str__(self):
-        return f'Review for {self.sweet.name} by {self.user}'
+        return f'Review for {self.sweet.name} by {self.user.username}'

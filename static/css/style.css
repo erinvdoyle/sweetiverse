@@ -1334,7 +1334,7 @@ footer {
     }
   } */
  
-  .sweeti-review-container {
+  /* .sweeti-review-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -1343,15 +1343,30 @@ footer {
     margin-bottom: -10rem;
     padding: 0 2rem;
     flex-wrap: wrap;
+  } */
+
+  .sweeti-review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
   }
   
+  
   /* Recommendations Panel */
-  .sweeti-recommendations {
+  /* .sweeti-recommendations {
     flex: 1;
     max-width: 400px;
     margin-top: 10rem;
     margin-left: 6rem;
     text-align: center;
+  } */
+
+  .sweeti-recommendations {
+    flex: 0 1 350px;
+    text-align: center;
+    margin: auto;
   }
   
   .recommendation-cards {
@@ -1384,7 +1399,7 @@ footer {
   }
   
   /* Review Bubble Right Side */
-  .sweeti-review-bubble {
+  /* .sweeti-review-bubble {
     flex: 2;
     background: url('/static/images/speech-bubble.png') no-repeat center center;
     background-size: contain;
@@ -1398,25 +1413,94 @@ footer {
     font-size: 1.1rem;
     font-weight: 500;
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
-  }
-  
-  @media (max-width: 992px) {
-    .sweeti-review-container {
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-  
-    .sweeti-review-bubble,
-    .sweeti-recommendations {
-      max-width: 100%;
-    }
-  
-    .sweeti-review-bubble {
-      background-size: 90%;
-      min-height: 600px;
-    }
-  }
+  } */
 
+
+  .sweeti-review-bubble {
+    flex: 1 1 500px;
+    background: url('/static/images/speech-bubble2.png') no-repeat center center;
+    background-size: contain;
+    padding: 5rem 2rem 2rem;
+    margin-top: 2rem;
+    min-height: 600px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #5c3a82;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+  /* .sweeti-review-bubble form input,
+.sweeti-review-bubble form textarea {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+} */
+
+.sweeti-review-bubble form {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.sweeti-review-bubble form input,
+.sweeti-review-bubble form textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+
+.review-card {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px dashed !important;
+}
+
+.sweeti-review-bubble > *:first-child {
+  margin-top: 3rem;
+}
+   
+  .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  
+  .star-rating label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+  }
+  
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #d63384;
+  }
+    
   /*--- Toasts ------------------------------------------------------------------------------------------------------------------------------------------*/
 .custom-toast {
     border: 2px solid #ffc9f3;
@@ -2007,6 +2091,18 @@ input[type="file"] {
 
   .sweet-detail-wrapper {
     padding-top: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .sweeti-review-bubble {
+    background: #fceaff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+    min-height: auto;
+    padding: 2rem;
+    font-size: 1rem;
+    text-shadow: none;
   }
 }
 

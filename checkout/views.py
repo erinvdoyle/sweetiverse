@@ -17,13 +17,17 @@ from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 
 
-
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    bag = request.session.get('bag', {})
+    current_bag = bag_contents(request)
+    total = current_bag['total']
+    grand_total = current_bag['grand_total']
+    delivery = current_bag['delivery']
+
     if request.method == 'POST':
-        bag = request.session.get('bag', {})
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -42,6 +46,14 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+
+            if request.user.is_authenticated:
+                try:
+                    profile = UserProfile.objects.get(user=request.user)
+                    order.user_profile = profile
+                except UserProfile.DoesNotExist:
+                    pass
+
             order.save()
 
             for item_id, quantity in bag.items():
@@ -66,14 +78,11 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. Please check your information.')
     else:
-        bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "Your bag is empty")
             return redirect(reverse('sweets'))
 
-        current_bag = bag_contents(request)
-        total = current_bag['grand_total']
-        stripe_total = round(total * 100)
+        stripe_total = round(grand_total * 100)
         stripe.api_key = stripe_secret_key
 
         intent = stripe.PaymentIntent.create(
@@ -83,18 +92,17 @@ def checkout(request):
 
         order_form = OrderForm()
 
-    template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
         'bag_items': current_bag['bag_items'],
-        'total': current_bag['total'],
-        'grand_total': current_bag['grand_total'],
-        'delivery': current_bag['delivery'],
+        'total': total,
+        'grand_total': grand_total,
+        'delivery': delivery,
     }
 
-    return render(request, template, context)
+    return render(request, 'checkout/checkout.html', context)
 
 
 def checkout_success(request, order_number):

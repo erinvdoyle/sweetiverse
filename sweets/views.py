@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Sweet, Category
+from .models import Sweet, Category, SweetReview
 from django.db.models import Q
 from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from urllib.parse import urlencode
-from .forms import SweetForm
+from .forms import SweetForm, SweetReviewForm
 from django.contrib.auth.decorators import login_required
+from checkout.models import OrderLineItem
 
 
 def search_results(request):
@@ -65,21 +66,46 @@ def search_results(request):
     return render(request, 'home/search_results.html', context)
 
 
+@login_required
 def sweet_detail(request, sweet_id):
-    """
-    View to show an individual sweet's detail.
-    """
     sweet = get_object_or_404(Sweet, pk=sweet_id)
+    user = request.user
 
-    is_wishlisted = False
-    if request.user.is_authenticated:
-        is_wishlisted = request.user.wishlist_items.filter(sweet=sweet).exists()
+    is_wishlisted = user.wishlist_items.filter(sweet=sweet).exists()
+
+    has_purchased = OrderLineItem.objects.filter(
+        order__user_profile=user.userprofile, product=sweet
+    ).exists()
+
+    # Review instance
+    review_instance = SweetReview.objects.filter(sweet=sweet, user=user).first()
+    has_reviewed = bool(review_instance)
+
+    if request.method == 'POST' and has_purchased:
+        form = SweetReviewForm(request.POST, instance=review_instance)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.sweet = sweet
+            review.user = user
+            review.save()
+            sweet.update_rating()
+            messages.success(request, "Review submitted!" if not review_instance else "Review updated!")
+            return redirect('sweet_detail', sweet_id=sweet.id)
+    else:
+        form = SweetReviewForm(instance=review_instance)
+
+    reviews = sweet.reviews.all().order_by('-created_at')
 
     context = {
         'sweet': sweet,
         'is_wishlisted': is_wishlisted,
+        'form': form,
+        'has_purchased': has_purchased,
+        'has_reviewed': has_reviewed,
+        'reviews': reviews,
     }
     return render(request, 'sweets/sweet_detail.html', context)
+
 
 
 def sweets_list(request):
@@ -176,3 +202,29 @@ def delete_sweet(request, sweet_id):
     sweet.delete()
     messages.success(request, f'{sweet.name} has been deleted.')
     return redirect('sweets')
+
+
+@login_required
+def submit_review(request, sweet_id):
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
+    user = request.user
+
+    has_purchased = OrderLineItem.objects.filter(order__user_profile=user.userprofile, product=sweet).exists()
+    if not has_purchased:
+        messages.error(request, "You must purchase this sweet to leave a review.")
+        return redirect('sweet_detail', sweet_id=sweet_id)
+
+    review_instance = SweetReview.objects.filter(sweet=sweet, user=user).first()
+    form = SweetReviewForm(request.POST, instance=review_instance)
+
+    if form.is_valid():
+        review = form.save(commit=False)
+        review.sweet = sweet
+        review.user = user
+        review.save()
+        sweet.update_rating()
+        messages.success(request, "Your review was updated!" if review_instance else "Thanks for your review!")
+    else:
+        messages.error(request, "There was a problem with your review. Please check the form.")
+
+    return redirect('sweet_detail', sweet_id=sweet_id)

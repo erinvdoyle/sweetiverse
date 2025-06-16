@@ -3,8 +3,7 @@
 
 {% block content %}
 <div class="sweet-detail-bg">
-    <div class="container-xl py-5 sweet-detail-wrapper">
-
+  <div class="container-xl py-5 sweet-detail-wrapper">
     <div class="row justify-content-center align-items-start g-5 flex-column flex-md-row">
 
       <!-- Sweet Image Card -->
@@ -29,10 +28,10 @@
             <p><strong>Rating:</strong> ⭐ {{ sweet.rating }}</p>
           {% endif %}
           {% if user.is_superuser %}
-          <div class="mt-2">
-            <a href="{% url 'edit_sweet' sweet.id %}" class="btn btn-sm btn-outline-primary">Edit</a>
-            <a href="{% url 'delete_sweet' sweet.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
-          </div>
+            <div class="mt-2">
+              <a href="{% url 'edit_sweet' sweet.id %}" class="btn btn-sm btn-outline-primary">Edit</a>
+              <a href="{% url 'delete_sweet' sweet.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+            </div>
           {% endif %}
           {% if user.is_authenticated and not user.is_superuser %}
             {% if is_wishlisted %}
@@ -49,134 +48,132 @@
           <p><strong>Ingredients:</strong> {{ sweet.ingredients }}</p>
           <p><strong>Country of Origin:</strong> {{ sweet.country_of_origin.name }}</p>
           <p><strong>Flavor:</strong> {{ sweet.flavor }}</p>
-          <!-- Quantity + Form Centered -->
+
+          <!-- Add to Bag Form -->
           <form method="POST" action="{% url 'add_to_bag' sweet.id %}" id="add-to-bag-form">
             {% csrf_token %}
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-        
-            <!-- Quantity Controls-->
             <div class="d-flex justify-content-center">
-                <div class="d-flex align-items-center sweeti-quantity-form">
-                    <button type="button" class="btn sweeti-qty-btn decrease-qty" data-input-id="qty-input-{{ sweet.id }}">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                    <input type="number" name="quantity" value="1" min="1" max="99"
-                           class="form-control sweeti-qty-input mx-2" id="qty-input-{{ sweet.id }}">
-                    <button type="button" class="btn sweeti-qty-btn increase-qty" data-input-id="qty-input-{{ sweet.id }}">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-            </div>
-        
-
-            <div class="text-center mt-3 px-2">
-                <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
-                  🎉 SWEETiStravaganza: Buy 4 Sweetis, Get 1 FREE!
-                </p>
+              <div class="d-flex align-items-center sweeti-quantity-form">
+                <button type="button" class="btn sweeti-qty-btn decrease-qty" data-input-id="qty-input-{{ sweet.id }}">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <input type="number" name="quantity" value="1" min="1" max="99"
+                  class="form-control sweeti-qty-input mx-2" id="qty-input-{{ sweet.id }}">
+                <button type="button" class="btn sweeti-qty-btn increase-qty" data-input-id="qty-input-{{ sweet.id }}">
+                  <i class="fas fa-plus"></i>
+                </button>
               </div>
-              
-              
-
-            <!-- Add to Bag -->
-            <button type="submit" class="btn btn-primary mt-3 w-100 sweeti-add-btn">
-                Add to Bag
-            </button>
-        </form>
-        
-  
+            </div>
+            <div class="text-center mt-3 px-2">
+              <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
+                🎉 SWEETiStravaganza: Buy 4 Sweetis, Get 1 FREE!
+              </p>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3 w-100 sweeti-add-btn">Add to Bag</button>
+          </form>
         </div>
       </div>
     </div>
-
-    <!-- Reviews -->
-    <!-- <div class="sweeti-review-container">
-        <div class="sweeti-review-bubble text-center">
-        <h4 class="logo-font mb-3">💬 Sweeti Reviews</h4>
-        <p>No reviews yet... Be the first to sprinkle your thoughts!</p>
-        </div>
-    </div> -->
 
     <!-- Review + Recommendations Section -->
-<div class="sweeti-review-container">
-    <!-- Recommendations Section -->
-    <div class="sweeti-recommendations">
-      <h4 class="logo-font mb-3">You Might Also Like...</h4>
-      <div class="recommendation-cards">
-        <!-- Mini Product Card 1 -->
-        <div class="mini-product-card">
+    <div class="sweeti-review-container">
+
+      <!-- Recommendations -->
+      <div class="sweeti-recommendations">
+        <h4 class="logo-font mb-3">You Might Also Like...</h4>
+        <div class="recommendation-cards">
+          <div class="mini-product-card">
             <img src="/media/images/meiji_petitgum_grape_large.jpg" alt="Sweet 1" class="mini-product-img">
-          <p class="mini-product-name">Grape Puccho</p>
-        </div>
-        <!-- Mini Product Card 2 -->
-        <div class="mini-product-card">
+            <p class="mini-product-name">Grape Puccho</p>
+          </div>
+          <div class="mini-product-card">
             <img src="/media/images/big-sugar-rolly-rainbow-cotton-candy.webp" alt="Sweet 2" class="mini-product-img">
-          <p class="mini-product-name">Kit Kat Matcha</p>
+            <p class="mini-product-name">Kit Kat Matcha</p>
+          </div>
         </div>
       </div>
-    </div>
-  
-    <!-- Review Bubble Section -->
-    <div class="sweeti-review-bubble text-center">
-      <h4 class="logo-font mb-3">💬 Sweeti Reviews</h4>
-      <p>No reviews yet... Be the first to sprinkle your thoughts!</p>
-    </div>
-  </div>
-  
-    
 
+      <!-- Review Bubble -->
+      <div class="sweeti-review-bubble text-center">
+        <h4 class="logo-font mb-3">SWEETi Reviews</h4>
+
+        {% if user.is_authenticated and has_purchased %}
+          {% if has_reviewed %}
+            <button class="btn btn-outline-secondary btn-sm mb-3" id="edit-review-toggle">Edit Your Review</button>
+            <div id="review-form-wrapper" style="display: none;">
+          {% else %}
+            <button class="btn btn-outline-primary btn-sm mb-3" id="show-review-form">Leave Your Review</button>
+            <div id="review-form-wrapper" style="display: none;">
+          {% endif %}
+
+          <form method="POST" class="mb-4">
+            {% csrf_token %}
+            <label class="form-label">Your Rating</label>
+            <div class="star-rating mb-2">
+              {% for i in "54321" %}
+                <input type="radio" name="rating" id="star{{ i }}" value="{{ i }}"
+                {% if form.rating.value|stringformat:"s" == i %}checked{% endif %}>
+                <label for="star{{ i }}">&#9733;</label>
+              {% endfor %}
+            </div>
+            <label for="comment" class="form-label">Your Review</label>
+            <textarea name="comment" rows="3" class="form-control">{{ form.comment.value }}</textarea>
+            <button type="submit" class="btn btn-outline-primary btn-sm mt-2">
+              {% if has_reviewed %}Update{% else %}Submit{% endif %} Review
+            </button>
+          </form>
+        </div>
+        {% endif %}
+
+        {% if reviews %}
+          <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              {% for review in reviews %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                  <div class="review-card p-3 bg-white rounded shadow-sm text-start">
+                    <strong>{{ review.user }}</strong>
+                    <span class="text-warning">⭐ {{ review.rating }}</span>
+                    <p class="mb-1">{{ review.comment }}</p>
+                    <small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <p class="small text-muted">Check back soon for SWEETi reviews!</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- JS for toggling forms -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const editBtn = document.getElementById("edit-review-toggle");
+        const showBtn = document.getElementById("show-review-form");
+        const formWrapper = document.getElementById("review-form-wrapper");
+
+        if (editBtn) {
+          editBtn.addEventListener("click", () => {
+            formWrapper.style.display = formWrapper.style.display === "none" ? "block" : "none";
+            editBtn.textContent = formWrapper.style.display === "block" ? "Hide Review Form" : "Edit Your Review";
+          });
+        }
+
+        if (showBtn) {
+          showBtn.addEventListener("click", () => {
+            formWrapper.style.display = "block";
+            showBtn.style.display = "none";
+          });
+        }
+      });
+    </script>
   </div>
 </div>
-
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const qtyButtons = document.querySelectorAll('.increase-qty, .decrease-qty');
-    
-      function updateButtonState(input) {
-        const value = parseInt(input.value);
-        const increaseBtn = input.closest('.sweeti-quantity-form').querySelector('.increase-qty');
-        const decreaseBtn = input.closest('.sweeti-quantity-form').querySelector('.decrease-qty');
-    
-        increaseBtn.disabled = value >= 99;
-        decreaseBtn.disabled = value <= 1;
-      }
-    
-      qtyButtons.forEach(button => {
-        button.addEventListener('click', function () {
-          const inputId = this.getAttribute('data-input-id');
-          const input = document.getElementById(inputId);
-          if (!input) return;
-    
-          let value = parseInt(input.value) || 1;
-    
-          if (this.classList.contains('increase-qty') && value < 99) {
-            input.value = value + 1;
-          } else if (this.classList.contains('decrease-qty') && value > 1) {
-            input.value = value - 1;
-          }
-    
-          updateButtonState(input);
-        });
-      });
-    
-      // Ensure correct button states on load
-      document.querySelectorAll('.sweeti-qty-input').forEach(input => {
-        updateButtonState(input);
-    
-        input.addEventListener('change', function () {
-          let value = parseInt(input.value);
-          if (isNaN(value) || value < 1) value = 1;
-          if (value > 99) value = 99;
-          input.value = value;
-          updateButtonState(input);
-        });
-      });
-    });
-    </script> -->
+{% endblock %}
 
 {% block post_loadjs %}
   {{ block.super }}
   {% include "sweets/includes/quantity_update_script.html" %}
 {% endblock %}
-    
-{% endblock %}
-

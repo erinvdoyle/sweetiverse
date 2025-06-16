@@ -53,26 +53,30 @@
     </div>
   </div>
   
-  <!-- Most Popular Sweets -->
-  <div class="popular-section-wrapper">
-    <div class="popular-section-inner text-center">
-      <h3>Most Popular SWEETiS</h3>
-      <div class="row justify-content-center mt-4">
-        <div class="col-6 col-sm-3 mb-3">
-          <div class="product-placeholder"></div>
+<!-- Most Popular Sweets -->
+<div class="popular-section-wrapper">
+  <div class="popular-section-inner text-center">
+    <h3>Most Popular SWEETiS</h3>
+    <div class="row justify-content-center mt-4">
+      {% for sweet in popular_sweets %}
+        <div class="col-6 col-sm-3 mb-5 d-flex justify-content-center">
+          <a href="{% url 'sweet_detail' sweet.id %}" class="text-decoration-none" title="{{ sweet.name }}">
+            <div class="product-placeholder position-relative">
+              {% if sweet.image %}
+                <img src="{{ sweet.image.url }}" class="img-fluid rounded shadow sparkle-float" alt="{{ sweet.name }}">
+              {% else %}
+                <img src="{% static 'images/default.png' %}" class="img-fluid rounded shadow sparkle-float" alt="No image">
+              {% endif %}
+            </div>
+          </a>
         </div>
-        <div class="col-6 col-sm-3 mb-3">
-          <div class="product-placeholder"></div>
-        </div>
-        <div class="col-6 col-sm-3 mb-3">
-          <div class="product-placeholder"></div>
-        </div>
-        <div class="col-6 col-sm-3 mb-3">
-          <div class="product-placeholder"></div>
-        </div>
-      </div>
-      <a href="#" class="d-block mt-3 text-end pe-3 text-decoration-none text-dark">See all SWEETiS →</a>
+      {% endfor %}
+    </div>
+
+    <div class="text-end mt-4 pe-3">
+      <a href="{% url 'sweets' %}" class="text-decoration-none text-dark">See all SWEETiS →</a>
     </div>
   </div>
+</div>
 
 {% endblock %}
