@@ -212,6 +212,10 @@ if os.getenv('USE_AWS') == 'true':
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    AWS_S3_OBJECT_PARAMETERS = {
+        'CacheControl': 'max-age=86400',
+    }
+
 
     STATICFILES_STORAGE = 'sweetiverse.custom_storages.StaticStorage'
     DEFAULT_FILE_STORAGE = 'sweetiverse.custom_storages.MediaStorage'
