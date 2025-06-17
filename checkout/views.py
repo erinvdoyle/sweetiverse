@@ -15,6 +15,10 @@ from django.http import HttpResponse
 from django.views.decorators.http import require_POST
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
+from subscriptions.models import PickNMixSubscription
+from subscriptions.utils import create_stripe_subscription
+from django.utils import timezone
+
 
 
 def checkout(request):
@@ -128,9 +132,36 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation email \
-        will be sent to {order.email}.')
+        try:
+            from subscriptions.models import PickNMixSubscription
+            from sweets.models import Sweet
+
+            subscription_data = request.session.pop('picknmix_data', None)
+
+            if subscription_data:
+                picknmix_sweet = Sweet.objects.filter(name__icontains="Pick").first()
+                subscription_in_order = OrderLineItem.objects.filter(
+                    order=order, product=picknmix_sweet
+                ).exists()
+
+                if subscription_in_order:
+                    PickNMixSubscription.objects.update_or_create(
+                        user=request.user,
+                        defaults={
+                            'sweet_types': ", ".join(subscription_data['sweet_types']),
+                            'flavor_preferences': ", ".join(subscription_data['flavor_preferences']),
+                            'explorer': subscription_data['explorer'],
+                            'delivery_frequency': subscription_data['delivery_frequency'],
+                            'active': True,
+                            'next_billing_date': timezone.now() + timedelta(days=30),
+                        }
+                    )
+        except Exception as e:
+            messages.warning(request, f"Note: Subscription was not created automatically. {str(e)}")
+
+    messages.success(request, f'Order successfully processed! '
+        f'Your order number is {order_number}. A confirmation email '
+        f'will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
