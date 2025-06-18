@@ -1847,45 +1847,153 @@ input[type="file"] {
 }
 
 /*--- Pick-N-Mix ---------------------------------------------------------------------------------------------------------*/
-.btn-outline-pink {
-  border: 2px solid #ff69b4;
-  background-color: #fff0f6;
-  color: #d63384;
-  border-radius: 30px;
+.subscription-section {
+  background-image: url("/static/images/starry-bg.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  width: 95%;
+  position: relative;
+  overflow: hidden;
+}
+
+.subscription-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subscription-text {
+  flex: 1 1 55%;
+  color: #fff;
+  padding: 1rem 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+
+.subscription-text h2 {
+  font-family: 'Chewy', cursive;
+  font-size: 2.7rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #000;
+  text-align: center;
+}
+
+.subscription-form label {
   font-weight: 500;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  margin: 0.3rem;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.btn-outline-pink:hover {
-  background-color: #ff69b4;
-  color: white;
-}
-
-.btn-outline-yellow {
-  border: 2px solid #ffc107;
-  background-color: #fffbea;
-  color: #ff9800;
+.form-check-label {
+  display: inline-block;
+  margin: 0.4rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 30px;
+  border: 2px solid transparent;
   font-weight: 500;
+  font-family: 'Fredoka', sans-serif;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #fde2e2;
+  color: #880e4f;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.05);
 }
 
-.btn-outline-yellow:hover {
-  background-color: #ffc107;
+.form-check-label:nth-child(3n+1) {
+  background-color: #fbeec1;
+  color: #b76e00;
+}
+.form-check-label:nth-child(3n+2) {
+  background-color: #e0f7fa;
+  color: #006064;
+}
+.form-check-label:nth-child(3n+3) {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  background-color: #ff4081;
   color: white;
+  border: 2px solid #c2185b;
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(255, 64, 129, 0.4);
 }
 
-.btn-outline-green {
-  border: 2px solid #28a745;
-  background-color: #e9f9ed;
-  color: #218838;
-  border-radius: 30px;
+.form-check-label:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none !important;
+}
+
+.btn-subscribe {
+  background-color: #dfb154;
+  color: #6f0927;
+  font-size: 1.3rem;
+  border-radius: 40px;
+  padding: 0.8rem 2rem;
+  border: none;
+  box-shadow: 0 6px 15px rgba(223, 177, 84, 0.5);
+  transition: 0.3s ease;
+  font-family: 'Chewy', cursive;
+}
+
+.btn-subscribe:hover {
+  background-color: #f3c770;
+  transform: scale(1.06);
+}
+
+.form-check-label {
+  position: relative;
+  display: inline-block;
   font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  margin: 0.4rem;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: #f8d7e4;
+  color: #880e4f;
 }
 
-.btn-outline-green:hover {
-  background-color: #28a745;
-  color: white;
+.subscription-image {
+  flex: 1 1 40%;
+  text-align: right;
+  z-index: 1;
+  position: relative;
 }
 
+.subscription-image img {
+  max-height: 620px;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px #ffc0cb);
+  user-select: none;
+}
+
+.subscription-section fieldset {
+  margin-bottom: 1rem;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 

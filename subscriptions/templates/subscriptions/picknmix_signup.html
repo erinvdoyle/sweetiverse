@@ -2,73 +2,90 @@
 {% load static %}
 
 {% block content %}
-<div class="container my-5">
-  <h2 class="mb-4 text-center">🍭 Build Your Pick-N-Mix Subscription!</h2>
-  <form method="POST" class="p-4 bg-white rounded shadow-sm border">
-    {% csrf_token %}
+<div class="subscription-section">
+  <div class="row">
+    <!-- Form Text + Inputs -->
+    <div class="subscription-text text-center">
+      <h2>🍭 Build Your PICK-N-MIX Subscription!</h2>
+      <form method="POST" class="subscription-form">
+        {% csrf_token %}
 
-    <fieldset class="mb-4">
-      <legend class="fw-bold mb-2">My Favorite Sweetis (Pick 1 or 2)</legend>
-      <div class="d-flex flex-wrap">
-        {% for checkbox in form.sweet_types %}
-          <label class="btn btn-outline-pink me-2 mb-2">
-            {{ checkbox.tag }} {{ checkbox.choice_label }}
-          </label>
-        {% endfor %}
-      </div>
-    </fieldset>
+        <fieldset>
+          <legend>Favorite SWEETiS (Pick 1 or 2)</legend>
+          <div class="d-flex flex-wrap justify-content-center">
+            {% for checkbox in form.sweet_types %}
+              {{ checkbox.tag }}
+              <label class="form-check-label" for="{{ checkbox.id_for_label }}">
+                {{ checkbox.choice_label }}
+              </label>
+            {% endfor %}
+          </div>
+        </fieldset>
 
-    <fieldset class="mb-4">
-      <legend class="fw-bold mb-2">My Favorite Flavors (Pick 1 or 2)</legend>
-      <div class="d-flex flex-wrap">
-        {% for checkbox in form.flavor_preferences %}
-          <label class="btn btn-outline-yellow me-2 mb-2">
-            {{ checkbox.tag }} {{ checkbox.choice_label }}
-          </label>
-        {% endfor %}
-      </div>
-    </fieldset>
+        <fieldset>
+          <legend>Favorite Flavors (Pick 1 or 2)</legend>
+          <div class="d-flex flex-wrap justify-content-center">
+            {% for checkbox in form.flavor_preferences %}
+              {{ checkbox.tag }}
+              <label class="form-check-label" for="{{ checkbox.id_for_label }}">
+                {{ checkbox.choice_label }}
+              </label>
+            {% endfor %}
+          </div>
+        </fieldset>
 
-    <div class="form-check form-switch mb-4">
-      {{ form.explorer }}
-      <label class="form-check-label ms-2 fw-semibold">Include Sweeti Explorer? 🌈 (Surprise Picks!)</label>
+        <div class="form-check form-switch mb-4 text-start d-flex align-items-center">
+            {{ form.explorer }}
+            <label class="form-check-label ms-2 fw-semibold" for="{{ form.explorer.id_for_label }}">
+              Include Sweeti Explorer? 🌈
+            </label>
+            <small class="ms-2 fst-italic">(sample our newest SWEETiS!)</small>
+          </div>
+          
+
+        <fieldset>
+          <legend>Choose Your Delivery Frequency</legend>
+          <div class="d-flex flex-wrap justify-content-center">
+            {% for radio in form.delivery_frequency %}
+              {{ radio.tag }}
+              <label class="form-check-label" for="{{ radio.id_for_label }}">
+                {{ radio.choice_label }}
+              </label>
+            {% endfor %}
+          </div>
+        </fieldset>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-subscribe">
+            Add to Bag & CHECKOUT
+          </button>
+        </div>
+      </form>
     </div>
 
-    <fieldset class="mb-4">
-      <legend class="fw-bold mb-2">Choose Delivery Frequency</legend>
-      <div class="d-flex flex-wrap">
-        {% for radio in form.delivery_frequency %}
-          <label class="btn btn-outline-green me-2 mb-2">
-            {{ radio.tag }} {{ radio.choice_label }}
-          </label>
-        {% endfor %}
-      </div>
-    </fieldset>
-
-    <div class="text-center">
-      <button type="submit" class="btn btn-success btn-lg px-5">
-        💌 Add to Bag & Checkout
-      </button>
+    <div class="subscription-image text-center">
+      <img src="{% static 'images/spaceship.png' %}" alt="Astronaut Mascot" class="molly-img">
     </div>
-  </form>
+  </div>
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      function limitChecks(selector, max) {
-        document.querySelectorAll(selector).forEach(chk => {
-          chk.addEventListener('change', () => {
-            const checked = [...document.querySelectorAll(selector + ':checked')];
-            if (checked.length > max) {
-              chk.checked = false;
-              alert(`Please select up to ${max} options.`);
-            }
-          });
+  document.addEventListener("DOMContentLoaded", () => {
+    function limitChecks(selector, max) {
+      const checkboxes = document.querySelectorAll(selector);
+      checkboxes.forEach(chk => {
+        chk.addEventListener('change', () => {
+          const checked = [...checkboxes].filter(c => c.checked);
+          if (checked.length > max) {
+            chk.checked = false;
+            alert(`Please select up to ${max} options.`);
+          }
         });
-      }
-      limitChecks('input[name="sweet_types"]', 2);
-      limitChecks('input[name="flavor_preferences"]', 2);
-    });
-    </script>    
-{% endblock %}
+      });
+    }
 
+    limitChecks('input[name="sweet_types"]', 2);
+    limitChecks('input[name="flavor_preferences"]', 2);
+  });
+</script>
+{% endblock %}
