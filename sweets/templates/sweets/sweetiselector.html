@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="sweetiselector-wrapper">
+  <div class="sweetiselector-bg-frame">
+    <section class="sweetiselector-section position-relative">  
+    <div class="container text-center position-relative z-2">
+      <h2 class="mb-5 text-white">SWEETiSELECTOR: Boldly explore the SWEETiVERSE!</h2>
+
+      <form method="GET" class="sweetiselector-form">
+        <div class="sweetiselector-toggle-row">
+
+          <!-- Toggle 1 -->
+          <div class="d-flex flex-column align-items-center">
+            <label class="toggle-wrapper fruity-toggle">
+              <div class="toggle-labels">
+                <span class="toggle-label-left">Fruity</span>
+                <span class="toggle-label-right">Chocolate</span>
+              </div>
+              <div class="toggle-container">
+                <input type="checkbox" name="fruity_vs_chocolate" class="toggle-input"
+                       {% if request.GET.fruity_vs_chocolate %}checked{% endif %}>
+                <div class="toggle-handle-wrapper">
+                  <div class="toggle-handle">
+                    <div class="toggle-handle-knob"></div>
+                    <div class="toggle-handle-bar-wrapper">
+                      <div class="toggle-handle-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle-base">
+                  <div class="toggle-base-inside"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Toggle 2 -->
+          <div class="d-flex flex-column align-items-center">
+            <label class="toggle-wrapper texture-toggle">
+              <div class="toggle-labels">
+                <span class="toggle-label-left">Hard Candy</span>
+                <span class="toggle-label-right">Chewy Candy</span>
+              </div>
+              <div class="toggle-container">
+                <input type="checkbox" name="texture" class="toggle-input"
+                       {% if request.GET.texture %}checked{% endif %}>
+                <div class="toggle-handle-wrapper">
+                  <div class="toggle-handle">
+                    <div class="toggle-handle-knob"></div>
+                    <div class="toggle-handle-bar-wrapper">
+                      <div class="toggle-handle-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle-base">
+                  <div class="toggle-base-inside"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Toggle 3 -->
+          <div class="d-flex flex-column align-items-center">
+            <label class="toggle-wrapper flavor-toggle">
+              <div class="toggle-labels">
+                <span class="toggle-label-left">New Flavors</span>
+                <span class="toggle-label-right">Old Favorites</span>
+              </div>
+              <div class="toggle-container">
+                <input type="checkbox" name="flavor_age" class="toggle-input"
+                       {% if request.GET.flavor_age %}checked{% endif %}>
+                <div class="toggle-handle-wrapper">
+                  <div class="toggle-handle">
+                    <div class="toggle-handle-knob"></div>
+                    <div class="toggle-handle-bar-wrapper">
+                      <div class="toggle-handle-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle-base">
+                  <div class="toggle-base-inside"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Toggle 4 -->
+          <div class="d-flex flex-column align-items-center">
+            <label class="toggle-wrapper popularity-toggle">
+              <div class="toggle-labels">
+                <span class="toggle-label-left">Most Popular</span>
+                <span class="toggle-label-right">Most Unique</span>
+              </div>
+              <div class="toggle-container">
+                <input type="checkbox" name="popularity" class="toggle-input"
+                       {% if request.GET.popularity %}checked{% endif %}>
+                <div class="toggle-handle-wrapper">
+                  <div class="toggle-handle">
+                    <div class="toggle-handle-knob"></div>
+                    <div class="toggle-handle-bar-wrapper">
+                      <div class="toggle-handle-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toggle-base">
+                  <div class="toggle-base-inside"></div>
+                </div>
+              </div>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+          <button type="submit" class="btn btn-primary px-5 py-2">
+            Discover SWEETiS!
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  </div>
+
+  {% if selected_sweets %}
+    <div class="sweetiselector-card-section">
+      {% for sweet in selected_sweets %}
+        <div class="sweetiselector-card">
+          <a href="{% url 'sweet_detail' sweet.id %}">
+            {% if sweet.image and sweet.image.url %}
+              <img src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+            {% else %}
+              <img src="{% static 'images/placeholder.png' %}" alt="{{ sweet.name }}">
+            {% endif %}
+            <h3>{{ sweet.name }}</h3>
+            <p>{{ sweet.description|truncatewords:15 }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<!-- === JavaScript === -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Card animation
+    const cards = document.querySelectorAll(".sweetiselector-card");
+    cards.forEach((card, i) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(30px)";
+      card.style.transition = `opacity 0.5s ${i * 0.1}s, transform 0.5s ${i * 0.1}s`;
+    });
+    setTimeout(() => {
+      cards.forEach(card => {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      });
+    }, 100);
+
+    // Dynamic toggle label
+    document.querySelectorAll(".toggle-wrapper").forEach(wrapper => {
+      const input = wrapper.querySelector(".toggle-input");
+      const left = wrapper.querySelector(".toggle-label-left");
+      const right = wrapper.querySelector(".toggle-label-right");
+
+      const updateLabels = () => {
+        if (input.checked) {
+          left.classList.remove("active");
+          right.classList.add("active");
+        } else {
+          right.classList.remove("active");
+          left.classList.add("active");
+        }
+      };
+
+      input.addEventListener("change", updateLabels);
+      updateLabels();
+    });
+  });
+</script>
+{% endblock %}

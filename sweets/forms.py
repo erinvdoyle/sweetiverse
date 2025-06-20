@@ -52,3 +52,26 @@ class SweetReviewForm(forms.ModelForm):
         widgets = {
             'comment': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Write your thoughts...'}),
         }
+
+
+class SweetiSelectorForm(forms.Form):
+    fruity_vs_chocolate = forms.BooleanField(
+        required=False,
+        label="",
+        widget=forms.CheckboxInput(attrs={'class': 'django-toggle fruity'})
+    )
+    texture = forms.BooleanField(
+        required=False,
+        label="",
+        widget=forms.CheckboxInput(attrs={'class': 'django-toggle texture'})
+    )
+    flavor_age = forms.BooleanField(
+        required=False,
+        label="",
+        widget=forms.CheckboxInput(attrs={'class': 'django-toggle flavor-age'})
+    )
+    popularity = forms.BooleanField(
+        required=False,
+        label="",
+        widget=forms.CheckboxInput(attrs={'class': 'django-toggle popularity'})
+    )

@@ -1,12 +1,14 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Sweet, Category, SweetReview
-from django.db.models import Q
+from .models import Sweet, Category, SweetReview, Type
+from django.db.models import Q, Count
 from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from urllib.parse import urlencode
-from .forms import SweetForm, SweetReviewForm
+from .forms import SweetForm, SweetReviewForm, SweetiSelectorForm
 from django.contrib.auth.decorators import login_required
 from checkout.models import OrderLineItem
+from datetime import timedelta
+from django.utils import timezone
 
 
 def search_results(request):
@@ -228,3 +230,59 @@ def submit_review(request, sweet_id):
         messages.error(request, "There was a problem with your review. Please check the form.")
 
     return redirect('sweet_detail', sweet_id=sweet_id)
+
+
+def sweetiselector(request):
+    form = SweetiSelectorForm(request.GET or None)
+    all_sweets = Sweet.objects.filter(in_stock=True).exclude(name__icontains="subscription box")
+    filtered_sweets = all_sweets
+
+    if request.GET and form.is_valid():
+        data = form.cleaned_data
+
+        if data['fruity_vs_chocolate']:
+            chocolate_cat = Category.objects.filter(name__iexact='chocolate').first()
+            if chocolate_cat:
+                filtered_sweets = filtered_sweets.filter(categories=chocolate_cat)
+        else:
+            fruity_type = Type.objects.filter(name__iexact='fruity').first()
+            if fruity_type:
+                filtered_sweets = filtered_sweets.filter(type=fruity_type)
+
+        base_pool = filtered_sweets
+
+        texture_cat_name = 'chewy-candy' if data['texture'] else 'hard-candy'
+        texture_cat = Category.objects.filter(name__iexact=texture_cat_name).first()
+        if texture_cat:
+            filtered_sweets = filtered_sweets.filter(categories=texture_cat)
+
+        last_month = timezone.now() - timedelta(days=30)
+        if data['flavor_age']:
+            filtered_sweets = filtered_sweets.filter(created__lt=last_month)
+        else:
+            filtered_sweets = filtered_sweets.filter(created__gte=last_month)
+
+        filtered_sweets = filtered_sweets.annotate(wishlist_count=Count('wishlisted_by'))
+        if data['popularity']:
+            filtered_sweets = filtered_sweets.order_by('wishlist_count') 
+        else:
+            filtered_sweets = filtered_sweets.order_by('-wishlist_count')
+
+        filtered_sweets = filtered_sweets.distinct()
+        selected_sweets = list(filtered_sweets[:3])
+
+        if len(selected_sweets) < 3:
+            remaining = 3 - len(selected_sweets)
+            base_fallback = base_pool.exclude(id__in=[s.id for s in selected_sweets])
+            base_fallback = base_fallback.order_by('?')[:remaining]
+            selected_sweets.extend(base_fallback)
+
+    else:
+        selected_sweets = []
+
+    context = {
+        'form': form,
+        'selected_sweets': selected_sweets,
+        'suggestions': bool(selected_sweets),
+    }
+    return render(request, 'sweets/sweetiselector.html', context)

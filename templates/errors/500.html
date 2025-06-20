@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SweetiS Emergency! 🌌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background-color: #a172c7;
+      background-image: url("{% static 'images/asfalt-light.png' %}"), radial-gradient(circle at 50% 20%, #cfbaff 0%, #a172c7 100%);
+      background-blend-mode: overlay;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .error-container {
+      background: linear-gradient(145deg, #ecc9f6, #d38bf7);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+    }
+
+    .error-image {
+      width: 250px;
+      margin-bottom: .5rem;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px #ff64d3;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #fbeaff;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      background-color: #ff64d3;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255, 100, 211, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #ff3dbd;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <img src="{% static 'images/spaceship.png' %}" alt="Spaceship" class="error-image">
+    <h1>Mayday, mayday, SWEETi Malfunction 🚨</h1>
+    <p>Something in the SWEETiVERSE went supernova. We're working on it!</p>
+    <a href="{% url 'home' %}">Return to Base</a>
+  </div>
+</body>
+</html>
