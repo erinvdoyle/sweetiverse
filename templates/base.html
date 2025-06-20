@@ -157,11 +157,13 @@
     <div class="container-fluid mt-4"> {% block pageheader %}{% endblock %} </div>
     <!-- Main content -->
     <main class="my-4"> {% block content %}{% endblock %} </main>
-    
-    <!-- Subscription Box -->
-    <!-- <div class="subscription-box-wrapper py-4"><div class="container"><div class="subscription-box text-center p-4 rounded"><h4>Subscribe to Sweet News!</h4><form method="post" class="row justify-content-center">
-          {% csrf_token %}
-          <div class="col-md-6"><input type="email" class="form-control" placeholder="Enter your email"></div><div class="col-md-2 mt-2 mt-md-0"><button type="submit" class="btn btn-primary w-100">Subscribe</button></div></form></div></div></div> -->
+       <!-- Coming Soon Banner -->
+      <div class="comingsoon-banner-wrapper">
+        <div class="comingsoon-banner" id="comingsoonBanner">
+          <div class="comingsoon-message">Coming soon to the SWEETiVERSE: Swedish SWEETiS!</div>
+        </div>
+      </div>
+      <!-- Subscription Sign Up-->
     <div class="subscription-box-wrapper">
       <div class="container subscription-box-container">
         <div class="subscription-box text-center">
