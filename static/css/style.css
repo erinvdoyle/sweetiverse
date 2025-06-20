@@ -2418,6 +2418,42 @@ input[type="radio"] {
   color: #eee;
 }
 
+/*--- GDPR Privacy Policy ---------------------------------------------------------------------------------------------------------*/
+.privacy-wrapper {
+  background: linear-gradient(to bottom, #a86ccb, #e6d1f1);
+  min-height: 100vh;
+  opacity: 0.95;
+}
+
+ footer a {
+  color: #6f0927;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.privacy-box {
+  background-color: rgba(237, 223, 245, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(166, 95, 208, 0.2);
+  max-width: 800px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.privacy-box h2 {
+  color: #a65fd0;
+}
+
+.privacy-box a {
+  color: #a65fd0;
+  text-decoration: underline;
+}
+
+.privacy-box .btn {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/
 
 /* Candy Stripe Backgrounds */
