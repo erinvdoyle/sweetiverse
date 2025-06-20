@@ -16,3 +16,7 @@ def index(request):
         'popular_sweets': popular_sweets,
     }
     return render(request, 'home/index.html', context)
+
+
+def faq(request):
+    return render(request, 'home/faq.html')
