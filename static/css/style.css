@@ -225,23 +225,6 @@ footer {
   font-weight: 600;
 }
 
-/* .trust-badges {
-    background-color: rgba(252, 241, 127, 0.9);
-  } */
-
-/* .popular-section {
-    background-color: rgba(252, 241, 127, 0.9);
-  } */
-
-/* .popular-section {
-    background-color: rgba(252, 241, 127, 0.9);
-    padding: 3rem 0;
-    margin: 0;
-    width: 100vh;
-    border-radius: 0;
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
-  } */
-
 /*--- Popular Sweets Section -----------------------------------------------------------------------------------------------------------------*/
 .container-fluid.px-0 {
   padding-left: 0 !important;
@@ -698,12 +681,6 @@ footer {
     color: #f9f9f9;
   }
   
-  /* .product-placeholder {
-    background-color: #ffe6f1;
-    border-radius: 16px;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
-  } */
   .search-sweet-image-card {
     background-color: #fceaff;
     border-radius: 16px;
@@ -1079,34 +1056,6 @@ footer {
   
 
 /* --- SWEETS APP ---------------------------------------------------------------------------------------------------------*/
-/* .candy-card {
-    background: #fff0fb;
-    border: 3px dashed #ff6ec7;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
-    transition: transform 0.3s ease;
-    font-family: 'Fredoka', sans-serif;
-  }
-  .candy-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
-  }
-  .candy-card img {
-    max-height: 160px;
-    object-fit: contain;
-    border-radius: 12px;
-  } */
-
-  /* .page-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: white;
-    z-index: -1;
-  }
-   */
 /*--- sweets.html ---------------------------------------------------------------------------------------------------------*/  
   .sweet-card {
     transition: transform 0.3s ease;

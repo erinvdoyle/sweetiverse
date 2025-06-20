@@ -232,6 +232,114 @@ Monthly sweet box sent to a user
 - sweets (ManyToManyField to Sweet)
 - country_selection (Optional CharField or JSONField)
 
+# Marketing
+
+## Target Audience & Platforms
+
+SweetiVERSE is designed for international candy lovers, curious foodies, and expats who enjoy monthly tasting experiences. Our audience:
+
+- Aged 18–40 (but designed to be visually and thematically appealing to children as well!)  
+- Active on social platforms (Instagram, TikTok, Facebook)  
+- Interested in gifting, novelty, and subscription boxes  
+- Values personalization, cultural discovery, and nostalgia
+
+**Primary Platforms for Outreach:**
+
+- **Instagram & TikTok** – Visual, short-form content (unboxings, taste reactions)  
+- **Facebook** – Business visibility, ads, and longer-form posts  
+- **Email** – Newsletters, discounts, previews, and retention messaging
+
+---
+
+## Marketing Strategy Overview
+
+SweetiVERSE integrates five core marketing strategies to reach and engage customers:
+
+### 1. Search Engine Optimization (SEO)
+
+- Meta tags per page (title, description)
+- Semantic HTML and accessibility-compliant structure
+- Optimized image alt text and filenames
+- Focus keywords include:
+  - "Korean sweets online"
+  - "international pick n mix subscription"
+  - "Japanese candy box delivery Ireland"
+
+### 2. Content Marketing
+
+- Planned blog with monthly editorial content:
+  - Sweeti spotlights and box features
+  - Cultural and seasonal sweeti stories
+- Content tailored to support SEO and shareability
+
+### 3. Social Media Marketing
+
+**Organic Strategy:**
+
+- Community engagement via polls, comments, and reels
+- Featuring user-generated content and reactions
+
+**Paid Strategy:**
+
+- Instagram and Facebook ads
+- Retargeting campaigns for cart abandoners
+
+### 4. Email Marketing
+
+- Newsletter signup integrated via Mailchimp
+- Automated sequences:
+  - Welcome emails
+  - Monthly previews
+  - Promotions and seasonal offers
+
+### 5. Paid Advertising
+
+- Google Ads with targeted keyword bidding
+- Social retargeting (future goal with consent)
+- A/B testing to refine approach
+
+---
+
+## Tracking & Analytics
+
+(Marketing Future Features)
+
+| Tool                | Purpose                                      |
+|---------------------|----------------------------------------------|
+| Google Analytics    | Measure traffic, bounce rate, and engagement |
+| Mailchimp Analytics | Track open and click-through rates           |
+| Meta Ads Manager    | Review ad spend performance                  |
+| Instagram Insights  | Monitor post and story engagement            |
+
+---
+
+## GDPR & Data Protection
+
+SweetiVERSE follows GDPR best practices:
+
+- Privacy Policy linked in site footer
+- Double opt-in newsletter via Mailchimp
+- No pre-checked marketing boxes
+- Future cookie consent banner planned for analytics usage
+
+---
+
+## Strategy Timeline
+
+| Phase   | Key Activities                                                    |
+|---------|-------------------------------------------------------------------|
+| Month 1 | Initial SEO setup, launch Instagram and Facebook pages            |
+| Month 2 | Begin blog posts, start newsletter signups, share via socials     |
+| Month 3 | Launch paid ads, initiate retargeting with compliant tracking     |
+| Month 4+| Monthly Sweeti updates, optimize based on analytics and feedback  |
+
+---
+
+## Summary
+
+The SWEETiVERSE marketing plan is designed to balance cost-effectiveness, discoverability, and customer engagement. Using SEO, content creation, email retention, and scalable social media tactics, SWEETiVERSE aims to build a loyal, growing community of global sweet-lovers.
+
+
 # Search Engine Optimization SEO
 
 ## SEO Keyword Research Process
