@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}Logged Out{% endblock %}
+
+{% block content %}
+<div class="sweetiverse-wrapper">
+  <div class="sweeti-box">
+    <img src="{% static 'images/spaceship.png' %}" alt="Spaceship">
+    <h1>Sayonara, SWEETi!</h1>
+    <p style="color:#fff;">You have been logged out.</p>
+    <a href="{% url 'account_login' %}">Sign In Again</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}Join the SweetiVERSE{% endblock %}
+
+{% block content %}
+<style>
+  .sweetiverse-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: 100vh;
+    background-image: url("{% static 'images/asfalt-light.png' %}"), radial-gradient(circle at 50% 20%, #cfbaff 0%, #a172c7 100%);
+    background-blend-mode: overlay;
+  }
+
+  .sweeti-box {
+    background: linear-gradient(145deg, #ecc9f6, #d38bf7);
+    border-radius: 30px;
+    padding: 2.5rem 2rem;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+  }
+
+  .sweeti-box h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px #ff64d3;
+  }
+
+  .sweeti-box img {
+    width: 180px;
+    animation: float 4s ease-in-out infinite;
+    margin-bottom: 1rem;
+  }
+
+  .sweeti-box a,
+  .sweeti-box button {
+    background-color: #ff64d3;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(255, 100, 211, 0.4);
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .sweeti-box button:hover,
+  .sweeti-box a:hover {
+    background-color: #ff3dbd;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+</style>
+
+<div class="sweetiverse-wrapper">
+  <div class="sweeti-box">
+    <img src="{% static 'images/spaceship.png' %}" alt="Spaceship">
+    <h1>Discover the SWEETiVERSE</h1>
+    <form method="POST" action="{% url 'account_signup' %}">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
