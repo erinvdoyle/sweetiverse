@@ -231,3 +231,124 @@ Monthly sweet box sent to a user
 - active (BooleanField)
 - sweets (ManyToManyField to Sweet)
 - country_selection (Optional CharField or JSONField)
+
+# Search Engine Optimization SEO
+
+## SEO Keyword Research Process
+
+### Business Description
+SweetiVERSE is an e-commerce application offering a customizable international pick-n-mix sweets subscription. Users can create a personalized sweets box with candy from various countries and themes, with future expansions planned for additional regions and dietary options.
+
+---
+
+### 1. Brainstorm General Topics
+
+These are core subject areas relevant to SweetiVERSE:
+
+- Pick n mix
+- International candy
+- Subscription boxes
+- Sweet treats
+- Global sweets
+- Candy delivery
+- Themed sweets
+- Allergen-safe sweets
+
+---
+
+### 2. Brain Dump of Keyword Ideas
+
+#### Pick n mix:
+- pick n mix
+- pick and mix sweets
+- online pick n mix
+- custom pick n mix box
+
+#### International candy:
+- candy from around the world
+- international sweets
+- sweets from Europe
+- Japanese candy box
+- Swedish sweets online
+
+#### Subscription:
+- candy subscription
+- monthly sweets box
+- pick n mix subscription
+- sweet subscription UK
+
+#### Themed treats:
+- themed candy boxes
+- holiday candy box
+- best sweets for gifts
+
+#### Allergy-friendly:
+- peanut-free sweets
+- sugar-free candy
+- gluten-free pick n mix
+
+---
+
+### 3. Google Research Simulation
+
+Using tools like Google autocomplete, "People Also Ask", and "Related Searches", we simulated search behavior and confirmed interest in the following:
+
+- "Where to buy international candy?"
+- "Best candy subscription box"
+- "Candy box for kids with allergies"
+- "Sweets from Sweden"
+- "How to make your own pick n mix?"
+
+These results indicate active search interest in SweetiVERSE’s target features.
+
+---
+
+### 4. Final Keyword List
+
+| Short-Tail Keywords           | Long-Tail Keywords                                       |
+|------------------------------|----------------------------------------------------------|
+| pick n mix                   | buy international candy online                          |
+| candy subscription           | monthly pick and mix sweets box                         |
+| international sweets         | pick n mix subscription box UK                          |
+| themed candy                 | peanut-free sweets for kids                             |
+| global sweets                | Swedish sweets subscription                             |
+| sweetiverse                  | create your own pick n mix online                       |
+| sweets delivery              | custom sweet box with global candy                      |
+| allergen-free candy          | sugar-free candy options for monthly subscription       |
+
+---
+
+### 5. Keyword Strategy
+
+The final keywords were selected based on the following criteria:
+
+- **Relevance** to SweetiVERSE’s products and user needs
+- **Balance** of short-tail and long-tail keywords
+- **Specificity** to match high-intent user searches
+- **Potentially lower competition** due to niche focus
+
+This list will be used to optimize page titles, meta tags, headers, alt text, and on-page content.
+
+
+
+## SEO-Friendly Meta Tags
+
+## Semantic HTML
+
+## Keywords in Page Content
+
+## Optimized Image Names and Alt Texts
+
+## Sitemap and Robots.txt
+
+## Meaningful Internal and External Links
+
+## FAQ Page
+
+## Clear, Trustworthy Content
+(Terms & Conditions, Privacy Policy, Shipping Info, and Allergen Info) 
+
+## Track Engagement Metrics
+
+### Google Search Console CTR, Bounce Rate, Dwell Time, Pages per session
+
