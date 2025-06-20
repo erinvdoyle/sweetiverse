@@ -2,6 +2,13 @@
 {% load static %}
 
 {% block head_title %}SweetiVERSE FAQ{% endblock %}
+{% block extrameta %}
+  <meta name="description" content="Frequently asked questions about the SweetiVERSE subscription service. Learn about billing, sweeti selection, allergen info, and more.">
+  <meta name="keywords" content="sweetiverse faq, candy subscription questions, secure payment stripe, cancel subscription sweets, sweeti info, international candy help">
+  <meta name="author" content="SweetiVERSE">
+  <meta name="robots" content="index, follow">
+{% endblock %}
+
 
 {% block content %}
 <style>
@@ -101,7 +108,9 @@
   <!-- FAQ 2 -->
   <div class="faq-bubble faq-right">
     <h2>2. How do I know my payment is secure?</h2>
-    <p>We use Stripe, a leading secure payment platform trusted by millions globally. All your transactions are encrypted and protected.</p>
+    <p>
+      We use <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: underline;">Stripe</a>, a leading secure payment platform trusted by millions globally. All transactions are encrypted and PCI-compliant to protect your data.
+    </p>    
   </div>
 
   <!-- FAQ 3 -->
