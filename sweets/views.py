@@ -205,7 +205,6 @@ def delete_sweet(request, sweet_id):
     messages.success(request, f'{sweet.name} has been deleted.')
     return redirect('sweets')
 
-
 @login_required
 def submit_review(request, sweet_id):
     sweet = get_object_or_404(Sweet, pk=sweet_id)
@@ -229,6 +228,19 @@ def submit_review(request, sweet_id):
     else:
         messages.error(request, "There was a problem with your review. Please check the form.")
 
+    return redirect('sweet_detail', sweet_id=sweet_id)
+
+
+@login_required
+def delete_review(request, sweet_id):
+    review = get_object_or_404(SweetReview, sweet_id=sweet_id, user=request.user)
+
+    if request.method == "POST":
+        review.delete()
+        messages.success(request, "Your review has been deleted.")
+        return redirect('sweet_detail', sweet_id=sweet_id)
+
+    messages.warning(request, "Invalid request.")
     return redirect('sweet_detail', sweet_id=sweet_id)
 
 

@@ -10,5 +10,6 @@ urlpatterns = [
     path('delete/<uuid:sweet_id>/', views.delete_sweet, name='delete_sweet'),
     path('<uuid:sweet_id>/', views.sweet_detail, name='sweet_detail'),
     path('sweets/<uuid:sweet_id>/review/', views.submit_review, name='submit_review'),
+    path('sweet/<uuid:sweet_id>/delete_review/', views.delete_review, name='delete_review'),
     path('sweetiselector/', views.sweetiselector, name='sweetiselector'),
 ]

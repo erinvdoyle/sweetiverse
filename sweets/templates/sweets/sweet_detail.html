@@ -136,6 +136,16 @@
                     <span class="text-warning">⭐ {{ review.rating }}</span>
                     <p class="mb-1">{{ review.comment }}</p>
                     <small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small>
+
+                    {% if user == review.user %}
+                    <form method="POST" action="{% url 'delete_review' sweet.id %}" class="mt-2">
+                      {% csrf_token %}
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-outline-danger btn-sm">Delete Review</button>
+                      </div>
+                    </form>
+                    
+                    {% endif %}
                   </div>
                 </div>
               {% endfor %}
