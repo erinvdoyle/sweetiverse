@@ -8,7 +8,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
-
 @login_required
 def subscribe(request):
     if request.method == 'POST':
@@ -71,29 +70,29 @@ def picknmix_signup(request):
 @login_required
 def manage_subscription(request):
     try:
-        sub = request.user.picknmixsubscription
+        subscription = request.user.picknmixsubscription
     except PickNMixSubscription.DoesNotExist:
-        sub = None
+        subscription = None
 
     if request.method == 'POST':
         action = request.POST.get('action')
-        if sub and sub.stripe_subscription_id:
+        if subscription and subscription.stripe_subscription_id:
             try:
                 if action == 'cancel':
-                    stripe.Subscription.modify(sub.stripe_subscription_id, cancel_at_period_end=True)
-                    sub.active = False
-                    sub.save()
+                    stripe.Subscription.modify(subscription.stripe_subscription_id, cancel_at_period_end=True)
+                    subscription.active = False
+                    subscription.save()
                     messages.success(request, "Your subscription will cancel at the end of this period.")
                 elif action == 'resume':
-                    stripe.Subscription.modify(sub.stripe_subscription_id, cancel_at_period_end=False)
-                    sub.active = True
-                    sub.save()
+                    stripe.Subscription.modify(subscription.stripe_subscription_id, cancel_at_period_end=False)
+                    subscription.active = True
+                    subscription.save()
                     messages.success(request, "Your subscription has been reactivated!")
             except stripe.error.StripeError as e:
                 messages.error(request, f"Stripe error: {e.user_message}")
         return redirect('manage_subscription')
 
-    return render(request, 'subscriptions/manage_subscription.html', {'sub': sub})
+    return render(request, 'subscriptions/manage_subscription.html', {'subscription': subscription})
 
 
 @login_required
