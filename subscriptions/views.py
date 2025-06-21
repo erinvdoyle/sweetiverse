@@ -6,6 +6,11 @@ from .forms import PickNMixForm
 from .models import PickNMixSubscription
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import stripe
+from django.conf import settings
+
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 @login_required
@@ -78,18 +83,29 @@ def manage_subscription(request):
         action = request.POST.get('action')
         if subscription and subscription.stripe_subscription_id:
             try:
-                if action in ['cancel', 'pause']:
-                    stripe.Subscription.modify(subscription.stripe_subscription_id, cancel_at_period_end=True)
+                if action == 'pause':
+                    stripe.Subscription.modify(
+                        subscription.stripe_subscription_id,
+                        cancel_at_period_end=True
+                    )
                     subscription.active = False
                     subscription.save()
-                    messages.success(request, "Your subscription will pause at the end of this period.")
+                    messages.success(request, "Your subscription will pause at the end of this billing period.")
+
                 elif action == 'resume':
-                    stripe.Subscription.modify(subscription.stripe_subscription_id, cancel_at_period_end=False)
+                    stripe.Subscription.modify(
+                        subscription.stripe_subscription_id,
+                        cancel_at_period_end=False
+                    )
                     subscription.active = True
                     subscription.save()
                     messages.success(request, "Your subscription has been reactivated!")
+
             except stripe.error.StripeError as e:
                 messages.error(request, f"Stripe error: {e.user_message}")
+            except Exception as e:
+                messages.error(request, f"Unexpected error: {str(e)}")
+
         return redirect('manage_subscription')
 
     return render(request, 'subscriptions/manage_subscription.html', {'subscription': subscription})

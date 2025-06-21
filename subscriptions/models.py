@@ -26,7 +26,6 @@ class PickNMixSubscription(models.Model):
     def __str__(self):
         return f"{self.user.username}'s PickNMix Subscription"
 
-
     def get_next_billing(self):
         if self.delivery_frequency == 'weekly':
             return self.next_billing_date + timedelta(days=7)

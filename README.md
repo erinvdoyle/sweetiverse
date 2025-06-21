@@ -492,3 +492,6 @@ Future Feature with Google Console CTR (Bounce Rate, dwell time, pages per sessi
 - Vector Speech Bubble https://www.freepik.com
 - Vector Cloud https://www.fffuel.co
 - Cloud Border https://pngtree.com/
+- icons icons8
+- fonts googlefonts
+- font awesome
