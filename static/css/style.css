@@ -1279,7 +1279,7 @@ footer {
     color: white;
     font-weight: 600;
     font-size: 1rem;
-    border-radius: 999px; /* pill shape */
+    border-radius: 999px;
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
@@ -1493,6 +1493,15 @@ footer {
   .star-rating label:hover ~ label {
     color: #d63384;
   }
+
+  .carousel-inner {
+    transition: height 0.3s ease;
+  }
+  
+  .review-card {
+    min-height: 160px;
+  }
+  
     
   /*--- Toasts ------------------------------------------------------------------------------------------------------------------------------------------*/
 .custom-toast {

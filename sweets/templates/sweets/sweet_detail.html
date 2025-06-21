@@ -142,8 +142,8 @@
         {% endif %}
 
         {% if reviews %}
-          <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
+          <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div class="carousel-inner" style="min-height: 180px;">
               {% for review in reviews %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
                   <div class="review-card p-3 bg-white rounded shadow-sm text-start">
@@ -153,24 +153,32 @@
                     <small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small>
 
                     {% if user == review.user %}
-                    <form method="POST" action="{% url 'delete_review' sweet.id %}" class="mt-2">
-                      {% csrf_token %}
-                      <div class="text-center">
-                        <button type="submit" class="btn btn-outline-danger btn-sm">Delete Review</button>
-                      </div>
-                    </form>
-                    
+                      <form method="POST" action="{% url 'delete_review' sweet.id %}" class="mt-2">
+                        {% csrf_token %}
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-outline-danger btn-sm">Delete Review</button>
+                        </div>
+                      </form>
                     {% endif %}
                   </div>
                 </div>
               {% endfor %}
             </div>
+
+            <!-- Manual Carousel Controls -->
+            <div class="text-center mt-3">
+              <button class="btn btn-outline-secondary btn-sm me-2" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                ← Previous
+              </button>
+              <button class="btn btn-outline-secondary btn-sm" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                Next →
+              </button>
+            </div>
           </div>
         {% else %}
           <p class="small text-muted">Check back soon for SWEETi reviews!</p>
         {% endif %}
-      </div>
-    </div>
+
 
     <!-- JS for toggling forms -->
     <script>
