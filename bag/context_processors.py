@@ -45,6 +45,18 @@ def bag_contents(request):
             total -= discount
         sweetistravaganza_applied = True
 
+        try:
+            mystery_sweet = Sweet.objects.get(name__icontains="Mystery Sweeti")
+            bag_items.append({
+                'sweet_id': 'mystery_bonus',
+                'quantity': 1,
+                'sweet': mystery_sweet,
+                'subscription_details': None,
+                'is_bonus': True,
+            })
+        except Sweet.DoesNotExist:
+            pass
+
     delivery = Decimal('3.95') if total < 25 else Decimal('0.00')
     grand_total = total + delivery
 
