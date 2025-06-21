@@ -18,6 +18,8 @@ from profiles.forms import UserProfileForm
 from subscriptions.models import PickNMixSubscription
 from subscriptions.utils import create_stripe_subscription
 from django.utils import timezone
+from datetime import timedelta
+
 
 
 def checkout(request):
@@ -66,9 +68,11 @@ def checkout(request):
                     if isinstance(item_data, int):
                         quantity = item_data
                         subscription_details = None
-                    else:
+                    elif isinstance(item_data, dict):
                         quantity = item_data.get('quantity', 1)
                         subscription_details = item_data.get('subscription_details')
+                    else:
+                        continue
 
                     line_item = OrderLineItem(
                         order=order,
@@ -89,6 +93,7 @@ def checkout(request):
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. Please check your information.')
+
     else:
         if not bag:
             messages.error(request, "Your bag is empty")
@@ -115,7 +120,6 @@ def checkout(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
-
 
 
 def checkout_success(request, order_number):
@@ -154,15 +158,23 @@ def checkout_success(request, order_number):
                 ).exists()
 
                 if subscription_in_order:
+                    frequency = subscription_data['delivery_frequency']
+                    if frequency == 'weekly':
+                        next_billing = timezone.now() + timedelta(weeks=1)
+                    elif frequency == 'biweekly':
+                        next_billing = timezone.now() + timedelta(weeks=2)
+                    else:
+                        next_billing = timezone.now() + timedelta(days=30)
+
                     PickNMixSubscription.objects.update_or_create(
                         user=request.user,
                         defaults={
                             'sweet_types': ", ".join(subscription_data['sweet_types']),
                             'flavor_preferences': ", ".join(subscription_data['flavor_preferences']),
                             'explorer': subscription_data['explorer'],
-                            'delivery_frequency': subscription_data['delivery_frequency'],
+                            'delivery_frequency': frequency,
                             'active': True,
-                            'next_billing_date': timezone.now() + timedelta(days=30),
+                            'next_billing_date': next_billing,
                         }
                     )
         except Exception as e:
@@ -182,7 +194,6 @@ def checkout_success(request, order_number):
     }
 
     return render(request, 'checkout/checkout_success.html', context)
-
 
 @require_POST
 def cache_checkout_data(request):

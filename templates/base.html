@@ -41,8 +41,10 @@
                     <i class="fas fa-heart"></i> Wishlist
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'manage_subscription' %}">🍭 My Subscription</a>
+                <li>
+                  <a class="dropdown-item" href="{% url 'manage_subscription' %}">
+                    <i class="fas fa-candy-cane"></i> 🍭 My Subscription
+                  </a>
                 </li>
               {% endif %}              
               {% if user.is_authenticated %}

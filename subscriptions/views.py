@@ -43,14 +43,14 @@ def picknmix_signup(request):
         form = PickNMixForm(request.POST)
         form.fields['flavor_preferences'].choices = [(f['flavor'], f['flavor']) for f in top_flavors]
         if form.is_valid():
-            subscription_data = {
+            picknmix_data = {
                 'sweet_types': form.cleaned_data['sweet_types'],
                 'flavor_preferences': form.cleaned_data['flavor_preferences'],
                 'explorer': form.cleaned_data['explorer'],
                 'delivery_frequency': form.cleaned_data['delivery_frequency'],
             }
 
-            request.session['picknmix_data'] = subscription_data
+            request.session['picknmix_data'] = picknmix_data
 
             subscription_product = Sweet.objects.filter(name__icontains='Pick').first()
 
@@ -58,7 +58,7 @@ def picknmix_signup(request):
                 bag = request.session.get('bag', {})
                 bag[str(subscription_product.id)] = {
                     'quantity': 1,
-                    'subscription_details': subscription_data
+                    'subscription_details': picknmix_data
                 }
                 request.session['bag'] = bag
                 return redirect('checkout')
