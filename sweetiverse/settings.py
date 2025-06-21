@@ -205,6 +205,10 @@ ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_ON_GET = False
 LOGOUT_REDIRECT_URL = '/'
 
+DEFAULT_FROM_EMAIL = 'SWEETiVERSE <noreply@herokuapp.com>'
+ACCOUNT_EMAIL_CONFIRMATION_TEMPLATE = "account/email/email_confirmation_message.txt"
+ACCOUNT_EMAIL_CONFIRMATION_SUBJECT_TEMPLATE = "account/email/email_confirmation_subject.txt"
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

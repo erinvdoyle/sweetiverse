@@ -486,3 +486,5 @@ Future Feature with:
 - Pink Spaceship https://www.vectorstock.com/
 - Pick N Mix Lever https://uiverse.io/njesenberger/brave-firefox-90
 - Spaceship Control Room https://thehungryjpeg.com/
+- Japanese Sweet Images https://www.tofucute.com
+- Korean Sweet Images https://www.japancandystore.com/

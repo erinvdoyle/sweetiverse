@@ -1,0 +1,13 @@
+Hello, SWEETi!
+
+Thanks for signing up for the SWEETiVERSE—your intergalactic candy adventure is about to begin 🌟
+
+Please confirm your email address by clicking the link below:
+
+{{ activate_url }}
+
+If you didn’t request this, no worries—you can safely ignore this email.
+
+See you in the SWEETiVERSE!
+
+– The SWEETiVERSE Crew
