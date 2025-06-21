@@ -17,19 +17,26 @@ def bag_contents(request):
         sweet = get_object_or_404(Sweet, pk=item_id)
 
         if isinstance(item_data, int):
-            line_total = item_data * sweet.price
-            total += line_total
-            sweeti_count += item_data
+            quantity = item_data
+            subscription_details = None
+        else:
+            quantity = item_data.get('quantity', 1)
+            subscription_details = item_data.get('subscription_details', None)
 
-            for _ in range(item_data):
-                if lowest_price is None or sweet.price < lowest_price:
-                    lowest_price = sweet.price
+        line_total = quantity * sweet.price
+        total += line_total
+        sweeti_count += quantity
 
-            bag_items.append({
-                'sweet_id': item_id,
-                'quantity': item_data,
-                'sweet': sweet,
-            })
+        for _ in range(quantity):
+            if lowest_price is None or sweet.price < lowest_price:
+                lowest_price = sweet.price
+
+        bag_items.append({
+            'sweet_id': item_id,
+            'quantity': quantity,
+            'sweet': sweet,
+            'subscription_details': subscription_details,
+        })
 
     sweetistravaganza_applied = False
     if sweeti_count >= 4:

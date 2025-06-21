@@ -34,18 +34,6 @@ def subscribe(request):
     return render(request, 'subscriptions/subscribe.html', {'form': form})
 
 
-# def picknmix_signup(request):
-#     form = PickNMixForm()
-    
-#     # Dynamically fetch top 5 flavors
-#     top_flavors = Sweet.objects.values('flavor') \
-#         .annotate(count=Count('flavor')) \
-#         .order_by('-count')[:5]
-    
-#     # Set dynamic flavor choices
-#     form.fields['flavor_preferences'].choices = [(fl['flavor'], fl['flavor']) for fl in top_flavors]
-
-
 def picknmix_signup(request):
     form = PickNMixForm()
     top_flavors = Sweet.objects.values('flavor').annotate(count=Count('flavor')).order_by('-count')[:5]
@@ -55,24 +43,30 @@ def picknmix_signup(request):
         form = PickNMixForm(request.POST)
         form.fields['flavor_preferences'].choices = [(f['flavor'], f['flavor']) for f in top_flavors]
         if form.is_valid():
-            request.session['picknmix_data'] = {
+            subscription_data = {
                 'sweet_types': form.cleaned_data['sweet_types'],
                 'flavor_preferences': form.cleaned_data['flavor_preferences'],
                 'explorer': form.cleaned_data['explorer'],
                 'delivery_frequency': form.cleaned_data['delivery_frequency'],
             }
 
+            request.session['picknmix_data'] = subscription_data
+
             subscription_product = Sweet.objects.filter(name__icontains='Pick').first()
 
             if subscription_product:
                 bag = request.session.get('bag', {})
-                bag[str(subscription_product.id)] = 1
+                bag[str(subscription_product.id)] = {
+                    'quantity': 1,
+                    'subscription_details': subscription_data
+                }
                 request.session['bag'] = bag
                 return redirect('checkout')
             else:
                 messages.error(request, "Subscription product not found.")
 
     return render(request, 'subscriptions/picknmix_signup.html', {'form': form})
+
 
 
 @login_required

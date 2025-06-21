@@ -62,6 +62,7 @@ class OrderLineItem(models.Model):
     product_size = models.CharField(max_length=2, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    subscription_details = models.JSONField(null=True, blank=True)
 
     def save(self, *args, **kwargs):
         self.lineitem_total = self.product.price * self.quantity

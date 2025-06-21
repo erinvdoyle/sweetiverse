@@ -20,7 +20,6 @@ from subscriptions.utils import create_stripe_subscription
 from django.utils import timezone
 
 
-
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -60,13 +59,22 @@ def checkout(request):
 
             order.save()
 
-            for item_id, quantity in bag.items():
+            for item_id, item_data in bag.items():
                 try:
                     sweet = Sweet.objects.get(id=item_id)
+
+                    if isinstance(item_data, int):
+                        quantity = item_data
+                        subscription_details = None
+                    else:
+                        quantity = item_data.get('quantity', 1)
+                        subscription_details = item_data.get('subscription_details')
+
                     line_item = OrderLineItem(
                         order=order,
                         product=sweet,
                         quantity=quantity,
+                        subscription_details=subscription_details,
                     )
                     line_item.save()
                 except Sweet.DoesNotExist:
@@ -107,6 +115,7 @@ def checkout(request):
     }
 
     return render(request, 'checkout/checkout.html', context)
+
 
 
 def checkout_success(request, order_number):

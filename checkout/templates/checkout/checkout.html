@@ -33,7 +33,15 @@
         <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
       {% endif %}
       {{ item.sweet.name }}
-    </div>
+      {% if item.subscription_details %}
+        <div class="mt-1 small text-muted">
+          <div><strong>Types:</strong> {{ item.subscription_details.sweet_types|join:", " }}</div>
+          <div><strong>Flavors:</strong> {{ item.subscription_details.flavor_preferences|join:", " }}</div>
+          <div><strong>Frequency:</strong> {{ item.subscription_details.delivery_frequency }}</div>
+          <div><strong>Explorer:</strong> {{ item.subscription_details.explorer|yesno:"Yes,No" }}</div>
+        </div>
+      {% endif %}
+    </div>    
     <div class="col-3 text-center">{{ item.quantity }}</div>
     <div class="col-3 text-end">£{{ item.sweet.price|calc_subtotal:item.quantity }}</div>
   </div>
