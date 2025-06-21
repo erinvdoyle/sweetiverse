@@ -68,10 +68,13 @@ def picknmix_signup(request):
     return render(request, 'subscriptions/picknmix_signup.html', {'form': form})
 
 
-
 @login_required
 def manage_subscription(request):
-    sub = PickNMixSubscription.objects.filter(user=request.user).first()
+    try:
+        sub = request.user.picknmixsubscription
+    except PickNMixSubscription.DoesNotExist:
+        sub = None
+
     if request.method == 'POST':
         action = request.POST.get('action')
         if sub and sub.stripe_subscription_id:
