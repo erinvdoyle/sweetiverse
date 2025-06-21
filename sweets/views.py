@@ -12,8 +12,11 @@ from datetime import timedelta
 from django.utils import timezone
 
 
+EXCLUDED_SWEETS = ["Sweetistravaganza Mystery Sweeti", "PickNMix Subscription Box"]
+
+
 def search_results(request):
-    sweets = Sweet.objects.all()
+    sweets = Sweet.objects.exclude(name__in=EXCLUDED_SWEETS)
     query = request.GET.get('q')
     sort = request.GET.get('sort')
     category_param = request.GET.get('category')
@@ -41,6 +44,8 @@ def search_results(request):
     if sort:
         sort_field = sort_options.get(sort, 'name')
         sweets = sweets.order_by(sort_field)
+
+    sweets = sweets.exclude(name__in=EXCLUDED_SWEETS)
 
     paginator = Paginator(sweets, 4)
     page = request.GET.get('page')
@@ -108,32 +113,32 @@ def sweet_detail(request, sweet_id):
         form = SweetReviewForm(instance=review_instance)
 
     reviews = sweet.reviews.all().order_by('-created_at')
-    
+
     recommendations = Sweet.objects.none()
-    
+
     category_matches = Sweet.objects.filter(
         Q(categories__in=sweet.categories.all())
-    ).exclude(id=sweet.id).distinct()
+    ).exclude(id=sweet.id).exclude(name__in=EXCLUDED_SWEETS).distinct()
 
     recommendations = category_matches
 
     if recommendations.count() < 4 and sweet.type:
         type_matches = Sweet.objects.filter(type=sweet.type).exclude(
             id__in=[sweet.id] + list(recommendations.values_list('id', flat=True))
-        )
+        ).exclude(name__in=EXCLUDED_SWEETS)
         recommendations = recommendations | type_matches
 
     if recommendations.count() < 4:
         flavor_matches = Sweet.objects.filter(flavor__iexact=sweet.flavor).exclude(
             id__in=[sweet.id] + list(recommendations.values_list('id', flat=True))
-        )
+        ).exclude(name__in=EXCLUDED_SWEETS)
         recommendations = recommendations | flavor_matches
 
     if recommendations.count() < 4:
         fill_needed = 4 - recommendations.count()
         top_rated = Sweet.objects.exclude(
             id__in=[sweet.id] + list(recommendations.values_list('id', flat=True))
-        ).order_by('-rating')[:fill_needed]
+        ).exclude(name__in=EXCLUDED_SWEETS).order_by('-rating')[:fill_needed]
         recommendations = recommendations | top_rated
 
     recommendations = recommendations.distinct()[:4]
@@ -151,8 +156,7 @@ def sweet_detail(request, sweet_id):
 
 
 def sweets_list(request):
-    """View to show all sweets"""
-    sweets = Sweet.objects.all()
+    sweets = Sweet.objects.exclude(name__in=EXCLUDED_SWEETS)
     sort = request.GET.get('sort')
     category_param = request.GET.get('category')
 
@@ -173,6 +177,8 @@ def sweets_list(request):
         sort_field = sort_options.get(sort)
         if sort_field:
             sweets = sweets.order_by(sort_field)
+
+    sweets = sweets.exclude(name__in=EXCLUDED_SWEETS)
 
     categories = Category.objects.all()
 
@@ -261,7 +267,8 @@ def delete_review(request, sweet_id):
 
 def sweetiselector(request):
     form = SweetiSelectorForm(request.GET or None)
-    all_sweets = Sweet.objects.filter(in_stock=True).exclude(name__icontains="subscription box")
+    all_sweets = Sweet.objects.filter(in_stock=True).exclude(name__in=EXCLUDED_SWEETS)
+
     filtered_sweets = all_sweets
 
     if request.GET and form.is_valid():
