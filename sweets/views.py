@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse
 from .models import Sweet, Category, SweetReview, Type
 from django.db.models import Q, Count
 from django.contrib import messages
@@ -54,6 +55,16 @@ def search_results(request):
     query_params.pop('page', None)
     base_query = urlencode(query_params)
 
+    pill_urls = []
+    for cat in current_categories:
+        remaining = [c.name for c in current_categories if c != cat]
+        qs = request.GET.copy()
+        if remaining:
+            qs['category'] = ','.join(remaining)
+        else:
+            qs.pop('category', None)
+        pill_urls.append(qs.urlencode())
+
     categories = Category.objects.all()
 
     context = {
@@ -63,6 +74,7 @@ def search_results(request):
         'current_categories': current_categories,
         'category_names': ','.join(category_names),
         'base_query': base_query,
+        'pill_urls': pill_urls,
     }
 
     return render(request, 'home/search_results.html', context)

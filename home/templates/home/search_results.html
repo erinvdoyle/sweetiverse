@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load custom_filters %}
+
 {% block content %}
 {% block extrameta %}
   <meta name="description" content="Search global candy and sweets in the SweetiVERSE. Find your favorite flavors, regions, or types of sweetis across our full catalogue.">
@@ -16,26 +18,19 @@
   <div class="cloud-search-content container-narrow text-center">
 
     <!-- Header -->
-    {% if search_term %}
-      <h3>Search Results for "{{ search_term }}"</h3>
-    {% elif current_categories %}
-      <h3>{{ current_categories.0.friendly_name }}{% if current_categories|length > 1 %}, ...{% endif %} Sweets</h3>
+    {% if search_term or current_categories or request.GET.sort %}
+      <h3>SWEETi Search Results</h3>
     {% else %}
       <h3>All Our Sweets</h3>
     {% endif %}
-
+  
     <!-- Category Badges with Remove Links -->
     {% if current_categories %}
       <div class="category-badges mt-3 mb-4 d-flex flex-wrap justify-content-center gap-2">
         {% for cat in current_categories %}
-          {% with remaining=category_names|cut:cat.name|cut:',,' %}
-            <a href="?{% if search_term %}q={{ search_term }}&{% endif %}
-                    {% if request.GET.sort %}sort={{ request.GET.sort }}&{% endif %}
-                    {% if remaining %}category={{ remaining }}{% endif %}"
-              class="candy-badge d-inline-flex align-items-center">
-              🍬 {{ cat.friendly_name }} <span class="badge-close ms-1">×</span>
-            </a>
-          {% endwith %}
+          <a href="?{{ pill_urls|index:forloop.counter0 }}" class="candy-badge d-inline-flex align-items-center">
+            🍬 {{ cat.friendly_name }} <span class="badge-close ms-1">×</span>
+          </a>
         {% endfor %}
       </div>
     {% endif %}
@@ -56,7 +51,7 @@
       <div class="row mt-4 justify-content-center">
         {% for sweet in sweets %}
           <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
-            <div class="sweet-card-wrapper w-100">
+            <a href="{% url 'sweet_detail' sweet.id %}" class="sweet-card-wrapper w-100 text-decoration-none text-dark">
               <!-- Image -->
               <div class="search-sweet-image-card">
                 <img src="{{ sweet.image.url }}" alt="{{ sweet.name }}" class="img-fluid">
@@ -67,7 +62,7 @@
                 <p class="mb-1">Flavor: {{ sweet.flavor }}</p>
                 <small class="text-muted">Origin: {{ sweet.country_of_origin.name }}</small>
               </div>
-            </div>
+            </a>            
           </div>
         {% endfor %}
       </div>

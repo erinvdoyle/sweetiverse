@@ -715,6 +715,11 @@ footer {
     margin-top: 0.6rem;
     text-align: center;
   }
+
+  .sweet-text-card p.mb-1 {
+    color: #7a003c !important;
+}
+
   
   
   .sweet-card-wrapper {
