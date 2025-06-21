@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}Terms & Conditions{% endblock %}
+
+{% block content %}
+<div class="privacy-wrapper py-5">
+  <div class="container">
+    <div class="privacy-box mx-auto px-4 py-5">
+      <h2 class="text-center logo-font mb-4">SWEETiVERSE Terms & Conditions</h2>
+
+      <p><strong>Effective Date:</strong> 20/6/2025</p>
+      <p><strong>Last Updated:</strong> 20/6/2025</p>
+
+      <p>Welcome to the <strong>SWEETiVERSE Pick N Mix Subscription Box!</strong></p>
+
+      <p>By subscribing, you agree to the following sweet conditions:</p>
+
+      <ul>
+        <li>You may <strong>pause or cancel</strong> your subscription anytime via your account dashboard</li>
+        <li>We will <strong>notify you ahead of each renewal</strong>, so no surprise charges—only sweet surprises!</li>
+        <li>Charges will be made to the <strong>card on file</strong> at the delivery frequency you select (e.g., weekly, fortnightly, monthly).</li>
+        <li>You’re free to <strong>change your SWEETi type</strong>, flavor preferences, or delivery frequency whenever the mood strikes.</li>
+        <li>We may update pricing or box contents occasionally, but you’ll always be informed in advance.</li>
+        <li>Your subscription is personal and meant for individual joy—no reselling, please!</li>
+      </ul>
+
+      <p>We’re committed to delivering only the happiest of SWEETi surprises. If you ever need help or have a change of heart, our team is just a message away: <a href="mailto:support@sweetiverse.com">support@sweetiverse.com</a>.</p>
+
+      <p>By signing up, you're agreeing to these terms. Enjoy, SWEETi!</p>
+
+      <div class="text-center mt-5">
+        <a href="{% url 'picknmix_signup' %}" class="btn btn-primary">Back to PICK N MIX</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

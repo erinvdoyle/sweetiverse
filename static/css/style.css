@@ -2418,7 +2418,7 @@ input[type="radio"] {
   color: #eee;
 }
 
-/*--- GDPR Privacy Policy ---------------------------------------------------------------------------------------------------------*/
+/*--- GDPR Privacy Policy & Terms and Conditions ---------------------------------------------------------------------------------------------------------*/
 .privacy-wrapper {
   background: linear-gradient(to bottom, #a86ccb, #e6d1f1);
   min-height: 100vh;
@@ -2452,6 +2452,25 @@ input[type="radio"] {
 .privacy-box .btn {
   color: #fff;
   text-decoration: none;
+}
+
+.terms-note {
+  font-size: 0.85rem !important;
+  color: #800020 !important;
+  text-align: center !important;
+  margin-bottom: 1rem !important;
+  font-style: italic !important;
+  margin-top: -5px !important;
+}
+
+.terms-note a {
+  color: #800020 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.terms-note a:hover {
+  text-decoration: underline !important;
 }
 
 /*--- Design Embellishments & Effects ---------------------------------------------------------------------------------------------------------*/

@@ -7,6 +7,9 @@
     <!-- Form Text + Inputs -->
     <div class="subscription-text text-center">
       <h2>🍭 Build Your PICK-N-MIX Subscription!</h2>
+      <p class="terms-note mt-1"> Our SWEETi Subscriptions are stress-free! Check out the 
+        <a href="{% url 'terms' %}" target="_blank">Terms & Conditions</a>
+      </p>
       <form method="POST" class="subscription-form">
         {% csrf_token %}
 
@@ -59,6 +62,7 @@
           <button type="submit" class="btn btn-subscribe">
             Add to Bag & CHECKOUT
           </button>
+          
         </div>
       </form>
     </div>

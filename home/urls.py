@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('faq/', views.faq, name='faq'),
     path("privacy/", TemplateView.as_view(template_name="home/privacy.html"), name="privacy"),
+    path("terms/", TemplateView.as_view(template_name="home/terms.html"), name="terms"),
 ]

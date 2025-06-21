@@ -347,8 +347,6 @@ The SWEETiVERSE marketing plan is designed to balance cost-effectiveness, discov
 ### Business Description
 SweetiVERSE is an e-commerce application offering a customizable international pick-n-mix sweets subscription. Users can create a personalized sweets box with candy from various countries and themes, with future expansions planned for additional regions and dietary options.
 
----
-
 ### 1. Brainstorm General Topics
 
 These are core subject areas relevant to SweetiVERSE:
@@ -360,7 +358,8 @@ These are core subject areas relevant to SweetiVERSE:
 - Global sweets
 - Candy delivery
 - Themed sweets
-- Allergen-safe sweets
+- Allergen-safe sweets (Future Feature)
+- Limited edition and new Kit Kats
 
 ---
 
@@ -377,34 +376,36 @@ These are core subject areas relevant to SweetiVERSE:
 - international sweets
 - sweets from Europe
 - Japanese candy box
-- Swedish sweets online
+- Korean sweets online
+- unique kit kat flavors
 
 #### Subscription:
 - candy subscription
 - monthly sweets box
 - pick n mix subscription
-- sweet subscription UK
+- sweet subscription Ireland
 
 #### Themed treats:
 - themed candy boxes
 - holiday candy box
 - best sweets for gifts
+- Japanese Kit Kats
 
 #### Allergy-friendly:
 - peanut-free sweets
 - sugar-free candy
-- gluten-free pick n mix
+- gluten-free
 
 ---
 
 ### 3. Google Research Simulation
 
-Using tools like Google autocomplete, "People Also Ask", and "Related Searches", we simulated search behavior and confirmed interest in the following:
+Using tools like Google autocomplete, "People Also Ask", and "Related Searches", I simulated search behavior and confirmed interest in the following:
 
 - "Where to buy international candy?"
 - "Best candy subscription box"
 - "Candy box for kids with allergies"
-- "Sweets from Sweden"
+- "Sweets from Japan"
 - "How to make your own pick n mix?"
 
 These results indicate active search interest in SweetiVERSE’s target features.
@@ -438,25 +439,42 @@ The final keywords were selected based on the following criteria:
 This list will be used to optimize page titles, meta tags, headers, alt text, and on-page content.
 
 
-
 ## SEO-Friendly Meta Tags
+
+screenshots
 
 ## Semantic HTML
 
+screenshots
+
 ## Keywords in Page Content
+
+screenshots
 
 ## Optimized Image Names and Alt Texts
 
+screenshots
+
 ## Sitemap and Robots.txt
+
+screenshots
 
 ## Meaningful Internal and External Links
 
+screenshots
+
 ## FAQ Page
+
+screenshots
 
 ## Clear, Trustworthy Content
 (Terms & Conditions, Privacy Policy, Shipping Info, and Allergen Info) 
 
+screenshots
+
 ## Track Engagement Metrics
+
+Future Feature with:
 
 ### Google Search Console CTR, Bounce Rate, Dwell Time, Pages per session
 
