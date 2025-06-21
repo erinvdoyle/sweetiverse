@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from sweetiverse import views as core_views
 from sweets import views as sweets_views
+from allauth.account.views import confirm_email
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
@@ -16,7 +17,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('subscriptions/', include('subscriptions.urls')),
-
+    path("accounts/confirm-email/<key>/", confirm_email, name="account_confirm_email"),
 ]
 
 if not settings.DEBUG:
