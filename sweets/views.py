@@ -85,7 +85,6 @@ def search_results(request):
     return render(request, 'home/search_results.html', context)
 
 
-@login_required
 def sweet_detail(request, sweet_id):
     sweet = get_object_or_404(Sweet, pk=sweet_id)
     user = request.user

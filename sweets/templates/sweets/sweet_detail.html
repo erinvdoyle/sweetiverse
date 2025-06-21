@@ -49,29 +49,42 @@
           <p><strong>Country of Origin:</strong> {{ sweet.country_of_origin.name }}</p>
           <p><strong>Flavor:</strong> {{ sweet.flavor }}</p>
 
-          <!-- Add to Bag Form -->
-          <form method="POST" action="{% url 'add_to_bag' sweet.id %}" id="add-to-bag-form">
-            {% csrf_token %}
-            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            <div class="d-flex justify-content-center">
-              <div class="d-flex align-items-center sweeti-quantity-form">
-                <button type="button" class="btn sweeti-qty-btn decrease-qty" data-input-id="qty-input-{{ sweet.id }}">
-                  <i class="fas fa-minus"></i>
-                </button>
-                <input type="number" name="quantity" value="1" min="1" max="99"
-                  class="form-control sweeti-qty-input mx-2" id="qty-input-{{ sweet.id }}">
-                <button type="button" class="btn sweeti-qty-btn increase-qty" data-input-id="qty-input-{{ sweet.id }}">
-                  <i class="fas fa-plus"></i>
-                </button>
+          {% if user.is_authenticated %}
+            <!-- Add to Bag Form for Logged-In Users -->
+            <form method="POST" action="{% url 'add_to_bag' sweet.id %}" id="add-to-bag-form">
+              {% csrf_token %}
+              <input type="hidden" name="redirect_url" value="{{ request.path }}">
+              <div class="d-flex justify-content-center">
+                <div class="d-flex align-items-center sweeti-quantity-form">
+                  <button type="button" class="btn sweeti-qty-btn decrease-qty" data-input-id="qty-input-{{ sweet.id }}">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <input type="number" name="quantity" value="1" min="1" max="99"
+                        class="form-control sweeti-qty-input mx-2" id="qty-input-{{ sweet.id }}">
+                  <button type="button" class="btn sweeti-qty-btn increase-qty" data-input-id="qty-input-{{ sweet.id }}">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="text-center mt-3 px-2">
-              <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
-                🎉 SWEETiStravaganza: Buy 4 Sweetis, Get 1 FREE!
+              <div class="text-center mt-3 px-2">
+                <p class="sweetistravaganza-label d-inline-block px-3 py-2 mb-0">
+                  🎉 SWEETiStravaganza: Buy 4 Sweetis, Get 1 FREE!
+                </p>
+              </div>
+              <button type="submit" class="btn btn-primary mt-3 w-100 sweeti-add-btn">Add to Bag</button>
+            </form>
+          {% else %}
+            <!-- Login/Register Prompt for Guests -->
+            <div class="text-center mt-4">
+              <a href="{% url 'account_login' %}?next={{ request.path }}" class="btn btn-pink w-100">
+                Log in to add to SWEETi Bag
+              </a>
+              <p class="mt-2 small text-muted">
+                New here? <a href="{% url 'account_signup' %}?next={{ request.path }}">Register now</a> to start your SWEETi adventure!
               </p>
             </div>
-            <button type="submit" class="btn btn-primary mt-3 w-100 sweeti-add-btn">Add to Bag</button>
-          </form>
+          {% endif %}
+
         </div>
       </div>
     </div>
@@ -179,6 +192,22 @@
             showBtn.style.display = "none";
           });
         }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".sweeti-qty-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            const inputId = this.dataset.inputId;
+            const input = document.getElementById(inputId);
+            if (input) {
+              let current = parseInt(input.value) || 1;
+              const isIncrease = this.classList.contains("increase-qty");
+              const newVal = isIncrease ? current + 1 : Math.max(1, current - 1);
+              input.value = newVal;
+            }
+          });
+        });
       });
     </script>
   </div>
