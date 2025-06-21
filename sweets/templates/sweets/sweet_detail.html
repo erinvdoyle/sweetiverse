@@ -142,14 +142,17 @@
         {% endif %}
 
         {% if reviews %}
-          <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
             <div class="carousel-inner" style="min-height: 180px;">
               {% for review in reviews %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
                   <div class="review-card p-3 bg-white rounded shadow-sm text-start">
                     <strong>{{ review.user }}</strong>
                     <span class="text-warning">⭐ {{ review.rating }}</span>
-                    <p class="mb-1">{{ review.comment }}</p>
+                    <p class="mb-1 review-comment" data-full="{{ review.comment }}">{{ review.comment|truncatechars:180 }}</p>
+                      {% if review.comment|length > 180 %}
+                        <button class="btn btn-link p-0 review-toggle-btn small" type="button">Read more</button>
+                      {% endif %}
                     <small class="text-muted">{{ review.created_at|date:"M d, Y" }}</small>
 
                     {% if user == review.user %}
@@ -218,6 +221,26 @@
         });
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Review expand/collapse toggle
+        document.querySelectorAll(".review-toggle-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            const comment = btn.previousElementSibling;
+            const fullText = comment.dataset.full;
+            const isExpanded = btn.textContent === "Read less";
+    
+            if (isExpanded) {
+              comment.textContent = fullText.slice(0, 180) + '...';
+              btn.textContent = "Read more";
+            } else {
+              comment.textContent = fullText;
+              btn.textContent = "Read less";
+            }
+          });
+        });
+      });
+    </script>    
   </div>
 </div>
 {% endblock %}

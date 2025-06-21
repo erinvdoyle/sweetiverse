@@ -1502,7 +1502,15 @@ footer {
     min-height: 160px;
   }
   
-    
+  .review-comment {
+    white-space: pre-line;
+  }
+  .review-toggle-btn {
+    color: #a64ac9;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
   /*--- Toasts ------------------------------------------------------------------------------------------------------------------------------------------*/
 .custom-toast {
     border: 2px solid #ffc9f3;
