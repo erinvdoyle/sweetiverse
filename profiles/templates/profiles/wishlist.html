@@ -31,7 +31,7 @@
                     {% csrf_token %}
                     <input type="hidden" name="quantity" value="1">
                     <input type="hidden" name="redirect_url" value="{% url 'wishlist' %}">
-                    <button type="submit" class="btn btn-primary btn-sm">Move to Bag</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Add to Bag</button>
                   </form>                  
                 <a href="{% url 'remove_from_wishlist' item.sweet.id %}" class="btn btn-primary-outline btn-remove btn-sm">
                   ❌ Remove
