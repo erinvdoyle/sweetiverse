@@ -474,13 +474,13 @@ screenshots
 
 ## Track Engagement Metrics
 
-Future Feature with:
-
-### Google Search Console CTR, Bounce Rate, Dwell Time, Pages per session
+Future Feature with Google Console CTR (Bounce Rate, dwell time, pages per session)
 
 # Credits
 
 ## Media
+
+### Images
 
 - Starry backgrounds https://www.transparenttextures.com/
 - Pink Spaceship https://www.vectorstock.com/
@@ -488,3 +488,7 @@ Future Feature with:
 - Spaceship Control Room https://thehungryjpeg.com/
 - Japanese Sweet Images https://www.tofucute.com
 - Korean Sweet Images https://www.japancandystore.com/
+- Mega Space Molly images https://www.popmart.com
+- Vector Speech Bubble https://www.freepik.com
+- Vector Cloud https://www.fffuel.co
+- Cloud Border https://pngtree.com/
