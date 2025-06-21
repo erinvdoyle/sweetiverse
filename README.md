@@ -478,3 +478,11 @@ Future Feature with:
 
 ### Google Search Console CTR, Bounce Rate, Dwell Time, Pages per session
 
+# Credits
+
+## Media
+
+- Starry backgrounds https://www.transparenttextures.com/
+- Pink Spaceship https://www.vectorstock.com/
+- Pick N Mix Lever https://uiverse.io/njesenberger/brave-firefox-90
+- Spaceship Control Room https://thehungryjpeg.com/
