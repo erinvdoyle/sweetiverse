@@ -82,18 +82,20 @@
       <!-- Recommendations -->
       <div class="sweeti-recommendations">
         <h4 class="logo-font mb-3">You Might Also Like...</h4>
-        <div class="recommendation-cards">
-          <div class="mini-product-card">
-            <img src="/media/images/meiji_petitgum_grape_large.jpg" alt="Sweet 1" class="mini-product-img">
-            <p class="mini-product-name">Grape Puccho</p>
-          </div>
-          <div class="mini-product-card">
-            <img src="/media/images/big-sugar-rolly-rainbow-cotton-candy.webp" alt="Sweet 2" class="mini-product-img">
-            <p class="mini-product-name">Kit Kat Matcha</p>
-          </div>
+        <div class="recommendation-cards d-flex flex-wrap gap-3">
+          {% for rec in recommendations %}
+            <a href="{% url 'sweet_detail' rec.id %}" class="mini-product-card text-decoration-none text-dark text-center">
+              {% if rec.image %}
+                <img src="{{ rec.image.url }}" alt="{{ rec.name }}" class="mini-product-img">
+              {% else %}
+                <img src="{% static 'images/default.png' %}" alt="No image" class="mini-product-img">
+              {% endif %}
+              <p class="mini-product-name mt-2">{{ rec.name }}</p>
+            </a>
+          {% endfor %}
         </div>
       </div>
-
+      
       <!-- Review Bubble -->
       <div class="sweeti-review-bubble text-center">
         <h4 class="logo-font mb-3">SWEETi Reviews</h4>

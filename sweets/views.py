@@ -96,6 +96,35 @@ def sweet_detail(request, sweet_id):
         form = SweetReviewForm(instance=review_instance)
 
     reviews = sweet.reviews.all().order_by('-created_at')
+    
+    recommendations = Sweet.objects.none()
+    
+    category_matches = Sweet.objects.filter(
+        Q(categories__in=sweet.categories.all())
+    ).exclude(id=sweet.id).distinct()
+
+    recommendations = category_matches
+
+    if recommendations.count() < 4 and sweet.type:
+        type_matches = Sweet.objects.filter(type=sweet.type).exclude(
+            id__in=[sweet.id] + list(recommendations.values_list('id', flat=True))
+        )
+        recommendations = recommendations | type_matches
+
+    if recommendations.count() < 4:
+        flavor_matches = Sweet.objects.filter(flavor__iexact=sweet.flavor).exclude(
+            id__in=[sweet.id] + list(recommendations.values_list('id', flat=True))
+        )
+        recommendations = recommendations | flavor_matches
+
+    if recommendations.count() < 4:
+        fill_needed = 4 - recommendations.count()
+        top_rated = Sweet.objects.exclude(
+            id__in=[sweet.id] + list(recommendations.values_list('id', flat=True))
+        ).order_by('-rating')[:fill_needed]
+        recommendations = recommendations | top_rated
+
+    recommendations = recommendations.distinct()[:4]
 
     context = {
         'sweet': sweet,
@@ -104,9 +133,9 @@ def sweet_detail(request, sweet_id):
         'has_purchased': has_purchased,
         'has_reviewed': has_reviewed,
         'reviews': reviews,
+        'recommendations': recommendations,
     }
     return render(request, 'sweets/sweet_detail.html', context)
-
 
 
 def sweets_list(request):
