@@ -1,0 +1,2512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/accounts/login/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/bag/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/sweets/sweets/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/sweets/sweetiselector/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/subscriptions/signup/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/faq/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/privacy/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/sweets/sweets/?category=korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/sweets/sweets/?category=japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/sweets/sweets/?category=korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/terms/</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;category=,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;category=korean,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Chard-candy&amp;category=hard-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;category=chewy-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchewy-candy&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgummies&amp;category=gummies,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;category=chocolate,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cchocolate&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;category=gum,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cgum&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;page=1</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?&amp;page=3</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cjapanese&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;category=korean,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Ckorean&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Chard-candy&amp;category=hard-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;category=chewy-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchewy-candy&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgummies&amp;category=gummies,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;category=chocolate,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cchocolate&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;category=gum,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;category=%2Cgum&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;page=1</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=price&amp;page=3</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cjapanese&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;category=korean,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Ckorean&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Chard-candy&amp;category=hard-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;category=chewy-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchewy-candy&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgummies&amp;category=gummies,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;category=chocolate,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cchocolate&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;category=gum,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;category=%2Cgum&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;page=1</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=type&amp;page=3</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cjapanese&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;category=korean,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Ckorean&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Chard-candy&amp;category=hard-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;category=chewy-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchewy-candy&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgummies&amp;category=gummies,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;category=chocolate,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cchocolate&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;category=gum,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;category=%2Cgum&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;page=1</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?sort=rating&amp;page=3</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=price&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=type&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;category=japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;sort=rating&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;category=japanese,japanese,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cjapanese&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;category=japanese,korean,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Ckorean&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;category=japanese,hard-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Chard-candy&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;category=japanese,chewy-candy,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchewy-candy&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;category=japanese,gummies,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgummies&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;category=japanese,chocolate,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cchocolate&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;category=japanese,gum,gum</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=japanese%2Cgum&amp;page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?page=2</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;page=1</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Cjapanese&amp;page=3</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;sort=price</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;sort=type</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;sort=rating</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;category=korean,japanese</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;category=korean,korean</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;category=korean,hard-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;category=korean,chewy-candy</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;category=korean,gummies</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://sweetiverse-24537debe589.herokuapp.com/search/?category=%2Ckorean&amp;sort=price&amp;category=korean,chocolate</loc>
+  <lastmod>2025-06-21T20:36:58+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
