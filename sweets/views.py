@@ -79,7 +79,6 @@ def sweet_detail(request, sweet_id):
         order__user_profile=user.userprofile, product=sweet
     ).exists()
 
-    # Review instance
     review_instance = SweetReview.objects.filter(sweet=sweet, user=user).first()
     has_reviewed = bool(review_instance)
 
@@ -204,31 +203,6 @@ def delete_sweet(request, sweet_id):
     sweet.delete()
     messages.success(request, f'{sweet.name} has been deleted.')
     return redirect('sweets')
-
-@login_required
-def submit_review(request, sweet_id):
-    sweet = get_object_or_404(Sweet, pk=sweet_id)
-    user = request.user
-
-    has_purchased = OrderLineItem.objects.filter(order__user_profile=user.userprofile, product=sweet).exists()
-    if not has_purchased:
-        messages.error(request, "You must purchase this sweet to leave a review.")
-        return redirect('sweet_detail', sweet_id=sweet_id)
-
-    review_instance = SweetReview.objects.filter(sweet=sweet, user=user).first()
-    form = SweetReviewForm(request.POST, instance=review_instance)
-
-    if form.is_valid():
-        review = form.save(commit=False)
-        review.sweet = sweet
-        review.user = user
-        review.save()
-        sweet.update_rating()
-        messages.success(request, "Your review was updated!" if review_instance else "Thanks for your review!")
-    else:
-        messages.error(request, "There was a problem with your review. Please check the form.")
-
-    return redirect('sweet_detail', sweet_id=sweet_id)
 
 
 @login_required

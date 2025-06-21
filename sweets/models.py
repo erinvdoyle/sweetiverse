@@ -2,6 +2,7 @@ from django.db import models
 import uuid
 from django_countries.fields import CountryField
 from django.contrib.auth.models import User
+from django.db.models import Avg
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -57,17 +58,17 @@ class Sweet(models.Model):
         return self.price
 
     def save(self, *args, **kwargs):
+        """Override save to calculate sale price and update stock status."""
         self.sale_price = self.calculate_sale_price()
         self.in_stock = self.stock_amount > 0
         super().save(*args, **kwargs)
-        
-    def update_rating(self):
-        reviews = self.reviews.all()
-        if reviews.exists():
-            total = sum([review.rating for review in reviews])
-            self.rating = round(total / reviews.count(), 1)
-            self.save()
 
+    def update_rating(self):
+        """Recalculate average rating from all related reviews."""
+        average = self.reviews.aggregate(avg_rating=Avg('rating'))['avg_rating']
+        if average is not None:
+            self.rating = round(average, 1)
+            self.save()
 
 class SweetReview(models.Model):
     sweet = models.ForeignKey(Sweet, on_delete=models.CASCADE, related_name='reviews')

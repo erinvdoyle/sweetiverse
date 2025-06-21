@@ -107,7 +107,7 @@
             <div id="review-form-wrapper" style="display: none;">
           {% endif %}
 
-          <form method="POST" class="mb-4">
+          <form method="POST" action="{% url 'sweet_detail' sweet.id %}" class="mb-4">
             {% csrf_token %}
             <label class="form-label">Your Rating</label>
             <div class="star-rating mb-2">
