@@ -249,7 +249,14 @@ SweetiVERSE is designed for international candy lovers, curious foodies, and exp
 - **Facebook** – Business visibility, ads, and longer-form posts  
 - **Email** – Newsletters, discounts, previews, and retention messaging
 
----
+**Facebook Page**
+![Facebook Page](./assets/readme-images/pp5fb.PNG)
+![Facebook Page](./assets/readme-images/pp5fb1.PNG)
+![Facebook Page](./assets/readme-images/pp5fb2.PNG)
+![Facebook Page](./assets/readme-images/pp5fb3.PNG)
+![Facebook Page](./assets/readme-images/pp5fb4.PNG)
+
+
 
 ## Marketing Strategy Overview
 
@@ -495,3 +502,4 @@ Future Feature with Google Console CTR (Bounce Rate, dwell time, pages per sessi
 - icons icons8
 - fonts googlefonts
 - font awesome
+- Facebook cover image chatgpt.com
