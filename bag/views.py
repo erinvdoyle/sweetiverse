@@ -68,7 +68,6 @@ def adjust_bag(request, sweet_id):
     return redirect('view_bag')
 
 
-
 def remove_from_bag(request, sweet_id):
     """
     Remove the item from the shopping bag.

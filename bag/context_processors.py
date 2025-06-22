@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404
 from sweets.models import Sweet
 from decimal import Decimal
 from django.conf import settings
+from checkout.models import DiscountCode
 
 
 def bag_contents(request):
@@ -12,6 +13,9 @@ def bag_contents(request):
     discount = Decimal('0.00')
 
     bag = request.session.get('bag', {})
+    promo_code_input = request.session.get('promo_code', '').strip().upper()
+    promo_discount = Decimal('0.00')
+    promo_valid = False
 
     for item_id, item_data in bag.items():
         sweet = get_object_or_404(Sweet, pk=item_id)
@@ -57,6 +61,19 @@ def bag_contents(request):
         except Sweet.DoesNotExist:
             pass
 
+    if promo_code_input:
+        try:
+            discount_obj = DiscountCode.objects.get(code=promo_code_input, active=True)
+            if discount_obj.usage_limit is None or discount_obj.used_count < discount_obj.usage_limit:
+                if discount_obj.is_percentage:
+                    promo_discount = total * (discount_obj.amount / 100)
+                else:
+                    promo_discount = discount_obj.amount
+                total -= promo_discount
+                promo_valid = True
+        except DiscountCode.DoesNotExist:
+            pass
+
     delivery = Decimal('3.95') if total < 25 else Decimal('0.00')
     grand_total = total + delivery
 
@@ -69,4 +86,6 @@ def bag_contents(request):
         'sweetistravaganza_discount': discount,
         'sweetistravaganza_applied': sweetistravaganza_applied,
         'sweetistravaganza_needed': max(0, 4 - sweeti_count),
+        'promo_discount': promo_discount,
+        'promo_code': promo_code_input if promo_valid else '',
     }

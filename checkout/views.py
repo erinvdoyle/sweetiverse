@@ -76,9 +76,8 @@ def checkout(request):
             order.original_bag = json.dumps(bag)
             order.discount = discount
             order.promo_code_used = promo_code_input
-            order.order_total = total
-            order.delivery_cost = delivery
-            order.grand_total = grand_total
+            order.save()
+            order.update_total()
 
             if request.user.is_authenticated:
                 try:
@@ -149,7 +148,7 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
-    """ Handle successful checkouts """
+    """Handle successful checkouts"""
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
@@ -176,7 +175,6 @@ def checkout_success(request, order_number):
             from sweets.models import Sweet
 
             subscription_data = request.session.pop('picknmix_data', None)
-
             if subscription_data:
                 picknmix_sweet = Sweet.objects.filter(name__icontains="Pick").first()
                 subscription_in_order = OrderLineItem.objects.filter(
@@ -185,12 +183,13 @@ def checkout_success(request, order_number):
 
                 if subscription_in_order:
                     frequency = subscription_data['delivery_frequency']
-                    if frequency == 'weekly':
-                        next_billing = timezone.now() + timedelta(weeks=1)
-                    elif frequency == 'biweekly':
-                        next_billing = timezone.now() + timedelta(weeks=2)
-                    else:
-                        next_billing = timezone.now() + timedelta(days=30)
+                    next_billing = (
+                        timezone.now() + timedelta(weeks=1)
+                        if frequency == 'weekly'
+                        else timezone.now() + timedelta(weeks=2)
+                        if frequency == 'biweekly'
+                        else timezone.now() + timedelta(days=30)
+                    )
 
                     PickNMixSubscription.objects.update_or_create(
                         user=request.user,
@@ -206,6 +205,8 @@ def checkout_success(request, order_number):
         except Exception as e:
             messages.warning(request, f"Note: Subscription was not created automatically. {str(e)}")
 
+    request.session.pop('promo_code', None)
+
     subject = f"SWEETiVERSE Order Confirmation – {order.order_number}"
     body = render_to_string('checkout/emails/confirmation_email_body.txt', {
         'order': order,
@@ -220,7 +221,7 @@ def checkout_success(request, order_number):
     )
 
     messages.success(request, f'Order successfully processed! '
-        f'Your order number is {order_number}. A confirmation email '
+        f'Your order number is {order.order_number}. A confirmation email '
         f'has been sent to {order.email}.')
 
     if 'bag' in request.session:

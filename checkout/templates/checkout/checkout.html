@@ -47,13 +47,9 @@
             {% endfor %}
 
             <!-- Promo Code Field -->
-            <!-- <div class="form-group mt-4 mb-3">
-              <label for="promo_code" class="form-label fw-bold">Have a promo code?</label>
-              <input type="text" name="promo_code" id="promo_code" class="form-control" placeholder="Enter it here">
-            </div> -->
             <form method="POST" action="{% url 'checkout' %}" id="payment-form">
               {% csrf_token %}
-              ...
+
               <div class="mb-3">
                 <label for="promo_code" class="form-label fw-bold">Have a promo code?</label>
                 <input type="text" name="promo_code" id="promo_code"
@@ -63,18 +59,23 @@
                   <small class="text-success">✔ Discount Applied: £{{ discount|floatformat:2 }}</small>
                 {% endif %}
               </div>
-            
-            
 
-            <hr>
-            <div class="row fw-bold">
-              <div class="col-6">Total</div>
-              <div class="col-6 text-end">£{{ total|floatformat:2 }}</div>
-              <div class="col-6">Delivery</div>
-              <div class="col-6 text-end">£{{ delivery|floatformat:2 }}</div>
-              <div class="col-6">Grand Total</div>
-              <div class="col-6 text-end">£{{ grand_total|floatformat:2 }}</div>
-            </div>
+              <hr>
+              <div class="row fw-bold">
+                <div class="col-6">Total</div>
+                <div class="col-6 text-end">£{{ total|floatformat:2 }}</div>
+
+                {% if discount %}
+                  <div class="col-6">Promo Discount</div>
+                  <div class="col-6 text-end text-success">-£{{ discount|floatformat:2 }}</div>
+                {% endif %}
+
+                <div class="col-6">Delivery</div>
+                <div class="col-6 text-end">£{{ delivery|floatformat:2 }}</div>
+
+                <div class="col-6">Grand Total</div>
+                <div class="col-6 text-end">£{{ grand_total|floatformat:2 }}</div>
+              </div>
           </div>
 
           <!-- 💳 Checkout Form -->
