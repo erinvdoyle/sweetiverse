@@ -234,47 +234,39 @@ Monthly sweet box sent to a user
 
 ### Wireframes
 
-- Home
 <details>
 <summary>Home</summary>
 
-![Home](./assets/readme-images/wf2.png)
+<img src="assets/readme-images/wf2.png" height="450px"/>
 
 </details>
-
-- Sweets
 
 <details>
 <summary>Sweets</summary>
 
-![product](./assets/readme-images/wf1.png)
+<img src="assets/readme-images/wf1.png" height="450px"/>
 
 </details>
 
-- Search
 
 <details>
 <summary>Search</summary>
 
-![product](./assets/readme-images/wf3.png)
+<img src="assets/readme-images/wf3.png" height="450px"/>
 
 </details>
-
-- SWEETi Selector
 
 <details>
 <summary>SWEETi Selector</summary>
 
-![product](./assets/readme-images/wf4.png)
+<img src="assets/readme-images/wf4.png" height="450px"/>
 
 </details>
-
-- Pick N Mix
 
 <details>
 <summary>Pick N Mix</summary>
 
-![product](./assets/readme-images/wf5.png)
+<img src="assets/readme-images/wf5.png" height="450px"/>
 
 </details>
 

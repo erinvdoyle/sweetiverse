@@ -7,6 +7,7 @@ from sweetiverse import views as core_views
 from sweets import views as sweets_views
 from allauth.account.views import confirm_email
 from django.views.generic import TemplateView
+from sweetiverse.views import CustomConfirmEmailView
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
@@ -19,6 +20,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('subscriptions/', include('subscriptions.urls')),
     path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
+    path('accounts/confirm-email/<key>/', CustomConfirmEmailView.as_view(), name='account_confirm_email'),
 ]
 
 if not settings.DEBUG:
