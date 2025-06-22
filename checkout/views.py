@@ -19,6 +19,8 @@ from subscriptions.models import PickNMixSubscription
 from subscriptions.utils import create_stripe_subscription
 from django.utils import timezone
 from datetime import timedelta
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 
 def checkout(request):
@@ -204,9 +206,22 @@ def checkout_success(request, order_number):
         except Exception as e:
             messages.warning(request, f"Note: Subscription was not created automatically. {str(e)}")
 
+    subject = f"SWEETiVERSE Order Confirmation – {order.order_number}"
+    body = render_to_string('checkout/emails/confirmation_email_body.txt', {
+        'order': order,
+        'contact_email': settings.DEFAULT_FROM_EMAIL
+    })
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [order.email],
+    )
+
     messages.success(request, f'Order successfully processed! '
         f'Your order number is {order_number}. A confirmation email '
-        f'will be sent to {order.email}.')
+        f'has been sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
@@ -218,6 +233,7 @@ def checkout_success(request, order_number):
     }
 
     return render(request, 'checkout/checkout_success.html', context)
+
 
 @require_POST
 def cache_checkout_data(request):
