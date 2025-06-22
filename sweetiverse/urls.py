@@ -5,7 +5,6 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from sweetiverse import views as core_views
 from sweets import views as sweets_views
-from allauth.account.views import confirm_email
 from django.views.generic import TemplateView
 from sweetiverse.views import CustomConfirmEmailView
 
