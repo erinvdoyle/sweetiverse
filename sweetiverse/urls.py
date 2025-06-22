@@ -18,7 +18,6 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('subscriptions/', include('subscriptions.urls')),
-    path("accounts/confirm-email/<key>/", confirm_email, name="account_confirm_email"),
     path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
 ]
 
