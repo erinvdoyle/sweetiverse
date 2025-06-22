@@ -25,6 +25,8 @@ class Order(models.Model):
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
     stripe_customer_id = models.CharField(max_length=255, null=True, blank=True)
+    discount = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    promo_code_used = models.CharField(max_length=50, blank=True, null=True)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL,
         null=True, blank=True, related_name='orders')
@@ -70,3 +72,15 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
+
+
+class DiscountCode(models.Model):
+    code = models.CharField(max_length=50, unique=True)
+    amount = models.DecimalField(max_digits=5, decimal_places=2)
+    is_percentage = models.BooleanField(default=True)
+    active = models.BooleanField(default=True)
+    usage_limit = models.PositiveIntegerField(null=True, blank=True)
+    used_count = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return self.code

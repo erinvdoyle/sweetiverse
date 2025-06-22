@@ -37,16 +37,18 @@
             {% endfor %}
 
             <hr>
-            <div class="row fw-bold">
-              <div class="col-6">Order Total</div>
-              <div class="col-6 text-end">£{{ order.order_total }}</div>
-              <div class="col-6">Delivery</div>
-              <div class="col-6 text-end">£{{ order.delivery_cost }}</div>
-              <div class="col-6">Grand Total</div>
-              <div class="col-6 text-end">£{{ order.grand_total }}</div>
-            </div>
-          </div>
-
+              <div class="row fw-bold">
+                <div class="col-6">Order Total</div>
+                <div class="col-6 text-end">£{{ order.order_total }}</div>
+                {% if order.discount > 0 %}
+                  <div class="col-6 text-success">Discount Applied</div>
+                  <div class="col-6 text-end text-success">-£{{ order.discount|floatformat:2 }}</div>
+                {% endif %}
+                <div class="col-6">Delivery</div>
+                <div class="col-6 text-end">£{{ order.delivery_cost }}</div>
+                <div class="col-6">Grand Total</div>
+                <div class="col-6 text-end">£{{ order.grand_total }}</div>
+              </div>
           <!-- Action Button -->
           <div class="text-center mt-4">
             {% if from_profile %}

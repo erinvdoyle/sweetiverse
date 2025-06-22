@@ -2,132 +2,152 @@
 {% load static %}
 {% load bag_tools %}
 
-
 {% block content %}
 <div class="sweet-detail-bg">
-    <div class="container-xl py-5 sweet-detail-wrapper">
-      <div class="row justify-content-center align-items-start g-5 flex-column flex-md-row">
-  
-        <!-- Checkout Form Section -->
-        <div class="col-md-8">
-          <div class="sweet-info styled-card p-4">
-            <h2 class="logo-font sweet-text-highlight mb-4">CHECKOUT</h2>
-  
-            <p class="mb-3">Please fill out your details below to complete your SWEETi order.</p>
-  
-    
-<div class="sweet-info styled-card p-4 mb-4">
-  <h3 class="logo-font mb-3">Order Summary</h3>
-  <div class="row fw-bold border-bottom pb-2 mb-2">
-    <div class="col-6">Item</div>
-    <div class="col-3 text-center">Qty</div>
-    <div class="col-3 text-end">Subtotal</div>
-  </div>
+  <div class="container-xl py-5 sweet-detail-wrapper">
+    <div class="row justify-content-center align-items-start g-5 flex-column flex-md-row">
 
-  {% for item in bag_items %}
-  <div class="row align-items-center mb-2">
-    <div class="col-6">
-      {% if item.sweet.image %}
-        <img src="{{ item.sweet.image.url }}" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
-      {% else %}
-        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
-      {% endif %}
-      {{ item.sweet.name }}
-      {% if item.subscription_details %}
-        <div class="mt-1 small text-muted">
-          <div><strong>Types:</strong> {{ item.subscription_details.sweet_types|join:", " }}</div>
-          <div><strong>Flavors:</strong> {{ item.subscription_details.flavor_preferences|join:", " }}</div>
-          <div><strong>Frequency:</strong> {{ item.subscription_details.delivery_frequency }}</div>
-          <div><strong>Explorer:</strong> {{ item.subscription_details.explorer|yesno:"Yes,No" }}</div>
-        </div>
-      {% endif %}
-    </div>    
-    <div class="col-3 text-center">{{ item.quantity }}</div>
-    <div class="col-3 text-end">£{{ item.sweet.price|calc_subtotal:item.quantity }}</div>
-  </div>
-{% endfor %}
+      <!-- Checkout Form Section -->
+      <div class="col-md-8">
+        <div class="sweet-info styled-card p-4">
+          <h2 class="logo-font sweet-text-highlight mb-4">CHECKOUT</h2>
+          <p class="mb-3">Please fill out your details below to complete your SWEETi order.</p>
 
-  <hr>
-  <div class="row fw-bold">
-    <div class="col-6">Total</div>
-    <div class="col-6 text-end">£{{ total|floatformat:2 }}</div>
-    <div class="col-6">Delivery</div>
-    <div class="col-6 text-end">£{{ delivery|floatformat:2 }}</div>
-    <div class="col-6">Grand Total</div>
-    <div class="col-6 text-end">£{{ grand_total|floatformat:2 }}</div>
-  </div>
-</div>
+          <!-- 🧾 Order Summary -->
+          <div class="sweet-info styled-card p-4 mb-4">
+            <h3 class="logo-font mb-3">Order Summary</h3>
 
+            <div class="row fw-bold border-bottom pb-2 mb-2">
+              <div class="col-6">Item</div>
+              <div class="col-3 text-center">Qty</div>
+              <div class="col-3 text-end">Subtotal</div>
+            </div>
 
+            {% for item in bag_items %}
+            <div class="row align-items-center mb-2">
+              <div class="col-6">
+                {% if item.sweet.image %}
+                  <img src="{{ item.sweet.image.url }}" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
+                {% else %}
+                  <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.sweet.name }}" width="50" class="me-2 rounded">
+                {% endif %}
+                {{ item.sweet.name }}
+                {% if item.subscription_details %}
+                  <div class="mt-1 small text-muted">
+                    <div><strong>Types:</strong> {{ item.subscription_details.sweet_types|join:", " }}</div>
+                    <div><strong>Flavors:</strong> {{ item.subscription_details.flavor_preferences|join:", " }}</div>
+                    <div><strong>Frequency:</strong> {{ item.subscription_details.delivery_frequency }}</div>
+                    <div><strong>Explorer:</strong> {{ item.subscription_details.explorer|yesno:"Yes,No" }}</div>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="col-3 text-center">{{ item.quantity }}</div>
+              <div class="col-3 text-end">£{{ item.sweet.price|calc_subtotal:item.quantity }}</div>
+            </div>
+            {% endfor %}
+
+            <!-- Promo Code Field -->
+            <!-- <div class="form-group mt-4 mb-3">
+              <label for="promo_code" class="form-label fw-bold">Have a promo code?</label>
+              <input type="text" name="promo_code" id="promo_code" class="form-control" placeholder="Enter it here">
+            </div> -->
             <form method="POST" action="{% url 'checkout' %}" id="payment-form">
-                {% csrf_token %}<input type="hidden" name="client_secret" value="{{ client_secret }}">
+              {% csrf_token %}
+              ...
+              <div class="mb-3">
+                <label for="promo_code" class="form-label fw-bold">Have a promo code?</label>
+                <input type="text" name="promo_code" id="promo_code"
+                       value="{{ promo_code }}" class="form-control"
+                       placeholder="ENTER IT HERE!">
+                {% if discount %}
+                  <small class="text-success">✔ Discount Applied: £{{ discount|floatformat:2 }}</small>
+                {% endif %}
+              </div>
+            
+            
 
-                <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
-                  <legend class="logo-font fs-4 mb-3">Details</legend>
-                  {{ order_form.full_name|as_crispy_field }}
-                  {{ order_form.email|as_crispy_field }}
-                </fieldset>
-              
-                <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
-                  <legend class="logo-font fs-4 mb-3">Delivery</legend>
-                  {{ order_form.phone_number|as_crispy_field }}
-                  {{ order_form.street_address1|as_crispy_field }}
-                  {{ order_form.street_address2|as_crispy_field }}
-                  {{ order_form.city|as_crispy_field }}
-                  {{ order_form.postcode|as_crispy_field }}
-                  {{ order_form.county|as_crispy_field }}
-                  {{ order_form.country|as_crispy_field }}
-              
-                  {% if user.is_authenticated %}
-                    <div class="form-check mt-3">
-                      {{ order_form.save_info }}
-                      <label class="form-check-label ms-2">
-                        Save this info for next time!
-                      </label>
-                    </div>
-                  {% else %}
-                    <p class="mt-3"><a href="{% url 'account_signup' %}">Create an account</a> or <a href="{% url 'account_login' %}">Login</a> to save this info.</p>
-                  {% endif %}
-                </fieldset>
-              
-                <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
-                  <legend class="logo-font fs-4 mb-3">Payment</legend>
-                  <div id="card-element" class="mb-3"></div>
-                  <div id="card-errors" role="alert"></div>
-                </fieldset>
-              
-                <div class="d-flex justify-content-between align-items-center">
-                  <a href="{% url 'view_bag' %}" class="btn btn-outline-secondary rounded-pill">
-                    ← BACK TO BAG
-                  </a>
-                  <button id="submit-button" class="btn sweeti-add-btn rounded-pill px-4">
-                    COMPLETE ORDER
-                  </button>
-                </div>
-              
-                <p class="mt-3 text-muted text-center small">
-                  Your card will be charged securely via Stripe.
-                </p>
-              </form>
-              
+            <hr>
+            <div class="row fw-bold">
+              <div class="col-6">Total</div>
+              <div class="col-6 text-end">£{{ total|floatformat:2 }}</div>
+              <div class="col-6">Delivery</div>
+              <div class="col-6 text-end">£{{ delivery|floatformat:2 }}</div>
+              <div class="col-6">Grand Total</div>
+              <div class="col-6 text-end">£{{ grand_total|floatformat:2 }}</div>
+            </div>
           </div>
+
+          <!-- 💳 Checkout Form -->
+          <form method="POST" action="{% url 'checkout' %}" id="payment-form">
+            {% csrf_token %}
+            <input type="hidden" name="client_secret" value="{{ client_secret }}">
+
+            <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
+              <legend class="logo-font fs-4 mb-3">Details</legend>
+              {{ order_form.full_name|as_crispy_field }}
+              {{ order_form.email|as_crispy_field }}
+            </fieldset>
+
+            <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
+              <legend class="logo-font fs-4 mb-3">Delivery</legend>
+              {{ order_form.phone_number|as_crispy_field }}
+              {{ order_form.street_address1|as_crispy_field }}
+              {{ order_form.street_address2|as_crispy_field }}
+              {{ order_form.city|as_crispy_field }}
+              {{ order_form.postcode|as_crispy_field }}
+              {{ order_form.county|as_crispy_field }}
+              {{ order_form.country|as_crispy_field }}
+
+              {% if user.is_authenticated %}
+                <div class="form-check mt-3">
+                  {{ order_form.save_info }}
+                  <label class="form-check-label ms-2">
+                    Save this info for next time!
+                  </label>
+                </div>
+              {% else %}
+                <p class="mt-3">
+                  <a href="{% url 'account_signup' %}">Create an account</a> or
+                  <a href="{% url 'account_login' %}">Login</a> to save this info.
+                </p>
+              {% endif %}
+            </fieldset>
+
+            <fieldset class="sweeti-fieldset mb-4 p-4 rounded">
+              <legend class="logo-font fs-4 mb-3">Payment</legend>
+              <div id="card-element" class="mb-3"></div>
+              <div id="card-errors" role="alert"></div>
+            </fieldset>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="{% url 'view_bag' %}" class="btn btn-outline-secondary rounded-pill">
+                ← BACK TO BAG
+              </a>
+              <button id="submit-button" class="btn sweeti-add-btn rounded-pill px-4">
+                COMPLETE ORDER
+              </button>
+            </div>
+
+            <p class="mt-3 text-muted text-center small">
+              Your card will be charged securely via Stripe.
+            </p>
+          </form>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div id="loading-overlay" class="d-none">
-    <div class="spinner-container">
-      <div class="sweeti-spinner"></div>
-    </div>
+<div id="loading-overlay" class="d-none">
+  <div class="spinner-container">
+    <div class="sweeti-spinner"></div>
   </div>
-  
-  {% endblock %}
-  
-  {% block postloadjs %}
+</div>
+{% endblock %}
+
+{% block postloadjs %}
   {{ block.super }}
   {{ stripe_public_key|json_script:"id_stripe_public_key" }}
   {{ client_secret|json_script:"id_client_secret" }}
   <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
-
 {% endblock %}

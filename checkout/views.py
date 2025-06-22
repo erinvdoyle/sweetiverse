@@ -5,7 +5,7 @@ import stripe
 from django.conf import settings
 from bag.contexts import bag_contents
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, DiscountCode
 from sweets.models import Sweet
 from bag.contexts import bag_contents
 import uuid
@@ -21,7 +21,6 @@ from django.utils import timezone
 from datetime import timedelta
 
 
-
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -29,8 +28,10 @@ def checkout(request):
     bag = request.session.get('bag', {})
     current_bag = bag_contents(request)
     total = current_bag['total']
-    grand_total = current_bag['grand_total']
     delivery = current_bag['delivery']
+    discount = Decimal('0.00')
+    promo_code_input = ""
+    discount_obj = None
 
     if request.method == 'POST':
         form_data = {
@@ -45,12 +46,37 @@ def checkout(request):
             'country': request.POST['country'],
         }
 
+        promo_code_input = request.POST.get('promo_code', '').strip().upper()
+        if promo_code_input:
+            try:
+                discount_obj = DiscountCode.objects.get(code=promo_code_input, active=True)
+                if discount_obj.usage_limit is None or discount_obj.used_count < discount_obj.usage_limit:
+                    if discount_obj.is_percentage:
+                        discount = total * (discount_obj.amount / 100)
+                    else:
+                        discount = discount_obj.amount
+                    total -= discount
+                    messages.success(request, f"Promo code '{promo_code_input}' applied! 🎉")
+                else:
+                    messages.error(request, "This discount code has expired.")
+            except DiscountCode.DoesNotExist:
+                messages.error(request, "Invalid discount code.")
+
+        grand_total = total + delivery
+        stripe_total = round(grand_total * 100)
+        stripe.api_key = stripe_secret_key
+
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
+            order.discount = discount
+            order.promo_code_used = promo_code_input
+            order.order_total = total
+            order.delivery_cost = delivery
+            order.grand_total = grand_total
 
             if request.user.is_authenticated:
                 try:
@@ -64,30 +90,26 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     sweet = Sweet.objects.get(id=item_id)
+                    quantity = item_data if isinstance(item_data, int) else item_data.get('quantity', 1)
+                    subscription_details = None if isinstance(item_data, int) else item_data.get('subscription_details')
 
-                    if isinstance(item_data, int):
-                        quantity = item_data
-                        subscription_details = None
-                    elif isinstance(item_data, dict):
-                        quantity = item_data.get('quantity', 1)
-                        subscription_details = item_data.get('subscription_details')
-                    else:
-                        continue
-
-                    line_item = OrderLineItem(
+                    OrderLineItem.objects.create(
                         order=order,
                         product=sweet,
                         quantity=quantity,
                         subscription_details=subscription_details,
                     )
-                    line_item.save()
                 except Sweet.DoesNotExist:
-                    messages.error(request, (
-                        "One of the sweets in your bag wasn't found. "
-                        "Please call us for assistance!"
-                    ))
+                    messages.error(request, "One of the sweets in your bag wasn't found.")
                     order.delete()
                     return redirect(reverse('view_bag'))
+
+            if promo_code_input and discount > 0 and discount_obj:
+                try:
+                    discount_obj.used_count += 1
+                    discount_obj.save()
+                except Exception:
+                    pass
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
@@ -99,9 +121,9 @@ def checkout(request):
             messages.error(request, "Your bag is empty")
             return redirect(reverse('sweets'))
 
+        grand_total = total + delivery
         stripe_total = round(grand_total * 100)
         stripe.api_key = stripe_secret_key
-
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
@@ -115,8 +137,10 @@ def checkout(request):
         'client_secret': intent.client_secret,
         'bag_items': current_bag['bag_items'],
         'total': total,
-        'grand_total': grand_total,
         'delivery': delivery,
+        'grand_total': total + delivery,
+        'discount': discount,
+        'promo_code': promo_code_input,
     }
 
     return render(request, 'checkout/checkout.html', context)
