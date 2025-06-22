@@ -288,13 +288,18 @@ SweetiVERSE is designed for international candy lovers, curious foodies, and exp
 - **Email** – Newsletters, discounts, previews, and retention messaging
 
 **Facebook Page**
-![Facebook Page](./assets/readme-images/pp5fb.PNG)
-![Facebook Page](./assets/readme-images/pp5fb1.PNG)
-![Facebook Page](./assets/readme-images/pp5fb2.PNG)
-![Facebook Page](./assets/readme-images/pp5fb3.PNG)
-![Facebook Page](./assets/readme-images/pp5fb4.PNG)
 
+<img src="assets/readme-images/pp5fb.PNG" height="450px"/>
 
+<details>
+<summary>SWEETiVERSE Facebook Page</summary>
+
+<img src="assets/readme-images/pp5fb1.PNG" height="450px"/>
+<img src="assets/readme-images/pp5fb2.PNG" height="450px"/>
+<img src="assets/readme-images/pp5fb3.PNG" height="450px"/>
+<img src="assets/readme-images/pp5fb4.PNG" height="450px"/>
+
+</details>
 
 ## Marketing Strategy Overview
 
@@ -520,6 +525,13 @@ screenshots
 ## Track Engagement Metrics
 
 Future Feature with Google Console CTR (Bounce Rate, dwell time, pages per session)
+
+# Bugs
+
+## Problems with Django Allauth and emails
+
+- [example.com]
+- email_confirm.html
 
 # Credits
 
