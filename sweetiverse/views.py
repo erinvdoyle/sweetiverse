@@ -24,5 +24,8 @@ class CustomConfirmEmailView(ConfirmEmailView):
 
     def get(self, *args, **kwargs):
         self.object = confirmation = self.get_object()
-        confirmation.confirm(self.request)
+
+        if not confirmation.email_address.verified:
+            confirmation.confirm(self.request)
+
         return super().get(*args, **kwargs)

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}Check Your Inbox{% endblock %}
+
+{% block content %}
+<style>
+  .sweetiverse-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: 100vh;
+    background-image: url("{% static 'images/asfalt-light.png' %}"),
+                      radial-gradient(circle at 50% 20%, #cfbaff 0%, #a172c7 100%);
+    background-blend-mode: overlay;
+  }
+
+  .sweeti-box {
+    background: linear-gradient(145deg, #ecc9f6, #d38bf7);
+    border-radius: 30px;
+    padding: 2.5rem 2rem;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1),
+                0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+  }
+
+  .sweeti-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 5px #ff64d3;
+  }
+
+  .sweeti-box p {
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+</style>
+
+<div class="sweetiverse-wrapper">
+  <div class="sweeti-box">
+    <img src="{% static 'images/spaceship.png' %}" alt="Spaceship" class="mb-4" style="width: 180px;">
+    <h1>Check Your Inbox, SWEETi!</h1>
+    <p>We’ve sent a confirmation email to your address. Follow the link inside to start exploring the SWEETiVERSE! 🍬🚀</p>
+    <a href="{% url 'home' %}" class="btn btn-outline-light">Return to Home</a>
+  </div>
+</div>
+{% endblock %}
