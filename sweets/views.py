@@ -89,13 +89,17 @@ def sweet_detail(request, sweet_id):
     sweet = get_object_or_404(Sweet, pk=sweet_id)
     user = request.user
 
-    is_wishlisted = user.wishlist_items.filter(sweet=sweet).exists()
+    is_wishlisted = False
+    if user.is_authenticated and hasattr(user, 'wishlist_items'):
+        is_wishlisted = user.wishlist_items.filter(sweet=sweet).exists()
 
-    has_purchased = OrderLineItem.objects.filter(
-        order__user_profile=user.userprofile, product=sweet
-    ).exists()
+    has_purchased = False
+    if user.is_authenticated and hasattr(user, 'userprofile'):
+        has_purchased = OrderLineItem.objects.filter(
+            order__user_profile=user.userprofile, product=sweet
+        ).exists()
 
-    review_instance = SweetReview.objects.filter(sweet=sweet, user=user).first()
+    review_instance = SweetReview.objects.filter(sweet=sweet, user=user).first() if user.is_authenticated else None
     has_reviewed = bool(review_instance)
 
     if request.method == 'POST' and has_purchased:
@@ -109,7 +113,7 @@ def sweet_detail(request, sweet_id):
             messages.success(request, "Review submitted!" if not review_instance else "Review updated!")
             return redirect('sweet_detail', sweet_id=sweet.id)
     else:
-        form = SweetReviewForm(instance=review_instance)
+        form = SweetReviewForm(instance=review_instance) if user.is_authenticated else SweetReviewForm()
 
     reviews = sweet.reviews.all().order_by('-created_at')
 
