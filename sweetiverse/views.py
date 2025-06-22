@@ -1,5 +1,8 @@
-from django.shortcuts import render
 from allauth.account.views import ConfirmEmailView
+from allauth.account.models import EmailConfirmation, EmailConfirmationHMAC
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse
 
 
 def index(request):
@@ -17,4 +20,9 @@ def handler500(request):
 
 
 class CustomConfirmEmailView(ConfirmEmailView):
-    template_name = "account/email_confirm.html"
+    template_name = "account/email/email_confirmation.html"
+
+    def get(self, *args, **kwargs):
+        self.object = confirmation = self.get_object()
+        confirmation.confirm(self.request)
+        return super().get(*args, **kwargs)
