@@ -232,6 +232,52 @@ Monthly sweet box sent to a user
 - sweets (ManyToManyField to Sweet)
 - country_selection (Optional CharField or JSONField)
 
+### Wireframes
+
+- Home
+<details>
+<summary>Home</summary>
+
+![Home](./assets/readme-images/wf2.png)
+
+</details>
+
+- Sweets
+
+<details>
+<summary>Sweets</summary>
+
+![product](./assets/readme-images/wf1.png)
+
+</details>
+
+- Search
+
+<details>
+<summary>Search</summary>
+
+![product](./assets/readme-images/wf3.png)
+
+</details>
+
+- SWEETi Selector
+
+<details>
+<summary>SWEETi Selector</summary>
+
+![product](./assets/readme-images/wf4.png)
+
+</details>
+
+- Pick N Mix
+
+<details>
+<summary>Pick N Mix</summary>
+
+![product](./assets/readme-images/wf5.png)
+
+</details>
+
 # Marketing
 
 ## Target Audience & Platforms
