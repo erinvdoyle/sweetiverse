@@ -12,7 +12,7 @@ class PickNMixSubscription(models.Model):
         ('monthly', 'Monthly'),
     ]
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='picknmix_subscriptions')
     sweet_types = models.CharField(max_length=255)
     flavor_preferences = models.CharField(max_length=255)
     explorer = models.BooleanField(default=False)

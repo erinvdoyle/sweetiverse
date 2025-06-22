@@ -74,13 +74,13 @@ def picknmix_signup(request):
 
 @login_required
 def manage_subscription(request):
-    try:
-        subscription = request.user.picknmixsubscription
-    except PickNMixSubscription.DoesNotExist:
-        subscription = None
+    subscriptions = PickNMixSubscription.objects.filter(user=request.user)
 
     if request.method == 'POST':
+        sub_id = request.POST.get('sub_id')
         action = request.POST.get('action')
+        subscription = subscriptions.filter(id=sub_id).first()
+
         if subscription and subscription.stripe_subscription_id:
             try:
                 if action == 'pause':
@@ -90,7 +90,7 @@ def manage_subscription(request):
                     )
                     subscription.active = False
                     subscription.save()
-                    messages.success(request, "Your subscription will pause at the end of this billing period.")
+                    messages.success(request, "Subscription paused.")
 
                 elif action == 'resume':
                     stripe.Subscription.modify(
@@ -99,16 +99,21 @@ def manage_subscription(request):
                     )
                     subscription.active = True
                     subscription.save()
-                    messages.success(request, "Your subscription has been reactivated!")
+                    messages.success(request, "Subscription resumed.")
 
+                elif action == 'cancel':
+                    stripe.Subscription.delete(subscription.stripe_subscription_id)
+                    subscription.delete()
+                    messages.success(request, "Subscription cancelled.")
             except stripe.error.StripeError as e:
                 messages.error(request, f"Stripe error: {e.user_message}")
             except Exception as e:
-                messages.error(request, f"Unexpected error: {str(e)}")
+                messages.error(request, f"Error: {str(e)}")
 
         return redirect('manage_subscription')
 
-    return render(request, 'subscriptions/manage_subscription.html', {'subscription': subscription})
+    return render(request, 'subscriptions/manage_subscription.html', {'subscriptions': subscriptions})
+
 
 
 @login_required

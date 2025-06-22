@@ -16,7 +16,7 @@
     background-color: #fceaff;
     border-radius: 20px;
     padding: 2rem 2.5rem;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
@@ -28,12 +28,20 @@
     text-align: center;
   }
 
-  .subscription-manage-container p {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+  .subscription-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
-  .subscription-manage-container strong {
+  .subscription-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subscription-card strong {
     color: #a10053;
   }
 
@@ -67,6 +75,11 @@
     color: white;
   }
 
+  .btn-danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+
   fieldset {
     margin-bottom: 1rem;
   }
@@ -74,27 +87,31 @@
 
 <div class="subscription-manage-section">
   <div class="subscription-manage-container">
-    <h2>🧁 Manage Your Pick-N-Mix Subscription</h2>
+    <h2>🧁 Manage Your Pick-N-Mix Subscriptions</h2>
 
-    {% if subscription %}
-      <div class="mt-4">
-        <p><strong>👤 Hello:</strong> {{ user.username }}</p>
-        <p><strong>📦 Status:</strong> {{ subscription.active|yesno:"Active,Paused" }}</p>
-        <p><strong>🗓 Next Billing Date:</strong> {{ subscription.next_billing_date }}</p>
-        <p><strong>🚚 Delivery Frequency:</strong> {{ subscription.delivery_frequency|title }}</p>
-        <p><strong>🌈 Sweeti Explorer:</strong> {{ subscription.explorer|yesno:"Included,Not Included" }}</p>
-        <p><strong>🍬 Favorite Sweet Types:</strong> {{ subscription.sweet_types }}</p>
-        <p><strong>🍓 Favorite Flavors:</strong> {{ subscription.flavor_preferences }}</p>
+    {% if subscriptions %}
+      <p class="text-center mt-3"><strong>👤 Hello:</strong> {{ user.username }}</p>
+      {% for sub in subscriptions %}
+        <div class="subscription-card">
+          <p><strong>📦 Status:</strong> {{ sub.active|yesno:"Active,Paused" }}</p>
+          <p><strong>🗓 Next Billing:</strong> {{ sub.next_billing_date }}</p>
+          <p><strong>🚚 Delivery:</strong> {{ sub.delivery_frequency|title }}</p>
+          <p><strong>🌈 Sweeti Explorer:</strong> {{ sub.explorer|yesno:"Included,Not Included" }}</p>
+          <p><strong>🍬 Favorite Sweet Types:</strong> {{ sub.sweet_types }}</p>
+          <p><strong>🍓 Favorite Flavors:</strong> {{ sub.flavor_preferences }}</p>
 
-        <form method="POST" class="mt-4 text-center">
-          {% csrf_token %}
-          {% if subscription.active %}
-            <button type="submit" name="action" value="pause" class="btn btn-warning btn-candy">⏸ Pause Subscription</button>
-          {% else %}
-            <button type="submit" name="action" value="resume" class="btn btn-success btn-candy">▶ Resume Subscription</button>
-          {% endif %}
-        </form>
-      </div>
+          <form method="POST" class="text-center mt-3">
+            {% csrf_token %}
+            <input type="hidden" name="sub_id" value="{{ sub.id }}">
+            {% if sub.active %}
+              <button type="submit" name="action" value="pause" class="btn btn-warning btn-candy me-2">⏸ Pause</button>
+            {% else %}
+              <button type="submit" name="action" value="resume" class="btn btn-success btn-candy me-2">▶ Resume</button>
+            {% endif %}
+            <button type="submit" name="action" value="cancel" class="btn btn-danger btn-candy">❌ Cancel</button>
+          </form>
+        </div>
+      {% endfor %}
     {% else %}
       <div class="text-center mt-4">
         <p>You don't currently have a Pick-N-Mix subscription.</p>
