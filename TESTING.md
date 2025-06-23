@@ -39,7 +39,22 @@ Go back to [README.md](/README.md)
 
 ## Responsiveness
 ...
-![responsiveness](./assets/readme-images/testing/-)
+![responsiveness](./assets/readme-images/pp5resp0.png)
+
+Testing of each page was conducted with AMIRESPONSIVE? I downloaded the Ignore X-Frames Headers Chrome Extension, thanks to this helpful article, which allowed me to bypass issues created by the Django tags: https://techsini.com/unable-to-generate-mockup-of-your-website-here-is-the-quick-fix/
+
+<details>
+<summary>AMIRESPONSIVE Screenshots (click)</summary>
+
+<img src="assets/testing-images/pp5resp1.png" width="550px"/>
+<img src="assets/testing-images/pp5resp2.png" width="550px"/>
+<img src="assets/testing-images/pp5resp3.png" width="550px"/>
+<img src="assets/testing-images/pp5resp4.png" width="550px"/>
+<img src="assets/testing-images/pp5resp5.png" width="550px"/>
+<img src="assets/testing-images/pp5resp6.png" width="550px"/>
+
+</details>
+
 
 ## Browser Compatibility
 

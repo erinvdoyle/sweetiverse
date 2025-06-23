@@ -1,4 +1,4 @@
-# Sweetiverse
+# Welcome to the SWEETiVERSE
 
 ![Sweetiverse website preview](./assets/readme-images/pp5resp0.png)
 
