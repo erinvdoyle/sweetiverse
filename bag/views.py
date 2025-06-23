@@ -3,6 +3,8 @@ from sweets.models import Sweet
 from django.contrib import messages
 from .context_processors import bag_contents
 from django.http import HttpResponse, JsonResponse
+from profiles.models import WishlistItem, UserProfile
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -93,6 +95,17 @@ def remove_from_bag(request, sweet_id):
             return redirect('view_bag')
 
 
+@login_required
 def save_for_later(request, sweet_id):
-    messages.info(request, "Save for later is coming soon! 💖")
+    sweet = get_object_or_404(Sweet, pk=sweet_id)
+
+    bag = request.session.get('bag', {})
+    if sweet_id in bag:
+        del bag[sweet_id]
+        request.session['bag'] = bag
+        request.session.modified = True
+
+    WishlistItem.objects.get_or_create(user=request.user, sweet=sweet)
+
+    messages.success(request, f"{sweet.name} saved in your wishlist 💖")
     return redirect('view_bag')
