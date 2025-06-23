@@ -272,7 +272,52 @@ Monthly sweet box sent to a user
 
 # Features
 
-## Future Features
+## Home
+
+### User Dropdown Menu
+
+### Navigation Links
+
+### Search Bar
+
+### Trust Badges
+
+### Most Popular SWEETis
+
+### Contact
+
+### Testimonial Carousel 
+
+### Mailchimp Integrated Newsletter Signup
+
+### Footer
+
+Privacy Policy
+
+## User Registration and Login/Logout/Password Reset
+
+## Sweets Page
+
+### Breadcrumbs
+
+### Searching Sweets
+
+### Product Information Card
+
+#### User Ratings and Reviews
+
+#### Wishlist
+
+## User Bag and Checkout Process
+
+## Sweeti Selector
+
+## Pick N Mix Subscriptions
+
+## FAQ
+
+
+# Future Features
 
 - Custom Admin Panel
 - Send a SWEETi PICK N MIX Subscription box as a gift (this can already be done but does not appear as a button or link)
@@ -299,15 +344,15 @@ SweetiVERSE is designed for international candy lovers, curious foodies, and exp
 
 **Facebook Page**
 
-<img src="assets/readme-images/pp5fb.png" height="450px"/>
+<img src="assets/readme-images/pp5fb.png" width="550px"/>
 
 <details>
-<summary>SWEETiVERSE Facebook Page</summary>
+<summary>SWEETiVERSE Facebook  (click)</summary>
 
-<img src="assets/readme-images/pp5fb1.png" height="450px"/>
-<img src="assets/readme-images/pp5fb2.png" height="450px"/>
-<img src="assets/readme-images/pp5fb3.png" height="450px"/>
-<img src="assets/readme-images/pp5fb4.png" height="450px"/>
+<img src="assets/readme-images/pp5fb1.png" width="550px"/>
+<img src="assets/readme-images/pp5fb2.png" width="550px"/>
+<img src="assets/readme-images/pp5fb3.png" width="550px"/>
+<img src="assets/readme-images/pp5fb4.png" width="550px"/>
 
 </details>
 

@@ -191,17 +191,16 @@ def checkout_success(request, order_number):
                         else timezone.now() + timedelta(days=30)
                     )
 
-                    PickNMixSubscription.objects.update_or_create(
+                    PickNMixSubscription.objects.create(
                         user=request.user,
-                        defaults={
-                            'sweet_types': ", ".join(subscription_data['sweet_types']),
-                            'flavor_preferences': ", ".join(subscription_data['flavor_preferences']),
-                            'explorer': subscription_data['explorer'],
-                            'delivery_frequency': frequency,
-                            'active': True,
-                            'next_billing_date': next_billing,
-                        }
+                        sweet_types=", ".join(subscription_data['sweet_types']),
+                        flavor_preferences=", ".join(subscription_data['flavor_preferences']),
+                        explorer=subscription_data['explorer'],
+                        delivery_frequency=frequency,
+                        active=True,
+                        next_billing_date=next_billing,
                     )
+                    messages.success(request, "Your Pick-N-Mix subscription was successfully created! 🍬")
         except Exception as e:
             messages.warning(request, f"Note: Subscription was not created automatically. {str(e)}")
 
