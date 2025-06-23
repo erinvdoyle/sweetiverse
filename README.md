@@ -1,5 +1,7 @@
 # Sweetiverse
 
+Intro and AMIRESPONSIVE SS
+
 # Table of Contents
 
 -   [User Experience](#user-experience)
