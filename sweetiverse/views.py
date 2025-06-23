@@ -29,3 +29,7 @@ class CustomConfirmEmailView(ConfirmEmailView):
             confirmation.confirm(self.request)
 
         return super().get(*args, **kwargs)
+
+
+def subscriber_confirmation(request):
+    return render(request, 'account/subscriber_confirmation.html')

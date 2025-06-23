@@ -3,7 +3,7 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
-from sweetiverse import views as core_views
+from sweetiverse import views
 from sweets import views as sweets_views
 from django.views.generic import TemplateView
 from sweetiverse.views import CustomConfirmEmailView
@@ -19,6 +19,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('subscriptions/', include('subscriptions.urls')),
+    path('thank-you-subscriber/', views.subscriber_confirmation, name='subscriber_confirmation'),
     path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml", content_type="application/xml")),
 ]
 
