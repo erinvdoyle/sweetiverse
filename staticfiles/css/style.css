@@ -2813,4 +2813,9 @@ input[type="radio"] {
       }
     }
   
+    @media (max-width: 374px) {
+      .promo-message {
+        font-size: 1rem;
+      }
+    }
   
