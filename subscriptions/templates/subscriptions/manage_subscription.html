@@ -108,7 +108,9 @@
             {% else %}
               <button type="submit" name="action" value="resume" class="btn btn-success btn-candy me-2">▶ Resume</button>
             {% endif %}
-            <button type="submit" name="action" value="cancel" class="btn btn-danger btn-candy">❌ Cancel</button>
+            <button type="button" class="btn btn-danger btn-candy" onclick="confirmCancel(this.form)">
+              ❌ Cancel
+            </button>            
           </form>
         </div>
       {% endfor %}
@@ -120,4 +122,41 @@
     {% endif %}
   </div>
 </div>
+
+<script>
+  function confirmCancel(form) {
+    if (confirm("Are you sure you want to cancel your subscription?")) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'action';
+      input.value = 'cancel';
+      form.appendChild(input);
+      form.submit();
+    }
+  }
+
+  {% if messages %}
+    {% for message in messages %}
+      {% if "Subscription cancelled" in message %}
+        window.addEventListener('load', function () {
+          const toast = document.createElement('div');
+          toast.innerText = "You can sign up for a new subscription anytime at our Pick-N-Mix page 🍭";
+          toast.style.position = 'fixed';
+          toast.style.bottom = '30px';
+          toast.style.right = '30px';
+          toast.style.background = '#a10053';
+          toast.style.color = '#fff';
+          toast.style.padding = '1rem 1.5rem';
+          toast.style.borderRadius = '30px';
+          toast.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+          toast.style.fontFamily = 'Fredoka, sans-serif';
+          toast.style.zIndex = 9999;
+          document.body.appendChild(toast);
+          setTimeout(() => toast.remove(), 6000);
+        });
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</script>
+
 {% endblock %}

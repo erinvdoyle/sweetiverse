@@ -121,13 +121,3 @@ def manage_subscription(request):
     return render(request, 'subscriptions/manage_subscription.html', {
         'subscriptions': subscriptions
     })
-
-
-# @login_required
-# def cancel_subscription(request):
-#     if request.method == 'POST':
-#         sub = PickNMixSubscription.objects.filter(user=request.user).first()
-#         if sub:
-#             sub.active = False
-#             sub.save()
-#     return redirect('manage_subscription')
