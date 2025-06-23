@@ -81,46 +81,53 @@ def manage_subscription(request):
         action = request.POST.get('action')
         subscription = subscriptions.filter(id=sub_id).first()
 
-        if subscription and subscription.stripe_subscription_id:
-            try:
-                if action == 'pause':
+        if not subscription:
+            messages.error(request, "Subscription not found.")
+            return redirect('manage_subscription')
+
+        try:
+            if action == 'pause':
+                if subscription.stripe_subscription_id:
                     stripe.Subscription.modify(
                         subscription.stripe_subscription_id,
                         cancel_at_period_end=True
                     )
-                    subscription.active = False
-                    subscription.save()
-                    messages.success(request, "Subscription paused.")
+                subscription.active = False
+                subscription.save()
+                messages.success(request, "Subscription paused.")
 
-                elif action == 'resume':
+            elif action == 'resume':
+                if subscription.stripe_subscription_id:
                     stripe.Subscription.modify(
                         subscription.stripe_subscription_id,
                         cancel_at_period_end=False
                     )
-                    subscription.active = True
-                    subscription.save()
-                    messages.success(request, "Subscription resumed.")
+                subscription.active = True
+                subscription.save()
+                messages.success(request, "Subscription resumed.")
 
-                elif action == 'cancel':
+            elif action == 'cancel':
+                if subscription.stripe_subscription_id:
                     stripe.Subscription.delete(subscription.stripe_subscription_id)
-                    subscription.delete()
-                    messages.success(request, "Subscription cancelled.")
-            except stripe.error.StripeError as e:
-                messages.error(request, f"Stripe error: {e.user_message}")
-            except Exception as e:
-                messages.error(request, f"Error: {str(e)}")
+                subscription.delete()
+                messages.success(request, "Subscription cancelled.")
+        except stripe.error.StripeError as e:
+            messages.error(request, f"Stripe error: {e.user_message}")
+        except Exception as e:
+            messages.error(request, f"Error: {str(e)}")
 
         return redirect('manage_subscription')
 
-    return render(request, 'subscriptions/manage_subscription.html', {'subscriptions': subscriptions})
+    return render(request, 'subscriptions/manage_subscription.html', {
+        'subscriptions': subscriptions
+    })
 
 
-
-@login_required
-def cancel_subscription(request):
-    if request.method == 'POST':
-        sub = PickNMixSubscription.objects.filter(user=request.user).first()
-        if sub:
-            sub.active = False
-            sub.save()
-    return redirect('manage_subscription')
+# @login_required
+# def cancel_subscription(request):
+#     if request.method == 'POST':
+#         sub = PickNMixSubscription.objects.filter(user=request.user).first()
+#         if sub:
+#             sub.active = False
+#             sub.save()
+#     return redirect('manage_subscription')
