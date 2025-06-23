@@ -1,6 +1,7 @@
 from django import forms
 from .models import Sweet, Category, SweetReview
 from .widgets import CustomClearableFileInput
+from django.core.exceptions import ValidationError
 
 
 class SweetForm(forms.ModelForm):
@@ -29,6 +30,19 @@ class SweetForm(forms.ModelForm):
 
             if not isinstance(field.widget, CustomClearableFileInput):
                 field.widget.attrs['class'] = css_classes
+
+    def clean(self):
+        cleaned_data = super().clean()
+        price = cleaned_data.get('price')
+        quantity = cleaned_data.get('quantity')
+
+        if price is not None and price < 0:
+            self.add_error('price', ValidationError("Price cannot be negative."))
+
+        if quantity is not None and quantity < 0:
+            self.add_error('quantity', ValidationError("Quantity cannot be negative."))
+
+        return cleaned_data
 
 
 class SweetReviewForm(forms.ModelForm):
