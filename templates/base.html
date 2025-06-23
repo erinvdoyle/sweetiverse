@@ -213,7 +213,7 @@
             required
           >
         </div>
-        <div class="col-md-4 mt-2 mt-md-0">
+        <div class="col-md-3 mt-2 mt-md-0 d-flex align-items-center justify-content-end gap-2">
           <button 
             type="submit" 
             name="subscribe" 
@@ -222,6 +222,25 @@
           >
             Subscribe
           </button>
+
+          <a 
+            href="https://mailchimp.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="mailchimp-icon-link"
+            aria-label="Mailchimp"
+          >
+            <img 
+              src="{% static 'images/mailchimp.svg' %}" 
+              alt="Mailchimp" 
+              width="24" 
+              height="24"
+              class="mailchimp-icon"
+            >
+          </a>
+        </div>
+
+
         </div>
 
         <!-- Hidden bot-trap field -->
