@@ -5,6 +5,7 @@ from django.db.models import Sum
 from sweets.models import Sweet
 from django_countries.fields import CountryField
 from profiles.models import UserProfile
+from decimal import Decimal
 
 
 class Order(models.Model):
@@ -35,19 +36,16 @@ class Order(models.Model):
         """Generate a unique, random order number using UUID"""
         return uuid.uuid4().hex.upper()
 
-    def update_total(self):
-        """Update order total and delivery cost"""
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        free_delivery_threshold = settings.FREE_DELIVERY_THRESHOLD
-        standard_delivery = settings.STANDARD_DELIVERY_PERCENTAGE
+def update_total(self):
+    self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or Decimal('0.00')
 
-        if self.order_total < free_delivery_threshold:
-            self.delivery_cost = self.order_total * standard_delivery / 100
-        else:
-            self.delivery_cost = 0
+    if self.order_total < Decimal('25.00'):
+        self.delivery_cost = Decimal('3.95')
+    else:
+        self.delivery_cost = Decimal('0.00')
 
-        self.grand_total = self.order_total + self.delivery_cost
-        self.save()
+    self.grand_total = self.order_total + self.delivery_cost - self.discount
+    self.save()
 
     def save(self, *args, **kwargs):
         if not self.order_number:

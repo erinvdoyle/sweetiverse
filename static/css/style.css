@@ -236,7 +236,6 @@ footer {
   opacity: 1;
 }
 
-
 /*--- Popular Sweets Section -----------------------------------------------------------------------------------------------------------------*/
 .container-fluid.px-0 {
   padding-left: 0 !important;
@@ -2835,6 +2834,13 @@ input[type="radio"] {
       }
       .sweeti-bag-card p {
         font-size: 0.9rem;
+      }
+    }
+
+      
+    @media (max-width: 374px) {
+      .promo-message {
+        font-size: 1rem;
       }
     }
   

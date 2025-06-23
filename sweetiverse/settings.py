@@ -214,10 +214,6 @@ LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/'
 
-# DEFAULT_FROM_EMAIL = 'SWEETiVERSE <noreply@herokuapp.com>'
-# ACCOUNT_EMAIL_CONFIRMATION_TEMPLATE = "account/email/email_confirmation_message.txt"
-# ACCOUNT_EMAIL_CONFIRMATION_SUBJECT_TEMPLATE = "account/email/email_confirmation_subject.txt"
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

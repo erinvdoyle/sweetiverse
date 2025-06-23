@@ -225,6 +225,17 @@ footer {
   font-weight: 600;
 }
 
+.mailchimp-icon-link img {
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  fill: #ff69b4;
+}
+
+.mailchimp-icon-link img:hover {
+  opacity: 1;
+}
+
 /*--- Popular Sweets Section -----------------------------------------------------------------------------------------------------------------*/
 .container-fluid.px-0 {
   padding-left: 0 !important;
@@ -1467,7 +1478,7 @@ footer {
 }
 
 .sweeti-review-bubble > *:first-child {
-  margin-top: 3rem;
+  margin-top: 15rem;
 }
    
   .star-rating {
@@ -2135,9 +2146,12 @@ input[type="radio"] {
   .toggle-label-right {
     font-size: 1.1rem;
   }
+}
 
+  @media (max-width: 768px) {
   .sweetiselector-section h2 {
     font-size: 2.5rem;
+    margin-top: -10rem;
   }
 }
 
@@ -2693,6 +2707,12 @@ input[type="radio"] {
   }
 }
 
+@media (max-width: 999px) {
+.sweeti-review-bubble > *:first-child {
+  margin-top: 8rem;
+  }
+}
+
 @media (max-width: 992px) {
     .contact-candy-section {
       margin-left: 0;
@@ -2748,6 +2768,10 @@ input[type="radio"] {
     padding: 2rem;
     font-size: 1rem;
     text-shadow: none;
+  }
+
+  .sweeti-review-bubble > *:first-child {
+    margin-top: 1rem;
   }
 }
 
@@ -2812,10 +2836,12 @@ input[type="radio"] {
         font-size: 0.9rem;
       }
     }
-  
+
+      
     @media (max-width: 374px) {
       .promo-message {
         font-size: 1rem;
       }
     }
+  
   
