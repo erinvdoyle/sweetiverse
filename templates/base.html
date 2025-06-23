@@ -139,9 +139,9 @@
       <div class="row">
         <div class="col-12 d-flex flex-wrap justify-content-center gap-2">
           <a href="{% url 'sweets' %}" class="text-decoration-none text-dark candy-stripe">All Sweets</a>
-          <a href="#" class="text-decoration-none text-dark candy-stripe4">Japanese Sweets</a>
-          <a href="#" class="text-decoration-none text-dark candy-stripe2">Korean Sweets</a>
-          <a href="#" class="text-decoration-none text-dark candy-stripe5">More Sweets by Nation</a>
+          <a href="{% url 'sweets' %}?category=japanese" class="text-decoration-none text-dark candy-stripe4">Japanese Sweets</a>
+          <a href="{% url 'sweets' %}?category=korean" class="text-decoration-none text-dark candy-stripe2">Korean Sweets</a>
+          <a href="{% url 'sweets' %}?category=korean,japanese" class="text-decoration-none text-dark candy-stripe5">More Sweets by Nation</a>
           <a href="{% url 'sweetiselector' %}" class="text-decoration-none text-dark candy-stripe3">SWEETi Selector</a>
           <a href="{% url 'picknmix_signup' %}" class="text-decoration-none text-dark candy-stripe4">Pick N Mix</a>
           <a href="{% url 'faq' %}" class="text-decoration-none text-dark candy-stripe">FAQ</a>
@@ -260,9 +260,9 @@
         <div class="contact-candy-section">
             <h3 class="contact-title">Let's confect!</h3>
             <div class="contact-icons">
-            <a href="#" class="contact-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="contact-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="contact-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" class="contact-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.x.com" class="contact-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" class="contact-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="mailto:info@sweetiverse.com" class="contact-icon email" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
