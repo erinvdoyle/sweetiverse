@@ -1,6 +1,8 @@
 # Sweetiverse
 
-Intro and AMIRESPONSIVE SS
+![Sweetiverse website preview](./assets/readme-images/pp5resp0.png)
+
+[Link to deployed site](https://sweetiverse-24537debe589.herokuapp.com/)
 
 # Table of Contents
 
