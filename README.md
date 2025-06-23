@@ -270,6 +270,16 @@ Monthly sweet box sent to a user
 
 </details>
 
+# Features
+
+## Future Features
+
+- Custom Admin Panel
+- Send a SWEETi PICK N MIX Subscription box as a gift (this can already be done but does not appear as a button or link)
+- SWEETi of the Month newsletter and discount code
+- Pick N Mix subscription option to select SWEETiS from only 1 or 2 nations
+- Irish, British, American, Swedish, Nigerian, Mexican, ETC(!) SWEETis
+
 # Marketing
 
 ## Target Audience & Platforms
@@ -289,15 +299,15 @@ SweetiVERSE is designed for international candy lovers, curious foodies, and exp
 
 **Facebook Page**
 
-<img src="assets/readme-images/pp5fb.PNG" height="450px"/>
+<img src="assets/readme-images/pp5fb.png" height="450px"/>
 
 <details>
 <summary>SWEETiVERSE Facebook Page</summary>
 
-<img src="assets/readme-images/pp5fb1.PNG" height="450px"/>
-<img src="assets/readme-images/pp5fb2.PNG" height="450px"/>
-<img src="assets/readme-images/pp5fb3.PNG" height="450px"/>
-<img src="assets/readme-images/pp5fb4.PNG" height="450px"/>
+<img src="assets/readme-images/pp5fb1.png" height="450px"/>
+<img src="assets/readme-images/pp5fb2.png" height="450px"/>
+<img src="assets/readme-images/pp5fb3.png" height="450px"/>
+<img src="assets/readme-images/pp5fb4.png" height="450px"/>
 
 </details>
 
