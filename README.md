@@ -581,6 +581,10 @@ screenshots
 
 Future Feature with Google Console CTR (Bounce Rate, dwell time, pages per session)
 
+# Testing
+
+View testing at [TESTING.md](/TESTING.md)
+
 # Bugs
 
 ## Problems with Django Allauth and emails
