@@ -304,19 +304,31 @@
     </footer>
 
     <div class="toast-container position-fixed top-0 end-0 p-3 z-3">
-        {% if messages %}
+      {% if messages %}
+      <div class="toast-container position-fixed">
+        {% for message in messages %}
+          {% if message.tags == "error" %}
+            {% include "sweets/includes/toasts/toast_error.html" %}
+          {% elif message.tags == "success" %}
+            {% include "sweets/includes/toasts/toast_success.html" %}
+          {% elif message.tags == "warning" %}
+            {% include "sweets/includes/toasts/toast_warning.html" %}
+          {% else %}
+            {% include "sweets/includes/toasts/toast_info.html" %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    
+      <noscript>
+        <div class="container mt-3">
           {% for message in messages %}
-            {% if message.tags == "error" %}
-              {% include "sweets/includes/toasts/toast_error.html" %}
-            {% elif message.tags == "success" %}
-              {% include "sweets/includes/toasts/toast_success.html" %}
-            {% elif message.tags == "warning" %}
-              {% include "sweets/includes/toasts/toast_warning.html" %}
-            {% else %}
-              {% include "sweets/includes/toasts/toast_info.html" %}
-            {% endif %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
           {% endfor %}
-        {% endif %}
+        </div>
+      </noscript>
+    {% endif %}    
       </div>
             
   {% block postloadjs %}
