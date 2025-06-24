@@ -599,7 +599,13 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 ### Sweeti Selector
 
+<img src="assets/readme-images/pp5sweetisel.png"/>
+<img src="assets/readme-images/pp5sweetisel2.png"/>
+
+
 ### Pick N Mix Subscriptions
+
+pp5sweetisel
 
 ### FAQ
 
@@ -608,6 +614,7 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 ### Deletion Pop Ups
 
 ### 404 and 500 Error Pages
+
 
 
 # Future Features
