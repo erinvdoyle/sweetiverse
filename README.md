@@ -158,6 +158,8 @@ The project aims to deliver a responsive and user-friendly sweets e-commerce pla
 
 ### Color Scheme
 
+I chose this palette to capture the whimsical spirit of candy culture. Bright pinks and purples for nostalgia and fun, with deeper accents for contrast and richness. These colors reflect the bold packaging, flavors, and certain je ne sais quoi and whimsy of foreign sweeties. 
+
 <img src="assets/readme-images/pp5colors.png">
 
 ### Database Schema
@@ -323,6 +325,8 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | created    | DateTimeField  | Submission timestamp               |
 
 ### Fonts
+
+The fonts for SWEETiVERSE were chosen to strike a balance between attentiong grabbing and readability, each appropriately whimsical and in the spirit of cartoonesque discovery. Chewy adds a sweet, bubblegum charm, while Fredoka brings a retro vibe that feels bold, commanding, and perfect for candy mission control
 
 <img src="assets/readme-images/pp5fredoka.png">
 <img src="assets/readme-images/pp5chewy.png">
