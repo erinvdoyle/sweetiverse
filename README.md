@@ -597,13 +597,21 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 <img src="assets/readme-images/pp5checkout7.png"/>
 <img src="assets/readme-images/pp5checkout8.png"/>
 
+</details>
+
 ### Sweeti Selector
+
+<details>
+<summary>SWEETi Selector (click)</summary>
 
 <img src="assets/readme-images/pp5sweetisel.png"/>
 <img src="assets/readme-images/pp5sweetisel2.png"/>
-
+</details>
 
 ### Pick N Mix Subscriptions
+
+<details>
+<summary>Pick N Mix Subscription Box(click)</summary>
 
 <img src="assets/readme-images/pp5pick1.png"/>
 <img src="assets/readme-images/pp5pick2.png"/>
@@ -612,15 +620,26 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 <img src="assets/readme-images/pp5pick5.png"/>
 <img src="assets/readme-images/pp5pick6.png"/>
 
+</details>
+
 ### FAQ
+
+<details>
+<summary>FAQ (click)</summary>
 
 <img src="assets/readme-images/pp5faq.png"/>
 
+</details>
+
 ### Deletion Pop Ups
+
+Users receive a pop up "are you sure" prompt at any delete action
+
+<img src="assets/readme-images/pp5delete.png"/>
 
 ### 404 and 500 Error Pages
 
-
+Custom 404 and 500 pages with return to main buttons meet the user in case of error
 
 # Future Features
 
