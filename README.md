@@ -92,38 +92,61 @@ Thanks for visiting SWEETiVERSE. I hope it makes you smile ✨
 | --- | --- | --- |
 
 | US - Project Setup | As a **developer** I can set up a new Django project so that I can establish the project structure. | ✅ |
+
 | US - Storage Setup | As a **developer** I can connect the database and media storage so that user data and images are stored successfully. | ✅ |
+
 | US - Early Deployment | As a **developer** I can deploy the application early so that I can verify everything works and continue testing during development. | ✅ |
 
 | US - Homepage | As a **user** I can visit the homepage so I understand the purpose of Sweetiverse. | ✅ |
+
 | US - Navigation | As a **user** I can navigate the website efficiently to access different sections like products, help, or cart. | ✅ |
+
 | US - Browse Sweets | As a **user** I want to be able to view all available sweets so that I can browse and discover treats to purchase. | ✅ |
+
 | US - Sweet Details | As a **user** I want to view detailed information about a single sweet so I can make informed decisions. | ✅ |
+
 | US - Filter Sweets | As a **user** I want to filter sweets by country or category so I can find exactly what I’m interested in. | ✅ |
+
 | US - Search Sweets | As a **user** I want to search for sweets by keywords so that I can quickly find specific items. | ✅ |
+
 | US - Sort Sweets | As a **user** I want to sort the sweet list by name or price so I can easily compare options. | ✅ |
 
 | US - Register | As a **user** I want to register an account so I can access full functionality. | ✅ |
+
 | US - Login | As a **user** I want to log in to my account so I can personalize my experience. | ✅ |
+
 | US - Password Reset | As a **user** I want to reset my password if I forget it so I can regain access. | ✅ |
+
 | US - Profile Update | As a **user** I want to update my profile information so I can keep my account current. | ✅ |
+
 | US - Submit Review | As an **authenticated user** I want to leave reviews for sweets so I can share feedback. | ✅ |
+
 | US - Edit/Delete Review | As an **authenticated user** I want to edit or delete my reviews to keep them relevant. | ✅ |
+
 | US - Wishlist | As an **authenticated user** I want to add sweets to my wishlist so I can save them for later. | ✅ |
 
 | US - Add to Cart | As a **user** I want to add products to my cart so I can review them before purchase. | ✅ |
+
 | US - Remove from Cart | As a **user** I want to remove items from my cart so I can adjust my order. | ✅ |
+
 | US - Adjust Quantity | As a **user** I want to adjust the quantity of items in my cart for accurate purchasing. | ✅ |
+
 | US - Apply Discount | As a **user** I want to apply discount codes to get deals and savings. | ✅ |
+
 | US - Stripe Payment | As a **user** I want to securely pay for items using Stripe so I can complete purchases confidently. | ✅ |
+
 | US - Smooth Checkout | As a **user** I want to complete checkout easily so I can buy sweets without friction. | ✅ |
 
 | US - Admin Dashboard | As an **admin** I want to view an admin dashboard to monitor orders and activity. | ✅ |
+
 | US - Manage Inventory | As an **admin** I want to add, update, or delete sweets so I can manage the inventory. | ✅ |
+
 | US - Adjust Stock | As an **admin** I want to adjust stock levels to maintain availability. | ✅ |
 
 | US - Submit Testimonial | As a **user** I want to submit a testimonial about my experience to share feedback. | ✅ |
+
 | US - View Testimonials | As a **user** I want to read other users’ testimonials to build trust. | ✅ |
+
 | US - Newsletter Signup | As a **user** I want to sign up for a newsletter so I can stay updated with offers. | ✅ |
 
 | US - SEO Optimization | As the **site owner** I want the site to be SEO optimized so Sweetiverse ranks higher and attracts more users. | ✅ |
@@ -326,7 +349,7 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 
 ### Fonts
 
-The fonts for SWEETiVERSE were chosen to strike a balance between attentiong grabbing and readability, each appropriately whimsical and in the spirit of cartoonesque discovery. Chewy adds a sweet, bubblegum charm, while Fredoka brings a retro vibe that feels bold, commanding, and perfect for candy mission control
+The fonts for SWEETiVERSE were chosen to strike a balance between attentiong grabbing and readability, each appropriately whimsical and in the spirit of cartoonesque discovery. Chewy adds a sweet, bubblegum charm, while Fredoka brings a retro vibe that feels bold, commanding, and befitting candy mission control
 
 <img src="assets/readme-images/pp5fredoka.png">
 <img src="assets/readme-images/pp5chewy.png">
@@ -374,7 +397,7 @@ The fonts for SWEETiVERSE were chosen to strike a balance between attentiong gra
 ## GitHub Projects Board – Workflow for Sweetiverse
 To plan and manage the development of Sweetiverse, I utilized GitHub’s built-in Projects tool. The Kanban board allowed me to clearly track progress, identify issues early, and organize development around my user stories.
 
-Throughout the development process, I recorded each user story as an issue. I added developer tasks and bugs as well, though I could have documented minor errors and small bugs more thoroughly as I worked. These issues were grouped under relevant milestones and categorized using MoSCoW prioritization labels. Each issue was further detailed with clear acceptance criteria and a breakdown of required tasks. This ensured that every piece of work had a purpose, scope, and a measurable outcome.
+Throughout the development process, I recorded each user story as an issue. I added developer tasks and bugs as well as the user stories, though I could have documented minor errors and small bugs more thoroughly as I worked. These issues were grouped under relevant milestones and categorized using MoSCoW prioritization labels. Each issue was further detailed with clear acceptance criteria and a breakdown of required tasks. This ensured that every piece of work had a purpose, scope, and a measurable outcome.
 
 Issues progressed through the following board columns:
 
@@ -431,39 +454,123 @@ Overall, GitHub Projects offered visibility, flexibility, and control during the
 
 # Features
 
-## User View - Guests/Account Holders
+## User Feature Access
 
-| Feature   | Guest | Registered, Account Holder |
-|-----------|-------------------|-----------------|
-| Home Page | Visible           | Visible         |
+| **Feature**           | **Guest**                                                              | **Registered, Account Holder**                                   |
+|-----------------------|------------------------------------------------------------------------|-------------------------------------------------------------------|
+| Home Page             | ✅ Visible                                                              | ✅ Visible                                                        |
+| Sweets Page           | ✅ Visible                                                              | ✅ Visible                                                        |
+| Sweets Search         | ✅ Can search                                                           | ✅ Can search                                                     |
+| Sweet Detail          | ✅ Viewable                                                             | ✅ Viewable, can add to wishlist or review if purchased           |
+| Add to Cart           | ⚠️ Prompted to log in when adding a sweet                              | ✅ Can add items directly                                         |
+| Review Sweet          | ❌ Not allowed                                                          | ✅ Only if user has purchased the sweet                          |
+| View Reviews          | ✅ All users can view                                                   | ✅ All users can view                                             |
+| Edit/Delete Review    | ❌ Not allowed                                                          | ✅ Only the reviewer can edit/delete                             |
+| SWEETiSELECTOR        | ✅ Fully accessible                                                     | ✅ Fully accessible                                               |
+| Pick N Mix            | ✅ Can explore, ⚠️ must log in to complete add-to-cart                 | ✅ Can explore and add to cart                                   |
+| Manage Subscriptions  | ❌ Not accessible                                                       | ✅ Only for subscribed users                                      |
+| Wishlist              | ❌ Not available                                                        | ✅ Can add/view/edit wishlist items                              |
+| FAQ / Help Page       | ✅ Fully accessible                                                     | ✅ Fully accessible                                               |
+
+## Admin Feature Access
+
+| **Feature**                      | **Admin Only** |
+|----------------------------------|----------------|
+| Add / Edit / Delete Sweets       | ✅              |
+| View any User’s Wishlist         | ✅              |
+| View User Order History          | ✅              |
+| View and Manage Subscriptions    | ✅              |
 
 ## CRUD Functionality
+
+SWEETiVERSE provides logged-in users with full CRUD functionality across key areas of the platform. Customers can view, add, update, and remove items from their shopping bag. Registered users can also manage their delivery information through their account profile.
+
+In addition, authenticated users can create, view, and delete items from their Wishlist, and leave reviews or star ratings on sweets they’ve purchased. Pick N Mix subscribers have the ability to add, pause, or cancel their subscriptions at any time through the "Manage Subscription" area.
 
 ## Feature Details
 
 ### Home Page and Base.html
+<details>
+<summary>Home Page and Base.html(click)</summary>
 
-#### User Dropdown Menu
+#### Favicon
 
-#### Navigation Links
+<img src="assets/readme-images/pp5favicon.png"/>
 
-#### Search Bar
+#### Navbar
+
+<img src="assets/readme-images/pp5navbar.png"/>
+
+#### User Dropdown Menu & Profiles
+
+<img src="assets/readme-images/pp5dropdown1.png"/>
+<img src="assets/readme-images/pp5dropdown2.png"/>
+<img src="assets/readme-images/pp5dropdown3.png"/>
+<img src="assets/readme-images/pp5adminpanel.png"/>
+<img src="assets/readme-images/pp5adminpanel2.png"/>
+<img src="assets/readme-images/pp5dropdown4.png"/>
+<img src="assets/readme-images/pp5profile.png"/>
+<img src="assets/readme-images/pp5profile2.png"/>
+<img src="assets/readme-images/pp5profile3.png"/>
+
+#### Shopping Bag
+
+<img src="assets/readme-images/pp5bag1.png"/>
+<img src="assets/readme-images/pp5bag2.png"/>
+<img src="assets/readme-images/pp5bag3.png"/>
+<img src="assets/readme-images/pp5bag4.png"/>
+
+#### Search Bar & Navigation Buttons
+
+<img src="assets/readme-images/pp5searchbar.png"/>
+
+#### Promo Banner
+
+<img src="assets/readme-images/pp5promo.png"/>
+
+#### Coming Soon Banner
+
+<img src="assets/readme-images/pp5promo3.png"/>
+
+#### Feature Section
+
+<img src="assets/readme-images/pp5feature.png"/>
 
 #### Trust Badges
 
+<img src="assets/readme-images/pp5trust.png"/>
+
 #### Most Popular SWEETis
 
-#### Contact
+<img src="assets/readme-images/pp5popsweets.png"/>
 
-#### Testimonial Carousel 
 
-#### Mailchimp Integrated Newsletter Signup
+#### Mailchimp Integrated Newsletter Signup, Contact, & Testimonial Carousel
+
+<img src="assets/readme-images/pp5subscribe.png"/>
+<img src="assets/readme-images/pp5subscribe2.png"/>
 
 #### Footer
 
+<img src="assets/readme-images/pp5footer.png"/>
+
+
 #### Privacy Policy
 
+<img src="assets/readme-images/pp5privacy.png"/>
+
+#### Vanta.js birds animation
+
+A beautiful, fun animation seen throughout all page backgrounds and through containers of varying degrees of opacity depending on readability
+
 ### User Registration and Login/Logout/Password Reset
+
+<img src="assets/readme-images/pp5register.png"/>
+<img src="assets/readme-images/pp5login.png"/>
+<img src="assets/readme-images/pp5logout.png"/>
+<img src="assets/readme-images/pp5passwordreset.png"/>
+
+</details>
 
 ### Sweets Page
 
