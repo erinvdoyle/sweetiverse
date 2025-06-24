@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'profiles',
     'subscriptions',
     'storages',
+    'django_extensions',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

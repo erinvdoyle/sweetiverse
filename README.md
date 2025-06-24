@@ -1,8 +1,50 @@
 # Welcome to the SWEETiVERSE
+** Boldly explore SWEETiS from every corner of the world... and beyond!**
 
 ![Sweetiverse website preview](./assets/readme-images/pp5resp0.png)
 
 [Link to deployed site](https://sweetiverse-24537debe589.herokuapp.com/)
+
+SWEETiVERSE was born of a mixture of nostalgia, wanderlust, and a wicked sweet tooth. My husband and I live on a farm in the countryside, and while working with horses is my great passion, it certainly puts a limit on vacation of any sort. Lately I've been feeling a yearning for the kind of travel we used to do when we first met, back when life was slower and wandering a grocery aisle in a foreign country was a favorite pastime.
+
+Bright colors, wild mascots, flavors we’d never heard of in languages we couldn't read: Sensory overload in the best way possible.
+
+This project is my way of bottling that experience into an interactive web app. I wanted to create a bright, playful digital candyshop where users can explore international sweets, browse by country, leave reviews, build wishlists, and even subscribe to a fun surprise Pick-N-Mix subscription box.
+
+SWEETiVERSE is a full-stack Django application with:
+
+- Custom shopping cart and Stripe integration for secure checkout
+
+- User authentication and profiles via Django Allauth
+
+- Reviews and wishlist functionality for engagement
+
+- Promo code logic and automatic discount triggers (like our SWEETiStravaganza)
+
+- Dynamic forms and AJAX enhancements for a smooth UX
+
+- Mobile-responsive design, SEO considerations, and custom toasts for feedback
+
+It’s built with a mix of HTML, CSS, Bootstrap, JavaScript, and Python, and deployed via Heroku.
+
+This project pushed me to go deeper with Django’s session handling, context processors, model design, and payment workflows. I thoroughly enjoyed designing something that feels equal parts functional and joyful.
+
+You can visit the site [here](https://sweetiverse-24537debe589.herokuapp.com/) 
+
+You can register as a new user here, explore the inventory, add SWEETiS to your shopping bag, and test our subscription and checkout processes [starting here](https://sweetiverse-24537debe589.herokuapp.com/accounts/signup/)
+
+Use the [Stripe Dummy Card](https://stripe.com/docs/testing) to simulate the purchasing process:
+
+- Use Card Number: 4242424242424242
+- Expiration Date: Any future date in MM/YY format
+- CVN: any 3 numerals
+- Postcode: any 5 digits
+
+ No money will be charged or transferred, it is purely a simulated expense integrated with Stripe-- so go wild! Order the whole store if you'd like 
+
+You can login as an admin to take a peak behind the curtain. Examine how the store/site owner adds sweets and manages user information [here:](https://sweetiverse-24537debe589.herokuapp.com/admin)(necessary credentials required) 
+
+Thanks for visiting SWEETiVERSE. I hope it makes you smile ✨
 
 # Table of Contents
 
@@ -46,49 +88,45 @@
 
 ### User Stories
 
-#### Developer Stories
-- As a developer, I can set up a new Django project so that I can establish the project structure.
-- As a developer, I can connect the database and media storage so that user data and images are stored successfully.
-- As a developer, I can deploy the application early so that I can verify everything works and continue testing during development.
+| **User Stories** | **Description** | **Status** |
+| --- | --- | --- |
 
-#### General User Stories
-- As a user, I can visit the homepage so I understand the purpose of Sweetiverse.
-- As a user, I can navigate the website efficiently to access different sections like products, help, or cart.
-- As a user, I want to be able to view all available sweets so that I can browse and discover treats to purchase.
-- As a user, I want to view detailed information about a single sweet so I can make informed decisions.
-- As a user, I want to filter sweets by country or category so I can find exactly what I’m interested in.
-- As a user, I want to search for sweets by keywords so that I can quickly find specific items.
-- As a user, I want to sort the sweet list by name or price so I can easily compare options.
+| US - Project Setup | As a **developer** I can set up a new Django project so that I can establish the project structure. | &#9745; |
+| US - Storage Setup | As a **developer** I can connect the database and media storage so that user data and images are stored successfully. | &#9745; |
+| US - Early Deployment | As a **developer** I can deploy the application early so that I can verify everything works and continue testing during development. | &#9745; |
 
-#### Authenticated User Stories
-- As a user, I want to register an account so I can access full functionality.
-- As a user, I want to log in to my account so I can personalize my experience.
-- As a user, I want to reset my password if I forget it so I can regain access.
-- As a user, I want to update my profile information so I can keep my account current.
-- As an authenticated user, I want to leave reviews for sweets so I can share feedback.
-- As an authenticated user, I want to edit or delete my reviews to keep them relevant.
-- As an authenticated user, I want to add sweets to my wishlist so I can save them for later.
+| US - Homepage | As a **user** I can visit the homepage so I understand the purpose of Sweetiverse. | &#9745; |
+| US - Navigation | As a **user** I can navigate the website efficiently to access different sections like products, help, or cart. | &#9745; |
+| US - Browse Sweets | As a **user** I want to be able to view all available sweets so that I can browse and discover treats to purchase. | &#9745; |
+| US - Sweet Details | As a **user** I want to view detailed information about a single sweet so I can make informed decisions. | &#9745; |
+| US - Filter Sweets | As a **user** I want to filter sweets by country or category so I can find exactly what I’m interested in. | &#9745; |
+| US - Search Sweets | As a **user** I want to search for sweets by keywords so that I can quickly find specific items. | &#9745; |
+| US - Sort Sweets | As a **user** I want to sort the sweet list by name or price so I can easily compare options. | &#9745; |
 
-#### Shopping Cart & Checkout
-- As a user, I want to add products to my cart so I can review them before purchase.
-- As a user, I want to remove items from my cart so I can adjust my order.
-- As a user, I want to adjust the quantity of items in my cart for accurate purchasing.
-- As a user, I want to apply discount codes to get deals and savings.
-- As a user, I want to securely pay for items using Stripe so I can complete purchases confidently.
-- As a user, I want to complete checkout easily so I can buy sweets without friction.
+| US - Register | As a **user** I want to register an account so I can access full functionality. | &#9745; |
+| US - Login | As a **user** I want to log in to my account so I can personalize my experience. | &#9745; |
+| US - Password Reset | As a **user** I want to reset my password if I forget it so I can regain access. | &#9745; |
+| US - Profile Update | As a **user** I want to update my profile information so I can keep my account current. | &#9745; |
+| US - Submit Review | As an **authenticated user** I want to leave reviews for sweets so I can share feedback. | &#9745; |
+| US - Edit/Delete Review | As an **authenticated user** I want to edit or delete my reviews to keep them relevant. | &#9745; |
+| US - Wishlist | As an **authenticated user** I want to add sweets to my wishlist so I can save them for later. | &#9745; |
 
-#### Admin Stories
-- As an admin, I want to view an admin dashboard to monitor orders and activity.
-- As an admin, I want to add, update, or delete sweets so I can manage the inventory.
-- As an admin, I want to adjust stock levels to maintain availability.
+| US - Add to Cart | As a **user** I want to add products to my cart so I can review them before purchase. | &#9745; |
+| US - Remove from Cart | As a **user** I want to remove items from my cart so I can adjust my order. | &#9745; |
+| US - Adjust Quantity | As a **user** I want to adjust the quantity of items in my cart for accurate purchasing. | &#9745; |
+| US - Apply Discount | As a **user** I want to apply discount codes to get deals and savings. | &#9745; |
+| US - Stripe Payment | As a **user** I want to securely pay for items using Stripe so I can complete purchases confidently. | &#9745; |
+| US - Smooth Checkout | As a **user** I want to complete checkout easily so I can buy sweets without friction. | &#9745; |
 
-#### Extra User Features
-- As a user, I want to submit a testimonial about my experience to share feedback.
-- As a user, I want to read other users’ testimonials to build trust.
-- As a user, I want to sign up for a newsletter so I can stay updated with offers.
+| US - Admin Dashboard | As an **admin** I want to view an admin dashboard to monitor orders and activity. | &#9745; |
+| US - Manage Inventory | As an **admin** I want to add, update, or delete sweets so I can manage the inventory. | &#9745; |
+| US - Adjust Stock | As an **admin** I want to adjust stock levels to maintain availability. | &#9745; |
 
-#### SEO / Business Goals
-- As the site owner, I want the site to be SEO optimized so Sweetiverse ranks higher and attracts more users.
+| US - Submit Testimonial | As a **user** I want to submit a testimonial about my experience to share feedback. | &#9745; |
+| US - View Testimonials | As a **user** I want to read other users’ testimonials to build trust. | &#9745; |
+| US - Newsletter Signup | As a **user** I want to sign up for a newsletter so I can stay updated with offers. | &#9745; |
+
+| US - SEO Optimization | As the **site owner** I want the site to be SEO optimized so Sweetiverse ranks higher and attracts more users. | &#9745; |
 
 ---
 
@@ -121,120 +159,163 @@ The project aims to deliver a responsive and user-friendly sweets e-commerce pla
 ### Color Scheme
 
 ### Database Schema
-![database schema](./assets/readme-images/erd.png)
+![database schema](./assets/readme-images/my_erd.png)
 
-#### User
-Django's built-in User model
+<details>
+<summary>First Draft ERD</summary>
 
-#### UserProfile
-- id (Primary Key)
-- user (One-to-One Field to User)
-- default_phone_number (CharField)
-- default_street_address1 (CharField)
-- default_street_address2 (CharField)
-- default_town_or_city (CharField)
-- default_county (CharField)
-- default_postcode (CharField)
-- default_country (CountryField)
+<img src="assets/readme-images/erd.png">
 
-#### Sweet
-Represents an individual sweet product
-- id (UUID)
-- name (CharField)
-- description (TextField)
-- image (ImageField)
-- ingredients (TextField)
-- flavor (CharField)
-- country_of_origin (CountryField)
-- type (ForeignKey to Type)
-- stock_amount (IntegerField)
-- in_stock (BooleanField)
-- on_sale (BooleanField)
-- price (DecimalField)
-- discount (IntegerField)
-- sale_price (DecimalField)
-- created (DateTimeField)
+</details>
 
-#### Type
-Represents a sweet type (e.g. chocolate, gummy, hard candy)
-- id (Primary Key)
-- name (CharField)
-- friendly_name (CharField)
-- category (ForeignKey to Category)
+#### User & Authentication Models
 
-#### Category
-Categorization of types
-- name (CharField)
+##### User
+Django’s built-in auth.User model is used for authentication. Extended by UserProfile.
 
+##### User Profile
+| Field Name              | Field Type         | Relationship              | Description                                      |
+|------------------------|--------------------|---------------------------|--------------------------------------------------|
+| id                     | AutoField          | Primary Key               | Unique ID for the profile                        |
+| user                   | OneToOneField      | User                      | Links to Django's built-in user                  |
+| default_phone_number   | CharField          | –                         | Stored for convenience at checkout               |
+| default_street_address1| CharField          | –                         | Shipping address line 1                          |
+| default_street_address2| CharField          | –                         | Shipping address line 2                          |
+| default_town_or_city   | CharField          | –                         | User's city                                      |
+| default_county         | CharField          | –                         | User's county                                    |
+| default_postcode       | CharField          | –                         | Postal code                                      |
+| default_country        | CountryField       | –                         | Country of the user                              |
+
+#### Product Models
+##### Sweet
+| Field Name         | Field Type    | Relationship     | Description                            |
+|--------------------|---------------|------------------|----------------------------------------|
+| id                 | UUIDField     | Primary Key      | Unique product ID                      |
+| name               | CharField     | –                | Product name                           |
+| description        | TextField     | –                | Full description                       |
+| image              | ImageField    | –                | Product image                          |
+| ingredients        | TextField     | –                | Ingredients list                       |
+| flavor             | CharField     | –                | Flavor description                     |
+| country_of_origin  | CountryField  | –                | Country where the sweet originates     |
+| type               | ForeignKey    | Type             | Type of sweet                          |
+| stock_amount       | IntegerField  | –                | Stock level                            |
+| in_stock           | BooleanField  | –                | Availability flag                      |
+| on_sale            | BooleanField  | –                | If discounted                          |
+| price              | DecimalField  | –                | Regular price                          |
+| discount           | IntegerField  | –                | Discount percent                       |
+| sale_price         | DecimalField  | –                | Price after discount                   |
+| created            | DateTimeField | –                | Creation timestamp                     |
+
+##### Type
+| Field Name    | Field Type  | Relationship  | Description                  |
+|---------------|-------------|---------------|------------------------------|
+| id            | AutoField   | Primary Key   | Unique type ID               |
+| name          | CharField   | –             | Internal name                |
+| friendly_name | CharField   | –             | Display name for UI          |
+| category      | ForeignKey  | Category      | Associated category           |
+
+##### Category
+| Field Name | Field Type | Description               |
+|------------|------------|---------------------------|
+| name       | CharField  | High-level category label |
+
+#### Reviews & Wishlist
 #### SweetReview
-User-generated review for a sweet
-- user (ForeignKey to UserProfile)
-- sweet (ForeignKey to Sweet)
-- rating (IntegerField)
-- review (TextField)
-- created (DateTimeField)
+| Field Name | Field Type     | Relationship   | Description                    |
+|------------|----------------|----------------|--------------------------------|
+| user       | ForeignKey     | UserProfile    | Reviewer                       |
+| sweet      | ForeignKey     | Sweet          | Reviewed item                  |
+| rating     | IntegerField   | –              | Rating out of 5                |
+| review     | TextField      | –              | User comment                   |
+| created    | DateTimeField  | –              | Submission date                |
 
-#### WishList
-A user's saved list of favorite sweets
-- user (ForeignKey to UserProfile)
-- sweet (ForeignKey to Sweet)
-- created (DateTimeField)
+##### WishListItem
+| Field Name | Field Type     | Relationship   | Description                    |
+|------------|----------------|----------------|--------------------------------|
+| user       | ForeignKey     | UserProfile    | Wishlist owner                 |
+| sweet      | ForeignKey     | Sweet          | Saved sweet                    |
+| created    | DateTimeField  | –              | Date added                     |
 
-#### Order
-Tracks all order details
-- id (Primary Key)
-- order_number (CharField)
-- user_profile (ForeignKey to UserProfile)
-- full_name (CharField)
-- email (EmailField)
-- phone_number (CharField)
-- country (CountryField)
-- postcode (CharField)
-- town_or_city (CharField)
-- street_address1 (CharField)
-- street_address2 (CharField)
-- county (CharField)
-- date (DateTimeField)
-- delivery_cost (DecimalField)
-- discount (DecimalField)
-- order_total (DecimalField)
-- grand_total (DecimalField)
-- original_cart (TextField)
-- stripe_pid (CharField)
+#### Orders & Checkout
+##### Order
+| Field Name        | Field Type      | Relationship   | Description                     |
+|-------------------|-----------------|----------------|---------------------------------|
+| id                | AutoField       | Primary Key    | Order ID                        |
+| order_number      | CharField       | –              | Unique reference code           |
+| user_profile      | ForeignKey      | UserProfile    | Associated user                 |
+| full_name         | CharField       | –              | Billing name                    |
+| email             | EmailField      | –              | Contact email                   |
+| phone_number      | CharField       | –              | Phone number                    |
+| country           | CountryField    | –              | Country of delivery             |
+| postcode          | CharField       | –              | Postal code                     |
+| town_or_city      | CharField       | –              | City                            |
+| street_address1   | CharField       | –              | Address line 1                  |
+| street_address2   | CharField       | –              | Address line 2                  |
+| county            | CharField       | –              | Region/county                   |
+| date              | DateTimeField   | –              | Order timestamp                 |
+| delivery_cost     | DecimalField    | –              | Shipping fee                    |
+| discount          | DecimalField    | –              | Discount amount                 |
+| order_total       | DecimalField    | –              | Total cost before shipping      |
+| grand_total       | DecimalField    | –              | Total with shipping             |
+| original_cart     | TextField       | –              | Snapshot of user’s cart         |
+| stripe_pid        | CharField       | –              | Stripe PaymentIntent ID         |
 
-#### OrderLineItem
-Individual sweet items in an order
-- order (ForeignKey to Order)
-- sweet (ForeignKey to Sweet)
-- quantity (IntegerField)
-- lineitem_total (DecimalField)
+##### OrderLineItem
+| Field Name     | Field Type     | Relationship | Description                   |
+|----------------|----------------|--------------|-------------------------------|
+| order          | ForeignKey     | Order        | Linked order                  |
+| sweet          | ForeignKey     | Sweet        | Item ordered                  |
+| quantity       | IntegerField   | –            | Units purchased               |
+| lineitem_total | DecimalField   | –            | Subtotal for this item        |
 
-#### Order Status
-Tracks the current status of an order
-- order (One-to-One Field to Order)
-- status (CharField)
+##### OrderStatus
+| Field Name | Field Type    | Relationship | Description                      |
+|------------|---------------|--------------|----------------------------------|
+| order      | OneToOneField | Order        | Associated order                 |
+| status     | CharField     | –            | Status label (e.g., Shipped)     |
 
-#### Discount Code
-Promotional codes for users to apply at checkout
-- code (CharField)
-- discount (IntegerField)
-- active (BooleanField)
+##### DiscountCode
+| Field Name | Field Type   | Description                           |
+|------------|--------------|---------------------------------------|
+| code       | CharField    | Coupon code for checkout              |
+| discount   | IntegerField | Percent discount                      |
+| active     | BooleanField | Whether code is valid or expired      |
 
-#### PickNMix
-A user-selected bundle of random sweets
-- user (ForeignKey to UserProfile)
-- quantity (IntegerField)
-- created (DateTimeField)
-- sweets (ManyToManyField to Sweet)
-- total_price (DecimalField)
+#### Pick n’ Mix & Subscriptions
+##### PickNMixSelectionOptions
+| Field Name   | Field Type      | Relationship   | Description                         |
+|--------------|-----------------|----------------|-------------------------------------|
+| user         | ForeignKey      | UserProfile    | Bundle creator                      |
+| quantity     | IntegerField    | –              | Total sweets in the mix             |
+| created      | DateTimeField   | –              | When it was created                 |
+| sweets       | ManyToManyField | Sweet          | Selected sweets                     |
+| total_price  | DecimalField    | –              | Cost of the entire mix              |
 
-#### SubscriptionBox
-Monthly sweet box sent to a user
-- user (ForeignKey to UserProfile)
-- start_date (DateTimeField)
-- active (BooleanField)
-- sweets (ManyToManyField to Sweet)
-- country_selection (Optional CharField or JSONField)
+##### SubscriptionBox
+| Field Name         | Field Type      | Relationship   | Description                        |
+|--------------------|-----------------|----------------|------------------------------------|
+| user               | ForeignKey      | UserProfile    | Subscriber                         |
+| start_date         | DateTimeField   | –              | Date of first delivery             |
+| active             | BooleanField    | –              | Is the box still active?           |
+| country_selection  | CharField/JSON  | –              | Optional country preferences       |
+| sweets             | ManyToManyField | Sweet          | Sweets included in the box         |
+
+#### Email & Contact
+##### EmailSubscription
+| Field Name  | Field Type     | Description                        |
+|-------------|----------------|------------------------------------|
+| email       | EmailField     | Email to receive newsletters       |
+| timestamp   | DateTimeField  | When subscribed                    |
+
+##### EmailContactSubmission
+| Field Name | Field Type     | Description                        |
+|------------|----------------|------------------------------------|
+| email      | EmailField     | Sender's email                     |
+| subject    | CharField      | Message subject                    |
+| message    | TextField      | Message content                    |
+| created    | DateTimeField  | Submission timestamp               |
+
+
 
 ### Wireframes
 
@@ -274,51 +355,125 @@ Monthly sweet box sent to a user
 
 </details>
 
+# Agile Methodology
+
+## GitHub Projects Board – Workflow for Sweetiverse
+To plan and manage the development of Sweetiverse, I utilized GitHub’s built-in Projects tool. The Kanban board allowed me to clearly track progress, identify issues early, and organize development around my user stories.
+
+Throughout the development process, I recorded each user story as an issue. I added developer tasks and bugs as well, though I could have documented minor errors and small bugs more thoroughly as I worked. These issues were grouped under relevant milestones and categorized using MoSCoW prioritization labels. Each issue was further detailed with clear acceptance criteria and a breakdown of required tasks. This ensured that every piece of work had a purpose, scope, and a measurable outcome.
+
+Issues progressed through the following board columns:
+
+Backlog: For brainstorming and unrefined ideas.
+
+To Do: Planned tasks ready to be worked on.
+
+In Progress: Actively being developed or debugged.
+
+Blocked: Items temporarily paused due to dependencies.
+
+Done: Completed and tested work.
+
+Won’t Have: Deferred or discarded for the current release
+
+## MoSCoW Prioritization
+To keep development focused, I adopted the MoSCoW method for prioritizing user stories and features:
+
+- Must Have: Core functionality like viewing sweets, checkout, and authentication.
+
+- Should Have: Features like wishlists, reviews, and search filters.
+
+- Could Have: Enhancements like newsletter signup or subtle UI improvements.
+
+- Won’t Have (for now): Deferred ideas or stretch features planned for future versions
+
+## Project Milestones
+The project was divided into several key milestones:
+
+- Project Setup: Initializing the Django project, repo setup, static/media config, and base templates.
+
+- Products: Building the sweets app, views, and templates. Core features like browsing, sorting, and filtering were delivered here.
+
+- User Profiles: Registration, login/logout, email confirmation, profile management, and saved preferences.
+
+- Orders: Shopping bag, discount code logic, Stripe checkout, and order recording.
+
+- Admin: Admin interface setup, inventory control, and order visibility.
+
+- Testimonials: Reviews and ratings by users.
+
+- Marketing/SEO: Metadata optimization, social sharing previews, and sitemap configuration.
+
+- Documentation: Writing the README, manual testing documentation, and issue documentation.
+
+- Backlog: Miscellaneous enhancements, future feature ideas, or things outside MVP scope.
+
+### In Future Iterations
+I plan to better automate issue-linking to commits and rely more heavily on GitHub’s automation tools (like actions and issue templates)
+
+Overall, GitHub Projects offered visibility, flexibility, and control during the SWEETiVERSE development process
+
+## Site Structure
+
 # Features
 
-## Home
+## User View - Guests/Account Holders
 
-### User Dropdown Menu
+| Feature   | Guest | Registered, Account Holder |
+|-----------|-------------------|-----------------|
+| Home Page | Visible           | Visible         |
 
-### Navigation Links
+## CRUD Functionality
 
-### Search Bar
+## Feature Details
 
-### Trust Badges
+### Home Page and Base.html
 
-### Most Popular SWEETis
+#### User Dropdown Menu
 
-### Contact
+#### Navigation Links
 
-### Testimonial Carousel 
+#### Search Bar
 
-### Mailchimp Integrated Newsletter Signup
+#### Trust Badges
 
-### Footer
+#### Most Popular SWEETis
 
-Privacy Policy
+#### Contact
 
-## User Registration and Login/Logout/Password Reset
+#### Testimonial Carousel 
 
-## Sweets Page
+#### Mailchimp Integrated Newsletter Signup
 
-### Breadcrumbs
+#### Footer
 
-### Searching Sweets
+#### Privacy Policy
 
-### Product Information Card
+### User Registration and Login/Logout/Password Reset
+
+### Sweets Page
+
+#### Breadcrumbs
+
+#### Searching Sweets
+
+#### Product Information Card
 
 #### User Ratings and Reviews
 
 #### Wishlist
 
-## User Bag and Checkout Process
+### User Bag and Checkout Process
 
-## Sweeti Selector
+### Sweeti Selector
 
-## Pick N Mix Subscriptions
+### Pick N Mix Subscriptions
 
-## FAQ
+### FAQ
+
+### Deletion Pop Ups
+
+### 404 and 500 Error Pages
 
 
 # Future Features
@@ -328,6 +483,13 @@ Privacy Policy
 - SWEETi of the Month newsletter and discount code
 - Pick N Mix subscription option to select SWEETiS from only 1 or 2 nations
 - Irish, British, American, Swedish, Nigerian, Mexican, ETC(!) SWEETis
+
+# Technologies Used
+## Languages
+## Frameworks and Software
+# Python Packages
+# Testing
+# Project Deployment
 
 # Marketing
 
@@ -595,6 +757,147 @@ View testing at [TESTING.md](/TESTING.md)
 
 - [example.com]
 - email_confirm.html
+
+# Project Deployment 
+Early deployment was essential for SWEETiVERSE, not just to avoid end-of-project surprises, but to see how the experience translated across real devices. With a Django backend, Stripe integration, and AWS-hosted media, this app had a lot of moving parts. Deploying early gave me confidence they’d work together smoothly in production.
+
+Here’s how to set up deployment using Heroku, Postgres, AWS S3, and Gmail:
+
+## Initial Setup & Local Development
+1. Start the Project
+
+Initialize a repo on  github.
+
+Launch VS Code and create a virtual environment.
+
+Install Django, sqlite3 support, and other essentials:
+
+pip install 'django<4' gunicorn dj_database_url psycopg2-binary
+pip install boto3 django-storages
+
+2. Setup Requirements File & Git
+
+pip3 freeze > requirements.txt
+
+Commit and push to GitHub regularly with detailed messages 
+
+3. Configure Project Settings
+
+env.py file for sensitive keys (e.g. SECRET_KEY, DATABASE_URL, etc.)
+
+In settings.py:
+
+import os
+if os.path.isfile('env.py'):
+    import env
+DEBUG set to:
+
+DEBUG = os.environ.get('DEVELOPMENT') == 'True'
+
+4. Database
+
+Created and connected to Postgres
+
+Switched DATABASES config to use PostgreSQL in production:
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+Heroku Deployment
+1. Create Heroku App
+
+Logged in and created a new Heroku app from the Heroku dashboard.
+
+Set config vars:
+
+DATABASE_URL, SECRET_KEY, USE_AWS
+
+Stripe keys, email credentials, etc.
+
+2. Add Procfile & Push to Heroku
+
+echo "web: gunicorn sweetiverse.wsgi:application" > Procfile
+git push heroku main
+
+3. Allowed Hosts
+
+ALLOWED_HOSTS = ['sweetiverse.herokuapp.com', 'localhost']
+
+4. Collect Static & Media
+
+For production:
+
+python manage.py collectstatic
+
+AWS S3 Storage for Media & Static
+Why? GitHub and Heroku don't store user-uploaded media.
+
+Steps:
+
+Created an AWS S3 bucket
+
+Set up public read access (with CORS policy and Bucket Policy)
+
+Created custom_storages.py:
+
+from storages.backends.s3boto3 import S3Boto3Storage
+
+class StaticStorage(S3Boto3Storage):
+    location = 'static'
+
+class MediaStorage(S3Boto3Storage):
+    location = 'media'
+In settings.py:
+
+if 'USE_AWS' in os.environ:
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+AWS keys added to env.py and Heroku config vars.
+
+Stripe Integration
+Created a Stripe test account and added public/secret keys to environment.
+
+Webhooks for Stripe events (like successful payment):
+
+Set up endpoint in Stripe Dashboard to https://sweetiverse.herokuapp.com/checkout/wh/
+
+Wrote webhook handler in Django to fulfill or cancel orders based on status.
+
+Gmail Email Backend
+Used Gmail to send registration and order confirmation emails.
+
+Enabled 2FA in Gmail → Created app password
+
+Added email credentials to env.py and Heroku
+
+Configured Django's email backend:
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+
+Final Notes on Deployment
+I regularly checked the live Heroku version to monitor changes.
+
+GitHub issues tied to deployment helped track config steps.
+
+Used Chrome DevTools and browser-stack-style emulators to test responsiveness across viewports.
+
+Cloning & Running Locally
+To run the project locally:
+
+git clone https://github.com/yourusername/sweetiverse.git
+cd sweetiverse
+pip install -r requirements.txt
+Create a .env file or env.py with your environment variables.
+
+python3 manage.py migrate
+python3 manage.py runserver
+
 
 # Credits
 
