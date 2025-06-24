@@ -585,11 +585,25 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 ### Checkout Process
 
+<details>
+<summary>Checking Out (click)</summary>
+
+<img src="assets/readme-images/pp5checkout1.png"/>
+<img src="assets/readme-images/pp5checkout2.png"/>
+<img src="assets/readme-images/pp5checkout3.png"/>
+<img src="assets/readme-images/pp5checkout4.png"/>
+<img src="assets/readme-images/pp5checkout5.png"/>
+<img src="assets/readme-images/pp5checkout6.png"/>
+<img src="assets/readme-images/pp5checkout7.png"/>
+<img src="assets/readme-images/pp5checkout8.png"/>
+
 ### Sweeti Selector
 
 ### Pick N Mix Subscriptions
 
 ### FAQ
+
+<img src="assets/readme-images/pp5faq.png"/>
 
 ### Deletion Pop Ups
 
@@ -599,6 +613,8 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 # Future Features
 
 - Custom Admin Panel
+- Monthly SWEETi of The Month Mailchimp-integrated newsletter with featured SwEETi discount
+- An about page with origin story
 - Send a SWEETi PICK N MIX Subscription box as a gift (this can already be done but does not appear as a button or link)
 - SWEETi of the Month newsletter and discount code
 - Pick N Mix subscription option to select SWEETiS from only 1 or 2 nations
@@ -829,39 +845,36 @@ The final keywords were selected based on the following criteria:
 
 This list will be used to optimize page titles, meta tags, headers, alt text, and on-page content.
 
+<details>
+<summary>WordTracker Results</summary>
+<img src="assets/readme-images/pp5wordtracker1.png">
+</details>
 
-## SEO-Friendly Meta Tags
 
-screenshots
+## SEO-Friendly Practices
 
-## Semantic HTML
-
-screenshots
-
-## Keywords in Page Content
-
-screenshots
-
-## Optimized Image Names and Alt Texts
-
-screenshots
+Meta tags, use of semantic HTML, keywords in page content, optimized image names and alt texts.
 
 ## Sitemap and Robots.txt
 
-screenshots
+<img src="assets/readme-images/pp5sitemap.png">
+
+<img src="assets/readme-images/pp5robots.png">
 
 ## Meaningful Internal and External Links
 
-screenshots
+Where possible I linked to Stripe and Mailchimp as well as to SWEETiVERSE Terms & Conditions and Privacy Policy.
 
 ## FAQ Page
 
-screenshots
+Along with fun SWEETi related content, the FAQ provides an opportunity to again detail Stripe's secure payment system and our Terms and Conditions. 
+
+<img src="assets/readme-images/pp5faq.png">
 
 ## Clear, Trustworthy Content
-(Terms & Conditions, Privacy Policy, Shipping Info, and Allergen Info) 
+(Terms & Conditions and Privacy Policy) 
 
-screenshots
+As detailed above, and in the Features section, we feature dedicated Terms & Conditions and Privacy Policy pages, accessible from relevant interaction points (Mailchimp subscription, SWEETi Pick N Mix signup, FAQ)
 
 ## Track Engagement Metrics
 
@@ -873,13 +886,32 @@ View testing at [TESTING.md](/TESTING.md)
 
 # Bugs
 
+## Trouble with API's and External Integrations
+
+### AWS
+
+<img src="assets/readme-images/pp5bug1.png">
+<img src="assets/readme-images/pp5bug1solution1.png">
+<img src="assets/readme-images/pp5bug1solution2.png">
+
+### Mailchimp Dashboard Woes
+
+<img src="assets/readme-images/pp5bug2.png">
+<img src="assets/readme-images/pp5bug2solution.png">
+
+
 ## Problems with Django Allauth and emails
 
-- [example.com]
-- email_confirm.html
+<img src="assets/readme-images/pp5bug3.png">
+
+- [example.com] - despite changing my settings.py settings and creating rtf files for email subjects, I have no been able to remove this subject line prefix from about half of my automated emails. 
+
+- email_confirm.html madness - I spent long hours trying to get to the root of I could not apply my customized template to the user account verification screen. In the end, it was due to my misunderstanding of Django's allauth necessary file structure AND failing to realize the correct file was actually verification_sent.html
+
+- Extraneous Success Messages - unfortunately, due to time constraints, I have not been able to remove the double flash messages that sometimes occur throughout the site's user interface. This is very much a lesson learned in cleaning up code as I update my codebase with better or preferred features
 
 # Project Deployment 
-Early deployment was essential for SWEETiVERSE, not just to avoid end-of-project surprises, but to see how the experience translated across real devices. With a Django backend, Stripe integration, and AWS-hosted media, this app had a lot of moving parts. Deploying early gave me confidence they’d work together smoothly in production.
+Early deployment was essential for SWEETiVERSE, not just to avoid end-of-project surprises, but to see how the experience translated across real devices. With a Django backend, Stripe integration, and AWS-hosted media, this app had a lot of moving parts. Deploying early allowed me to spot misses and find small bugs that didn't error out in my local server
 
 Here’s how to set up deployment using Heroku, Postgres, AWS S3, and Gmail:
 
