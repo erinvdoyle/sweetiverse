@@ -36,16 +36,16 @@ class Order(models.Model):
         """Generate a unique, random order number using UUID"""
         return uuid.uuid4().hex.upper()
 
-def update_total(self):
-    self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or Decimal('0.00')
+    def update_total(self):
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or Decimal('0.00')
 
-    if self.order_total < Decimal('25.00'):
-        self.delivery_cost = Decimal('3.95')
-    else:
-        self.delivery_cost = Decimal('0.00')
+        if self.order_total < Decimal('25.00'):
+            self.delivery_cost = Decimal('3.95')
+        else:
+            self.delivery_cost = Decimal('0.00')
 
-    self.grand_total = self.order_total + self.delivery_cost - self.discount
-    self.save()
+        self.grand_total = self.order_total + self.delivery_cost - self.discount
+        self.save()
 
     def save(self, *args, **kwargs):
         if not self.order_number:

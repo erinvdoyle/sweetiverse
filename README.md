@@ -474,6 +474,10 @@ In addition, authenticated users can create, view, and delete items from their W
 
 <img src="assets/readme-images/pp5navbar.png"/>
 
+#### Toasts
+
+<img src="assets/readme-images/pp5toasts.png"/>
+
 #### User Dropdown Menu & Profiles
 
 <img src="assets/readme-images/pp5dropdown1.png"/>
@@ -547,17 +551,39 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 ### Sweets Page
 
-#### Breadcrumbs
+<details>
+<summary>Sweets (click)</summary>
 
-#### Searching Sweets
+#### Sweets Lists with use of breadcrumbs 
 
-#### Product Information Card
+<img src="assets/readme-images/pp5sweets1.png"/>
+<img src="assets/readme-images/pp5sweets2.png"/>
 
-#### User Ratings and Reviews
+#### Sweet Details
+
+<img src="assets/readme-images/pp5sweets3.png"/>
+
+#### Sweet Reviews
+
+<img src="assets/readme-images/pp5sweets4.png"/>
+
+#### Sweet Suggestions
+
+<img src="assets/readme-images/pp5sweets5.png"/>
 
 #### Wishlist
 
-### User Bag and Checkout Process
+<img src="assets/readme-images/pp5sweets6.png"/>
+
+#### Search Sweets with filtering and pagination
+
+<img src="assets/readme-images/pp5sweets7.png"/>
+<img src="assets/readme-images/pp5sweets8.png"/>
+<img src="assets/readme-images/pp5sweets9.png"/>
+
+</details>
+
+### Checkout Process
 
 ### Sweeti Selector
 
