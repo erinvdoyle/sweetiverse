@@ -605,7 +605,12 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 ### Pick N Mix Subscriptions
 
-pp5sweetisel
+<img src="assets/readme-images/pp5pick1.png"/>
+<img src="assets/readme-images/pp5pick2.png"/>
+<img src="assets/readme-images/pp5pick3.png"/>
+<img src="assets/readme-images/pp5pick4.png"/>
+<img src="assets/readme-images/pp5pick5.png"/>
+<img src="assets/readme-images/pp5pick6.png"/>
 
 ### FAQ
 
