@@ -9,7 +9,7 @@ SWEETiVERSE was born of a mixture of nostalgia, wanderlust, and a wicked sweet t
 
 Bright colors, wild mascots, flavors we’d never heard of in languages we couldn't read: Sensory overload in the best way possible.
 
-This project is my way of bottling that experience into an interactive web app. I wanted to create a bright, playful digital candyshop where users can explore international sweets, browse by country, leave reviews, build wishlists, and even subscribe to a fun surprise Pick-N-Mix subscription box.
+This project is my way of bottling that experience into an interactive web app. I wanted to create a bright, playful digital candyshop where users could explore international sweets, browse by country, leave reviews, create wishlists, and build in fun extras like the Pick-N-Mix subscription surprise box and retro-feel SWEETiSelector sweet suggestor.
 
 SWEETiVERSE is a full-stack Django application with:
 
@@ -31,7 +31,7 @@ This project pushed me to go deeper with Django’s session handling, context pr
 
 You can visit the site [here](https://sweetiverse-24537debe589.herokuapp.com/) 
 
-You can register as a new user here, explore the inventory, add SWEETiS to your shopping bag, and test our subscription and checkout processes [starting here](https://sweetiverse-24537debe589.herokuapp.com/accounts/signup/)
+You can register as a new user, explore the inventory, add SWEETiS to your shopping bag, and test our subscription and checkout processes [starting here](https://sweetiverse-24537debe589.herokuapp.com/accounts/signup/)
 
 Use the [Stripe Dummy Card](https://stripe.com/docs/testing) to simulate the purchasing process:
 
@@ -40,7 +40,7 @@ Use the [Stripe Dummy Card](https://stripe.com/docs/testing) to simulate the pur
 - CVN: any 3 numerals
 - Postcode: any 5 digits
 
- No money will be charged or transferred, it is purely a simulated expense integrated with Stripe-- so go wild! Order the whole store if you'd like 
+ No money will be charged or transferred, it is purely a simulated checkout integrated with Stripe-- so go wild! Order the whole store if you'd like!
 
 You can login as an admin to take a peak behind the curtain. Examine how the store/site owner adds sweets and manages user information [here:](https://sweetiverse-24537debe589.herokuapp.com/admin)(necessary credentials required) 
 
@@ -91,42 +91,42 @@ Thanks for visiting SWEETiVERSE. I hope it makes you smile ✨
 | **User Stories** | **Description** | **Status** |
 | --- | --- | --- |
 
-| US - Project Setup | As a **developer** I can set up a new Django project so that I can establish the project structure. | &#9745; |
-| US - Storage Setup | As a **developer** I can connect the database and media storage so that user data and images are stored successfully. | &#9745; |
-| US - Early Deployment | As a **developer** I can deploy the application early so that I can verify everything works and continue testing during development. | &#9745; |
+| US - Project Setup | As a **developer** I can set up a new Django project so that I can establish the project structure. | ✅ |
+| US - Storage Setup | As a **developer** I can connect the database and media storage so that user data and images are stored successfully. | ✅ |
+| US - Early Deployment | As a **developer** I can deploy the application early so that I can verify everything works and continue testing during development. | ✅ |
 
-| US - Homepage | As a **user** I can visit the homepage so I understand the purpose of Sweetiverse. | &#9745; |
-| US - Navigation | As a **user** I can navigate the website efficiently to access different sections like products, help, or cart. | &#9745; |
-| US - Browse Sweets | As a **user** I want to be able to view all available sweets so that I can browse and discover treats to purchase. | &#9745; |
-| US - Sweet Details | As a **user** I want to view detailed information about a single sweet so I can make informed decisions. | &#9745; |
-| US - Filter Sweets | As a **user** I want to filter sweets by country or category so I can find exactly what I’m interested in. | &#9745; |
-| US - Search Sweets | As a **user** I want to search for sweets by keywords so that I can quickly find specific items. | &#9745; |
-| US - Sort Sweets | As a **user** I want to sort the sweet list by name or price so I can easily compare options. | &#9745; |
+| US - Homepage | As a **user** I can visit the homepage so I understand the purpose of Sweetiverse. | ✅ |
+| US - Navigation | As a **user** I can navigate the website efficiently to access different sections like products, help, or cart. | ✅ |
+| US - Browse Sweets | As a **user** I want to be able to view all available sweets so that I can browse and discover treats to purchase. | ✅ |
+| US - Sweet Details | As a **user** I want to view detailed information about a single sweet so I can make informed decisions. | ✅ |
+| US - Filter Sweets | As a **user** I want to filter sweets by country or category so I can find exactly what I’m interested in. | ✅ |
+| US - Search Sweets | As a **user** I want to search for sweets by keywords so that I can quickly find specific items. | ✅ |
+| US - Sort Sweets | As a **user** I want to sort the sweet list by name or price so I can easily compare options. | ✅ |
 
-| US - Register | As a **user** I want to register an account so I can access full functionality. | &#9745; |
-| US - Login | As a **user** I want to log in to my account so I can personalize my experience. | &#9745; |
-| US - Password Reset | As a **user** I want to reset my password if I forget it so I can regain access. | &#9745; |
-| US - Profile Update | As a **user** I want to update my profile information so I can keep my account current. | &#9745; |
-| US - Submit Review | As an **authenticated user** I want to leave reviews for sweets so I can share feedback. | &#9745; |
-| US - Edit/Delete Review | As an **authenticated user** I want to edit or delete my reviews to keep them relevant. | &#9745; |
-| US - Wishlist | As an **authenticated user** I want to add sweets to my wishlist so I can save them for later. | &#9745; |
+| US - Register | As a **user** I want to register an account so I can access full functionality. | ✅ |
+| US - Login | As a **user** I want to log in to my account so I can personalize my experience. | ✅ |
+| US - Password Reset | As a **user** I want to reset my password if I forget it so I can regain access. | ✅ |
+| US - Profile Update | As a **user** I want to update my profile information so I can keep my account current. | ✅ |
+| US - Submit Review | As an **authenticated user** I want to leave reviews for sweets so I can share feedback. | ✅ |
+| US - Edit/Delete Review | As an **authenticated user** I want to edit or delete my reviews to keep them relevant. | ✅ |
+| US - Wishlist | As an **authenticated user** I want to add sweets to my wishlist so I can save them for later. | ✅ |
 
-| US - Add to Cart | As a **user** I want to add products to my cart so I can review them before purchase. | &#9745; |
-| US - Remove from Cart | As a **user** I want to remove items from my cart so I can adjust my order. | &#9745; |
-| US - Adjust Quantity | As a **user** I want to adjust the quantity of items in my cart for accurate purchasing. | &#9745; |
-| US - Apply Discount | As a **user** I want to apply discount codes to get deals and savings. | &#9745; |
-| US - Stripe Payment | As a **user** I want to securely pay for items using Stripe so I can complete purchases confidently. | &#9745; |
-| US - Smooth Checkout | As a **user** I want to complete checkout easily so I can buy sweets without friction. | &#9745; |
+| US - Add to Cart | As a **user** I want to add products to my cart so I can review them before purchase. | ✅ |
+| US - Remove from Cart | As a **user** I want to remove items from my cart so I can adjust my order. | ✅ |
+| US - Adjust Quantity | As a **user** I want to adjust the quantity of items in my cart for accurate purchasing. | ✅ |
+| US - Apply Discount | As a **user** I want to apply discount codes to get deals and savings. | ✅ |
+| US - Stripe Payment | As a **user** I want to securely pay for items using Stripe so I can complete purchases confidently. | ✅ |
+| US - Smooth Checkout | As a **user** I want to complete checkout easily so I can buy sweets without friction. | ✅ |
 
-| US - Admin Dashboard | As an **admin** I want to view an admin dashboard to monitor orders and activity. | &#9745; |
-| US - Manage Inventory | As an **admin** I want to add, update, or delete sweets so I can manage the inventory. | &#9745; |
-| US - Adjust Stock | As an **admin** I want to adjust stock levels to maintain availability. | &#9745; |
+| US - Admin Dashboard | As an **admin** I want to view an admin dashboard to monitor orders and activity. | ✅ |
+| US - Manage Inventory | As an **admin** I want to add, update, or delete sweets so I can manage the inventory. | ✅ |
+| US - Adjust Stock | As an **admin** I want to adjust stock levels to maintain availability. | ✅ |
 
-| US - Submit Testimonial | As a **user** I want to submit a testimonial about my experience to share feedback. | &#9745; |
-| US - View Testimonials | As a **user** I want to read other users’ testimonials to build trust. | &#9745; |
-| US - Newsletter Signup | As a **user** I want to sign up for a newsletter so I can stay updated with offers. | &#9745; |
+| US - Submit Testimonial | As a **user** I want to submit a testimonial about my experience to share feedback. | ✅ |
+| US - View Testimonials | As a **user** I want to read other users’ testimonials to build trust. | ✅ |
+| US - Newsletter Signup | As a **user** I want to sign up for a newsletter so I can stay updated with offers. | ✅ |
 
-| US - SEO Optimization | As the **site owner** I want the site to be SEO optimized so Sweetiverse ranks higher and attracts more users. | &#9745; |
+| US - SEO Optimization | As the **site owner** I want the site to be SEO optimized so Sweetiverse ranks higher and attracts more users. | ✅ |
 
 ---
 
@@ -158,6 +158,8 @@ The project aims to deliver a responsive and user-friendly sweets e-commerce pla
 
 ### Color Scheme
 
+<img src="assets/readme-images/pp5colors.png">
+
 ### Database Schema
 ![database schema](./assets/readme-images/my_erd.png)
 
@@ -187,6 +189,7 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | default_country        | CountryField       | –                         | Country of the user                              |
 
 #### Product Models
+
 ##### Sweet
 | Field Name         | Field Type    | Relationship     | Description                            |
 |--------------------|---------------|------------------|----------------------------------------|
@@ -220,6 +223,7 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | name       | CharField  | High-level category label |
 
 #### Reviews & Wishlist
+
 #### SweetReview
 | Field Name | Field Type     | Relationship   | Description                    |
 |------------|----------------|----------------|--------------------------------|
@@ -237,6 +241,7 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | created    | DateTimeField  | –              | Date added                     |
 
 #### Orders & Checkout
+
 ##### Order
 | Field Name        | Field Type      | Relationship   | Description                     |
 |-------------------|-----------------|----------------|---------------------------------|
@@ -282,6 +287,7 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | active     | BooleanField | Whether code is valid or expired      |
 
 #### Pick n’ Mix & Subscriptions
+
 ##### PickNMixSelectionOptions
 | Field Name   | Field Type      | Relationship   | Description                         |
 |--------------|-----------------|----------------|-------------------------------------|
@@ -301,6 +307,7 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | sweets             | ManyToManyField | Sweet          | Sweets included in the box         |
 
 #### Email & Contact
+
 ##### EmailSubscription
 | Field Name  | Field Type     | Description                        |
 |-------------|----------------|------------------------------------|
@@ -315,7 +322,10 @@ Django’s built-in auth.User model is used for authentication. Extended by User
 | message    | TextField      | Message content                    |
 | created    | DateTimeField  | Submission timestamp               |
 
+### Fonts
 
+<img src="assets/readme-images/pp5fredoka.png">
+<img src="assets/readme-images/pp5chewy.png">
 
 ### Wireframes
 
@@ -364,17 +374,17 @@ Throughout the development process, I recorded each user story as an issue. I ad
 
 Issues progressed through the following board columns:
 
-Backlog: For brainstorming and unrefined ideas.
+- Backlog: For brainstorming and unrefined ideas.
 
-To Do: Planned tasks ready to be worked on.
+- To Do: Planned tasks ready to be worked on.
 
-In Progress: Actively being developed or debugged.
+- In Progress: Actively being developed or debugged.
 
-Blocked: Items temporarily paused due to dependencies.
+- Blocked: Items temporarily paused due to dependencies.
 
-Done: Completed and tested work.
+- Done: Completed and tested work.
 
-Won’t Have: Deferred or discarded for the current release
+- Won’t Have: Deferred or discarded for the current release
 
 ## MoSCoW Prioritization
 To keep development focused, I adopted the MoSCoW method for prioritizing user stories and features:
