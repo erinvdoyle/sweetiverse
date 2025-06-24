@@ -77,65 +77,49 @@ For desktop, SWEETiVERSE has been manually tested on a Windows Elitebook
 
 ## Manual Testing
 
-- Home Page 
+| Section                         | Test Action                                                                 | Expected Result                                                                                         | Pass/Fail |
+|----------------------------------|-----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-----------|
+| Home Page                        | Loads successfully                                                         | Logo, promo banners, trust badges, most popular SWEETis displayed                                       | ✅        |
+| Favicon                          | Check browser tab                                                          | Candy icon appears as favicon                                                                           | ✅        |
+| Navbar                           | Inspect on desktop and mobile                                              | Responsive navigation with dropdown and shopping bag icon                                               | ✅        |
+| Toast Messages                   | Trigger actions like login, add to bag                                     | Toasts display with appropriate color and message                                                       | ✅        |
+| User Dropdown Menu               | Open dropdown                                                              | Shows Login/Register or Profile/Wishlist/Admin options depending on auth status                         | ✅        |
+| Admin Dropdown Links             | Log in as admin, open menu                                                 | See "+ Add Sweet" and link to Django admin panel                                                        | ✅        |
+| Profile Page                     | Log in, open dropdown > Profile                                            | Update delivery info, view orders, manage subscriptions                                                 | ✅        |
+| Shopping Bag                     | Add item, view bag                                                         | Item appears with update/remove/wishlist buttons and checkout option                                    | ✅        |
+| Empty Shopping Bag               | Click bag icon without adding anything                                     | Message and redirect to Sweets page                                                                     | ✅        |
+| Search Bar                       | Search for SWEETis                                                         | Returns matching SWEETis with pagination                                                                | ✅        |
+| Promo Banner                     | View homepage                                                              | Promo messages scroll in top banner                                                                     | ✅        |
+| Coming Soon Banner               | Scroll homepage                                                            | "Coming Soon" banner is visible                                                                         | ✅        |
+| Feature Section                  | Scroll homepage                                                            | Mascot, headline, and "Shop Now" button displayed                                                       | ✅        |
+| Trust Badges                     | Scroll homepage                                                            | Secure payment, shipping badge, and subscription info shown                                             | ✅        |
+| Most Popular SWEETis            | Scroll homepage                                                            | Most recent sweets shown                                                                                | ✅        |
+| Newsletter Signup                | Enter email, submit                                                        | Confirmation and discount toast triggered                                                               | ✅        |
+| Footer                           | Scroll to bottom                                                           | Link to Privacy Policy                                                                                  | ✅        |
+| Privacy Policy                   | Click footer link                                                          | Full privacy policy text loads                                                                          | ✅        |
+| Background Animation             | View homepage and other pages                                              | Vanta.js birds animation loads without interfering with content                                         | ✅        |
+| Registration                     | Register with valid info                                                   | Account created, user logged in, redirected                                                             | ✅        |
+| Login/Logout                     | Log in and out                                                             | Correct redirection and toasts triggered                                                                | ✅        |
+| Password Reset                   | Submit email via password reset                                            | Email sent with reset link                                                                              | ✅        |
+| Sweets Page                      | Navigate to Sweets                                                         | All SWEETis listed with sort and filter options                                                         | ✅        |
+| Sweet Detail                     | Click on SWEETi card                                                       | Detail page with ingredients, rating, and related suggestions                                           | ✅        |
+| Reviews Section                  | Scroll below SWEETi detail                                                 | Displays reviews and allows logged-in users to post if purchased                                        | ✅        |
+| Review Permissions               | Attempt to review without purchase                                         | Review action blocked                                                                                    | ✅        |
+| Wishlist                         | Click wishlist button as guest or user                                     | Guest prompted to log in, user adds/removes successfully                                                | ✅        |
+| Sweets Search                    | Use filters and search                                                     | Accurate filtered and paginated results                                                                 | ✅        |
+| Checkout                        | Add to bag, complete payment                                               | Stripe processes payment, user receives email and success screen                                        | ✅        |
+| Promo Codes                     | Apply valid/invalid code                                                   | Code accepted or error message shown                                                                    | ✅        |
+| Sweetistravaganza Logic         | Add qualifying number of sweets                                            | Discount applied at checkout                                                                            | ✅        |
+| Order Summary                   | View order summary on profile                                              | Order history visible and accurate                                                                      | ✅        |
+| Email Confirmation              | Complete order                                                             | Order confirmation email received                                                                       | ✅        |
+| SWEETi Selector                 | Pull lever to get suggested sweets                                         | Random suggestions based on chosen filters                                                              | ✅        |
+| Pick N Mix Subscription         | Subscribe, pause, cancel                                                   | Subscriptions managed and reflected in profile                                                          | ✅        |
+| Subscription Admin View         | Log in as admin, check subscriptions                                       | Subscriptions visible in Django admin                                                                   | ✅        |
+| FAQ Page                        | Open FAQ                                                                   | All accordion questions/answers visible                                                                 | ✅        |
+| Delete Popups                   | Try deleting from wishlist or subscription                                 | Confirmation dialog appears                                                                             | ✅        |
+| 404 Page                        | Visit a broken link                                                        | Custom 404 page with navigation link                                                                    | ✅        |
+| 500 Page                        | Trigger internal error (e.g. temporarily break a view)                     | Custom 500 page shown                                                                                   | ✅        |
 
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Navbar|Click on logo in Navbar|Redirect to Home |Pass|Navbar present on all pages |
-
-- SWEETiS Page 
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Pagination| Click on all of the links in the pagination. Ensure they redirect to the appropriate page. |All links redirect to the correct page. |Pass| |
-
-
-- Sweet Details Page 
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Sweet details|Open the product page. Ensure all the relevant information is correct for the specific product|All the relevant information is correct for the specific product|Pass||
-
-
-- Bag 
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Bag|Add product to bag and ensure it appears correctly in the bag|The product appears correctly in the bag|Pass||
-
-- Checkout
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Checkout|Fill in the form and click on save details. Use stripe test card and confirm the order is successfull by checking stripe. Confirm the address is saved to profile|The address is saved to my profile. The purchase is successfull. Stripe logs show success.|Pass||
-
-- User Profile
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Profile|Fill in the form and click on update. Ensure the details are updated|The details are updated|Pass||
-
-- Orders
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Orders|Open the orders page and ensure the orders showing are correct. |The orders are correct|Pass||
-|Orders |Click on the order link and ensure it leads to the order page|The link leads to the order page|Pass||
-
-- Wishlist
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|wishlist|Visit my wishlist page. Click on the heart button on the card. Ensure the card is removed from favourites |The card is removed from favourites|Pass||
-|wishlist|Visit my wishlist page. Click on the add to cart button on the card. Ensure the product is added to cart |The product is added to cart|Pass||
-|wishlist|Visit my wishlist page. Click on the card. Ensure it redirects to the product's page. |It redirects to product's page|Pass||
-
-- Admin
-
-|Section|Test Action|Expected Result|Pass/Fail|Comments|
-| ---| ---| ---| ---| ---|
-|Orders|Visit orders page. Ensure the refine drop down works by selecting all available options |The refine drop down works as expected|Pass||
-|Discount code|Visit discount code page. Ensure the refine drop down works by selecting all available options |The refine drop down works as expected|Pass||
 
 
 ## User Story Testing

@@ -468,67 +468,96 @@ In addition, authenticated users can create, view, and delete items from their W
 
 #### Favicon
 
+The favicon is a sweetie icon from Icons8
+
 <img src="assets/readme-images/pp5favicon.png"/>
 
 #### Navbar
+
+The navbar features a simply logo in all caps FREDOKA, a pink gradient, and a mobile friendly user dropdown menu and shopping bag
 
 <img src="assets/readme-images/pp5navbar.png"/>
 
 #### Toasts
 
+Custom toasts are triggered throughout the site on user action
+
 <img src="assets/readme-images/pp5toasts.png"/>
 
 #### User Dropdown Menu & Profiles
 
+The user dropdown menu features a login and register button for new and returning visitors.
+
 <img src="assets/readme-images/pp5dropdown1.png"/>
 <img src="assets/readme-images/pp5dropdown2.png"/>
+
+Admin can log in and add new sweet inventory from the + add sweet link, or they can head to the admin panel for all other action through the link
+
 <img src="assets/readme-images/pp5dropdown3.png"/>
 <img src="assets/readme-images/pp5adminpanel.png"/>
 <img src="assets/readme-images/pp5adminpanel2.png"/>
+
+The logged in user can access their wishlist and profile from the dropdown menu
 <img src="assets/readme-images/pp5dropdown4.png"/>
 <img src="assets/readme-images/pp5profile.png"/>
+
+In their profile, they can update their address, access past orders, and manage their Pick N Mix Subscriptions
+
 <img src="assets/readme-images/pp5profile2.png"/>
 <img src="assets/readme-images/pp5profile3.png"/>
 
 #### Shopping Bag
 
-<img src="assets/readme-images/pp5bag1.png"/>
+The shopping bag is located next to the user dropdown
+<img src="assets/readme-images/pp5bag.png"/>
+
+If the user clicks on an empty bag, they see a button directing them to the SWEETi page
 <img src="assets/readme-images/pp5bag2.png"/>
+
+A bag with products in it leads to the bag page, where a user can update sweeti quantity, see if they have enough sweetis for the Sweetistravaganza discount, remove items, or save items to their wishlist, before checking out
 <img src="assets/readme-images/pp5bag3.png"/>
 <img src="assets/readme-images/pp5bag4.png"/>
 
 #### Search Bar & Navigation Buttons
 
+The search bar allows users to quickly search for sweetis by name or nation, as well as accessing the Sweeti Selector, Pick N Mix, or FAQ page
 <img src="assets/readme-images/pp5searchbar.png"/>
 
 #### Promo Banner
 
+A scrolling promo banner advertizes the threshold for free shipping and the Sweetistravaganza bonus
 <img src="assets/readme-images/pp5promo.png"/>
 
 #### Coming Soon Banner
 
+A coming soon banner below the feature section advertizes new product
 <img src="assets/readme-images/pp5promo3.png"/>
 
 #### Feature Section
 
+The feature section features our intrepid mascot, MegaSpace Molly (credit to Popworld) and a gleaming "Shop Now" button
 <img src="assets/readme-images/pp5feature.png"/>
 
 #### Trust Badges
 
+Trust badges advertise prompt shipping, secure payment with Stripe, and the Pick N Mix Subscription Box
 <img src="assets/readme-images/pp5trust.png"/>
 
 #### Most Popular SWEETis
 
+The most popular SWEETiS section is made up of the most recently added SWEETiS (to help boost sales)
 <img src="assets/readme-images/pp5popsweets.png"/>
 
 
 #### Mailchimp Integrated Newsletter Signup, Contact, & Testimonial Carousel
 
+The newsletter is fully integrated with Mailchimp and features a customized confirmation screen and discount code
 <img src="assets/readme-images/pp5subscribe.png"/>
 <img src="assets/readme-images/pp5subscribe2.png"/>
 
 #### Footer
 
+The footer links to the SWEETiVERSE Privacy Policy
 <img src="assets/readme-images/pp5footer.png"/>
 
 
@@ -541,6 +570,8 @@ In addition, authenticated users can create, view, and delete items from their W
 A beautiful, fun animation seen throughout all page backgrounds and through containers of varying degrees of opacity depending on readability
 
 ### User Registration and Login/Logout/Password Reset
+
+User Registration, login/out, and password reset features form validation, custom templates, and custom emails through Google email.
 
 <img src="assets/readme-images/pp5register.png"/>
 <img src="assets/readme-images/pp5login.png"/>
@@ -556,15 +587,19 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 #### Sweets Lists with use of breadcrumbs 
 
+The Sweets list page features all of the SWEETis with poppy images and sweet information cards with name, price, and rating. Users can sort the sweetis using the sort "pills" below the header. Breadcrumbs are used to help users navigate
+
 <img src="assets/readme-images/pp5sweets1.png"/>
 <img src="assets/readme-images/pp5sweets2.png"/>
 
 #### Sweet Details
 
+Each sweet's detail screen features the Sweet name, ingredients, description, price, and rating, as well as an opportunity for the user to add it to their wishlist. The Sweetistravaganza deal is also advertised
 <img src="assets/readme-images/pp5sweets3.png"/>
 
 #### Sweet Reviews
 
+Below the sweet image and detail card, the user can find that sweet's reviews and four Sweeti suggestions based on similar flavor and category.
 <img src="assets/readme-images/pp5sweets4.png"/>
 
 #### Sweet Suggestions
@@ -577,6 +612,7 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 #### Search Sweets with filtering and pagination
 
+Sweetis can be searched and filtered by type and category, with multi-category selection and pagination featured 
 <img src="assets/readme-images/pp5sweets7.png"/>
 <img src="assets/readme-images/pp5sweets8.png"/>
 <img src="assets/readme-images/pp5sweets9.png"/>
@@ -587,6 +623,7 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 <details>
 <summary>Checking Out (click)</summary>
+THe checkout process features secure integration with Stripe. Discount codes and/or the Sweetistravaganza are applied at checkout. A customized wheel spins while payment processes. An order email is generated with the details of the order, which is also stored in the user profile
 
 <img src="assets/readme-images/pp5checkout1.png"/>
 <img src="assets/readme-images/pp5checkout2.png"/>
@@ -604,6 +641,8 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 <details>
 <summary>SWEETi Selector (click)</summary>
 
+The SWEETiSelector is a fun page where users can click the old fashioned levers to generate suggested SWEETiS based on flavor, type, category, and popularity
+
 <img src="assets/readme-images/pp5sweetisel.png"/>
 <img src="assets/readme-images/pp5sweetisel2.png"/>
 </details>
@@ -612,6 +651,8 @@ A beautiful, fun animation seen throughout all page backgrounds and through cont
 
 <details>
 <summary>Pick N Mix Subscription Box(click)</summary>
+
+The Pick N Mix Subscription box allows users to customize a Sweeti surprise box deliverable weekly, bi-weekly, or monthly. Terms and Conditions are linked. The user may pause or cancel their subscription at any time, which they can easily do through the dropdown menu and their user profile. Multiple subscriptions are allowed. Admin can access these subscriptions through the admin panel
 
 <img src="assets/readme-images/pp5pick1.png"/>
 <img src="assets/readme-images/pp5pick2.png"/>
