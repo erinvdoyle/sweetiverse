@@ -3,7 +3,6 @@ from django.contrib import messages
 from .forms import OrderForm
 import stripe
 from django.conf import settings
-# from bag.contexts import bag_contents
 from bag.context_processors import bag_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem, DiscountCode

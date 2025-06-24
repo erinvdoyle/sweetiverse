@@ -1,5 +1,5 @@
-# Welcome to the SWEETiVERSE
-** Boldly explore SWEETiS from every corner of the world... and beyond!**
+# Welcome to the SWEETiVERSE 🍬
+✨ Boldly explore SWEETiS from every corner of the world... and beyond! ✨
 
 ![Sweetiverse website preview](./assets/readme-images/pp5resp0.png)
 
@@ -653,8 +653,92 @@ Custom 404 and 500 pages with return to main buttons meet the user in case of er
 
 # Technologies Used
 ## Languages
+
+| Language       | Purpose                                                                |
+| -------------- | ---------------------------------------------------------------------- |
+| **Python**     | Powers the backend logic, database interactions, and overall app flow. |
+| **HTML5**      | Structures the content and layout across all pages.                    |
+| **CSS3**       | Handles styling, layout, and responsive design.                        |
+| **JavaScript** | Enables interactivity such as toasts, modals, and form enhancements.   |
+
 ## Frameworks and Software
+
+| Tool / Service             | Role in the Project                                                                 |
+|---------------------------|--------------------------------------------------------------------------------------|
+| **Django**                | The main web framework used to build out backend models, views, and templates.      |
+| **Bootstrap**             | CSS utility framework for creating mobile-first, responsive layouts.                |
+| **Cloudinary**            | Hosts and delivers optimized media files like product images.                       |
+| **Amazon AWS (S3/SES)**   | Manages static and media file storage; handles email functionality.                 |
+| **Stripe**                | Enables secure online payments during checkout.                                     |
+| **Heroku**                | Hosts the deployed version of the site.                                             |
+| **Git & GitHub**          | Used for version control and remote code repository hosting.                        |
+| **Graphviz**            | Generated the project’s final Entity Relationship Diagram (ERD).                    |
+| **Markdown Table Generator** | Helped generate readable markdown tables throughout this README.              |
+| **Google DevTools**       | Used extensively to test responsiveness and debug layout issues.                    |
+| **Lighthouse**            | Audited the site for performance, SEO, and accessibility improvements.              |
+| **W3C Validators**        | Ensured semantic and valid HTML5 and CSS3 code.                                     |
+| **CI Python Linter**      | Checked Python code for syntax errors and style consistency. 
+
 # Python Packages
+
+asgiref==3.8.1  
+blinker==1.9.0  
+boto3==1.38.37  
+botocore==1.38.37  
+certifi==2025.1.31  
+cffi==1.17.1  
+charset-normalizer==3.4.1  
+click==8.1.8  
+cloudinary==1.43.0  
+colorama==0.4.6  
+cryptography==45.0.3  
+defusedxml==0.7.1  
+dj-database-url==0.5.0  
+Django==3.2.25  
+django-allauth==0.50.0  
+django-cloudinary-storage==0.3.0  
+django-countries==7.2.1  
+django-crispy-forms==1.14.0  
+django-extensions==3.2.3  
+django-filter==2.4.0  
+django-storages==1.14.6  
+django-tables2==2.4.1  
+Flask==3.1.0  
+Flask-SQLAlchemy==3.1.1  
+git-filter-repo==2.47.0  
+greenlet==3.1.1  
+gunicorn==23.0.0  
+idna==3.10  
+itsdangerous==2.2.0  
+Jinja2==3.1.5  
+jmespath==1.0.1  
+MarkupSafe==3.0.2  
+oauthlib==3.2.2  
+packaging==25.0  
+pillow==10.3.0  
+psycopg2==2.9.10  
+pycparser==2.22  
+pydotplus==2.0.2  
+PyJWT==2.10.1  
+pyparsing==3.2.1  
+python-dateutil==2.9.0.post0  
+python-dotenv==1.1.0  
+python3-openid==3.2.0  
+pytz==2025.2  
+requests==2.32.3  
+requests-oauthlib==2.0.0  
+s3transfer==0.13.0  
+setuptools==75.8.0  
+six==1.17.0  
+SQLAlchemy==2.0.36  
+sqlparse==0.5.3  
+stripe==12.2.0  
+typing_extensions==4.12.2  
+tzdata==2025.2  
+urllib3==2.3.0  
+Werkzeug==3.1.3  
+whitenoise==6.9.0
+
 # Testing
 # Project Deployment
 
@@ -955,12 +1039,16 @@ Launch VS Code and create a virtual environment.
 
 Install Django, sqlite3 support, and other essentials:
 
+ ```
 pip install 'django<4' gunicorn dj_database_url psycopg2-binary
 pip install boto3 django-storages
+ ```
 
 2. Setup Requirements File & Git
 
+ ```
 pip3 freeze > requirements.txt
+ ```
 
 Commit and push to GitHub regularly with detailed messages 
 
@@ -970,12 +1058,14 @@ env.py file for sensitive keys (e.g. SECRET_KEY, DATABASE_URL, etc.)
 
 In settings.py:
 
+ ```
 import os
 if os.path.isfile('env.py'):
     import env
 DEBUG set to:
 
 DEBUG = os.environ.get('DEVELOPMENT') == 'True'
+ ```
 
 4. Database
 
@@ -983,9 +1073,11 @@ Created and connected to Postgres
 
 Switched DATABASES config to use PostgreSQL in production:
 
+ ```
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+ ```
 
 Heroku Deployment
 1. Create Heroku App
@@ -994,27 +1086,34 @@ Logged in and created a new Heroku app from the Heroku dashboard.
 
 Set config vars:
 
+ ```
 DATABASE_URL, SECRET_KEY, USE_AWS
+ ```
 
 Stripe keys, email credentials, etc.
 
 2. Add Procfile & Push to Heroku
 
+ ```
 echo "web: gunicorn sweetiverse.wsgi:application" > Procfile
 git push heroku main
+ ```
 
 3. Allowed Hosts
 
+ ```
 ALLOWED_HOSTS = ['sweetiverse.herokuapp.com', 'localhost']
+ ```
 
 4. Collect Static & Media
 
 For production:
 
+ ```
 python manage.py collectstatic
+ ```
 
 AWS S3 Storage for Media & Static
-Why? GitHub and Heroku don't store user-uploaded media.
 
 Steps:
 
@@ -1024,6 +1123,7 @@ Set up public read access (with CORS policy and Bucket Policy)
 
 Created custom_storages.py:
 
+ ```
 from storages.backends.s3boto3 import S3Boto3Storage
 
 class StaticStorage(S3Boto3Storage):
@@ -1031,12 +1131,16 @@ class StaticStorage(S3Boto3Storage):
 
 class MediaStorage(S3Boto3Storage):
     location = 'media'
+ ```
+
 In settings.py:
 
+ ```
 if 'USE_AWS' in os.environ:
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 AWS keys added to env.py and Heroku config vars.
+ ```
 
 Stripe Integration
 Created a Stripe test account and added public/secret keys to environment.
@@ -1056,12 +1160,14 @@ Added email credentials to env.py and Heroku
 
 Configured Django's email backend:
 
+ ```
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+ ```
 
 Final Notes on Deployment
 I regularly checked the live Heroku version to monitor changes.
@@ -1073,6 +1179,7 @@ Used Chrome DevTools and browser-stack-style emulators to test responsiveness ac
 Cloning & Running Locally
 To run the project locally:
 
+ ```
 git clone https://github.com/yourusername/sweetiverse.git
 cd sweetiverse
 pip install -r requirements.txt
@@ -1080,13 +1187,11 @@ Create a .env file or env.py with your environment variables.
 
 python3 manage.py migrate
 python3 manage.py runserver
-
+ ```
 
 # Credits
 
 ## Media
-
-### Images
 
 - Starry backgrounds https://www.transparenttextures.com/
 - Pink Spaceship https://www.vectorstock.com/
@@ -1098,7 +1203,14 @@ python3 manage.py runserver
 - Vector Speech Bubble https://www.freepik.com
 - Vector Cloud https://www.fffuel.co
 - Cloud Border https://pngtree.com/
-- icons icons8
-- fonts googlefonts
-- font awesome
-- Facebook cover image chatgpt.com
+- icons8 sweetie icon https://icons8.com
+- fonts https://googlefonts.com
+- https://fontawesome.com
+- Facebook cover image: http://chatgpt.com
+
+## Acknowledgements
+
+- Many thanks to my wonderful mentor, Precious Ileje, who helped me through each of my projects with patience, insight, and grace
+- Big hug to my husband, who stepped up as always and filled in for me with our horses, animals, and all other aspects of our daily life while working his own demanding full-time job
+- My wonderful classmates, whom I'll miss now that our standups are done
+- Our cohort leader, Kay Welfare
